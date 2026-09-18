@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+  <title>背單字 — 高中英文</title>
+  <meta name="description" content="高中英文單字記憶 App:音標、發音、例句與中譯,可離線、通勤盲聽。" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0e1220" />
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="背單字" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png" />
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ===== 頂列 ===== -->
+  <header class="topbar" id="topbar">
+    <button class="icon-btn" id="btnUnits" aria-label="選擇單元" title="單元">☰</button>
+    <div class="topbar-mid">
+      <div class="book-name" id="bookName">高一上</div>
+      <div class="unit-name" id="unitName">全部單元</div>
+    </div>
+    <button class="icon-btn" id="btnSearch" aria-label="搜尋" title="搜尋">🔍</button>
+    <button class="icon-btn" id="btnSettings" aria-label="設定" title="設定">⚙︎</button>
+  </header>
+
+  <!-- ===== 主卡片 ===== -->
+  <main class="stage" id="stage">
+    <div class="progress-line"><div class="progress-fill" id="progressFill"></div></div>
+
+    <section class="card" id="card" aria-live="polite">
+      <!-- 正面 -->
+      <div class="card-face card-front" id="cardFront">
+        <div class="pos-row" id="posRow"></div>
+        <button class="word" id="wordText" aria-label="播放單字發音">ancient</button>
+        <div class="ipa" id="ipaText">/ˈeɪnʃənt/</div>
+        <button class="play-word-btn" id="playWordBtn">🔊 單字</button>
+        <div class="tap-hint" id="tapHint">點卡片看例句 ▸</div>
+        <img class="card-img" id="imgWord" alt="" hidden />
+      </div>
+      <!-- 背面 -->
+      <div class="card-face card-back" id="cardBack" hidden>
+        <button class="example" id="exampleText" lang="en" aria-label="播放例句發音">
+          We were impressed by the ruins of an ancient building.
+        </button>
+        <div class="translation" id="translationText">我們對一處古建築廢墟印象頗深。</div>
+        <button class="play-sentence-btn" id="playSentenceBtn">🔊 例句</button>
+        <img class="card-img" id="imgSentence" alt="" hidden />
+        <div class="tap-hint" id="tapHintBack">◂ 點卡片回單字</div>
+      </div>
+
+      <div class="src-badge" id="srcBadge" hidden></div>
+    </section>
+
+    <div class="counter" id="counter">1 / 923</div>
+  </main>
+
+  <!-- ===== 底部操作列 ===== -->
+  <footer class="transport" id="transport">
+    <button class="t-btn" id="btnPrev" aria-label="上一個">‹</button>
+    <button class="t-btn t-mark" id="btnKnown" aria-label="標記已會">✓ 已會</button>
+    <button class="t-btn t-auto" id="btnAuto" aria-label="自動播放">▶ 自動</button>
+    <button class="t-btn t-mark" id="btnReview" aria-label="標記待複習">★ 複習</button>
+    <button class="t-btn" id="btnNext" aria-label="下一個">›</button>
+  </footer>
+
+  <!-- ===== 自動播放浮條 ===== -->
+  <div class="autobar" id="autobar" hidden>
+    <span class="autobar-title">自動播放中</span>
+    <span class="autobar-now" id="autobarNow"></span>
+    <button class="autobar-stop" id="autobarStop">■ 停止</button>
+  </div>
+
+  <!-- ===== 單元面板 ===== -->
+  <div class="panel-scrim" id="scrim" hidden></div>
+
+  <aside class="panel panel-left" id="panelUnits" hidden aria-label="單元清單">
+    <div class="panel-head">
+      <h2>單元</h2>
+      <button class="icon-btn" data-close aria-label="關閉">✕</button>
+    </div>
+    <div class="panel-body">
+      <label class="book-select-row">單字本
+        <select id="bookSelect"></select>
+      </label>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-filter="all">全部</button>
+        <button class="chip" data-filter="review">待複習</button>
+        <button class="chip" data-filter="unknown">未標記</button>
+      </div>
+      <ul class="unit-list" id="unitList"></ul>
+    </div>
+  </aside>
+
+  <!-- ===== 搜尋面板 ===== -->
+  <aside class="panel panel-right" id="panelSearch" hidden aria-label="搜尋">
+    <div class="panel-head">
+      <h2>搜尋</h2>
+      <button class="icon-btn" data-close aria-label="關閉">✕</button>
+    </div>
+    <div class="panel-body">
+      <input type="search" id="searchInput" class="search-input" placeholder="輸入英文或中文…" autocomplete="off" />
+      <ul class="search-results" id="searchResults"></ul>
+    </div>
+  </aside>
+
+  <!-- ===== 設定面板 ===== -->
+  <aside class="panel panel-right" id="panelSettings" hidden aria-label="設定">
+    <div class="panel-head">
+      <h2>設定</h2>
+      <button class="icon-btn" data-close aria-label="關閉">✕</button>
+    </div>
+    <div class="panel-body">
+      <div class="set-group">
+        <div class="set-label">字級</div>
+        <div class="seg" id="fontSeg">
+          <button data-font="0.9">小</button>
+          <button data-font="1" class="active">標準</button>
+          <button data-font="1.15">大</button>
+          <button data-font="1.3">特大</button>
+        </div>
+      </div>
+
+      <div class="set-group">
+        <div class="set-label">語速</div>
+        <div class="seg" id="rateSeg">
+          <button data-rate="0.75">0.75x</button>
+          <button data-rate="1" class="active">1x</button>
+        </div>
+      </div>
+
+      <div class="set-group">
+        <label class="switch-row"><span>播放後自動翻面看例句</span>
+          <input type="checkbox" id="setFlip" checked /></label>
+        <label class="switch-row"><span>自動播放時朗讀中譯</span>
+          <input type="checkbox" id="setReadZh" /></label>
+        <label class="switch-row"><span>重複播放(單張循環)</span>
+          <input type="checkbox" id="setRepeat" /></label>
+      </div>
+
+      <div class="set-group">
+        <div class="set-label">自動播放間隔</div>
+        <div class="seg" id="gapSeg">
+          <button data-gap="0.4">緊湊</button>
+          <button data-gap="0.9" class="active">標準</button>
+          <button data-gap="1.6">寬鬆</button>
+        </div>
+      </div>
+
+      <div class="set-group">
+        <div class="set-label">離線下載</div>
+        <p class="hint-text">預設只快取 App 與文字。點單元的「下載」把該單元音檔與圖片存到裝置,離線可播、可看圖。</p>
+        <div class="storage-line" id="storageLine">已下載:計算中…</div>
+        <button class="wide-btn danger" id="btnClearAudio">清除所有已下載音檔/圖片</button>
+      </div>
+
+      <div class="set-group">
+        <div class="set-label">關於</div>
+        <p class="hint-text" id="installHint"></p>
+        <p class="hint-text">資料來源:高一上單字表。單字發音:真人錄音(Wikimedia Commons)或神經語音;例句:神經語音 (edge-tts)。圖片:Wikipedia / Wikimedia Commons(CC/公有領域),抽象字留白。</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 持久音訊元素:自動播放靠它串接播放清單 + MediaSession -->
+  <audio id="player" preload="auto" playsinline></audio>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

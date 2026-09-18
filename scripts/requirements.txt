@@ -1,0 +1,6 @@
+edge-tts>=6.1.0
+eng-to-ipa>=0.0.2
+requests>=2.28
+imageio-ffmpeg>=0.4.9
+python-docx>=0.8.11
+Pillow>=9.0

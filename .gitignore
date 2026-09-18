@@ -1,0 +1,15 @@
+# 建置暫存 / 快取
+scripts/cache/
+scripts/__pycache__/
+__pycache__/
+*.pyc
+
+# API KEY:嚴禁入庫(若日後改用需 KEY 的 TTS 引擎)
+.env
+*.key
+secrets.*
+
+# 系統
+.DS_Store
+Thumbs.db
+*.part

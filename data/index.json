@@ -1,0 +1,11 @@
+{
+  "books": [
+    {
+      "book": "G1-S1",
+      "name": "高一上",
+      "file": "data/G1-S1.json",
+      "count": 923,
+      "units": 34
+    }
+  ]
+}
