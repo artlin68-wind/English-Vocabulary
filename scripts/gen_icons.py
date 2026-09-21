@@ -11,9 +11,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "icons")
 os.makedirs(OUT, exist_ok=True)
 
-BG = (14, 18, 32)        # 深藍黑
-ACCENT = (109, 214, 168)  # 薄荷綠(與 App 主色一致)
-FG = (240, 244, 255)
+BG = (27, 28, 31)        # 中性深灰
+ACCENT = (255, 134, 54)  # 亮橘(與 App 主色一致)
+FG = (245, 245, 246)
 
 
 def find_font(size):
