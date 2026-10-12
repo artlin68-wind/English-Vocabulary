@@ -86,6 +86,11 @@ async function loadBook(bookCode) {
   state.book = data.meta;
   state.words = data.words;
   state.pageNotes = data.pageNotes || {};
+  // 每頁第一個字的 id(頁筆記只在該字顯示一次,避免同頁每張卡重複)
+  state.pageFirstId = {};
+  state.words.forEach((w) => {
+    if (state.pageFirstId[w.page] === undefined) state.pageFirstId[w.page] = w.id;
+  });
   state.progress = LS.get(keyProgress(bookCode), {});
   state.downloaded = LS.get(keyDl(bookCode), {});
   buildUnits();
@@ -145,11 +150,12 @@ function render() {
   if (!w) return;
 
   /* ---- 正面 ---- */
-  // 頁級補充(📝)
+  // 頁級補充(📝):只在該頁「第一個字」顯示一次,避免同頁每張卡重複
   const pn = state.pageNotes[String(w.page)];
   const pnEl = $('pageNote');
-  if (pn && pn.length) {
-    pnEl.innerHTML = pn.map((t) => `📝 ${esc(t)}`).join('<br>');
+  if (pn && pn.length && state.pageFirstId[w.page] === w.id) {
+    pnEl.innerHTML = `<span class="page-note-tag">本頁補充</span>` +
+      pn.map((t) => `📝 ${esc(t)}`).join('<br>');
     pnEl.hidden = false;
   } else { pnEl.hidden = true; pnEl.innerHTML = ''; }
 
@@ -168,7 +174,15 @@ function render() {
   toggleImg($('imgWord'), w.imageWord);
 
   /* ---- 背面 ---- */
-  $('glossText').textContent = w.gloss || '';
+  // 多詞性:gloss 以 ' / ' 分段,每個詞性分行顯示,詞性縮寫加強標示
+  const glossEl = $('glossText');
+  const segs = (w.gloss || '').split(' / ').filter((s) => s.trim());
+  glossEl.innerHTML = segs.map((seg) => {
+    const m = seg.trim().match(/^([A-Za-z]+\.)\s*(.*)$/);
+    return m
+      ? `<span class="gloss-line"><span class="gloss-pos">${esc(m[1])}</span>${esc(m[2])}</span>`
+      : `<span class="gloss-line">${esc(seg.trim())}</span>`;
+  }).join('');
   const vf = $('verbForms');
   if (w.verbForms) { vf.textContent = `動詞三態:${w.verbForms}`; vf.hidden = false; }
   else { vf.hidden = true; }

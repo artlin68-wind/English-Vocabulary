@@ -90,6 +90,11 @@ img{max-width:100%;}
   background:var(--bg2); border:1px solid var(--line); border-radius:12px;
   color:var(--review); font-size:calc(13px*var(--fs)); line-height:1.5; text-align:left;
 }
+.page-note-tag{
+  display:inline-block; margin-right:8px; padding:1px 8px; border-radius:999px;
+  background:rgba(242,192,75,.15); border:1px solid var(--review);
+  color:var(--review); font-size:calc(11px*var(--fs)); font-weight:700; vertical-align:middle;
+}
 .pos-row{display:flex; gap:6px; flex-wrap:wrap; justify-content:center; min-height:22px;}
 .pos-tag{
   font-size:calc(13px*var(--fs)); color:var(--accent);
@@ -121,6 +126,12 @@ img{max-width:100%;}
   padding:2px 2px 4px;
 }
 .gloss{font-size:calc(21px*var(--fs)); font-weight:700; line-height:1.45; color:var(--fg);}
+.gloss-line{display:block;}
+.gloss-line + .gloss-line{margin-top:4px;}
+.gloss-pos{
+  display:inline-block; min-width:2.6em; margin-right:6px;
+  color:var(--accent); font-weight:800;
+}
 .verb-forms{
   align-self:flex-start; font-size:calc(14px*var(--fs)); color:var(--accent);
   border:1px solid var(--accent2); background:rgba(255,134,54,.09);
