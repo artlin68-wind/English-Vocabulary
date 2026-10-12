@@ -1,0 +1,1795 @@
+{
+  "meta": {
+    "book": "G1-S1-SUP",
+    "name": "高一上 補充（詞類變化＋片語）",
+    "description": "補充版：68 個詞類變化單字 + 20 個片語（Lesson 1–3）",
+    "wordCount": 68,
+    "phraseCount": 20,
+    "source": "英文單字與片語整理.pdf",
+    "note": "本補充版無音標與例句中譯；audio 欄位待建置管線產生；exampleZh 可日後補中譯。"
+  },
+  "units": [
+    "詞類變化補充",
+    "片語 Lesson 1：Firsts in Life",
+    "片語 Lesson 2：Goodbye, John",
+    "片語 Lesson 3：Do Animals Sleep like You and Me?"
+  ],
+  "words": [
+    {
+      "id": "G1-S1-SUP-W001",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "accidentally",
+      "pos": "副詞",
+      "meaning": "意外地；不小心地",
+      "derivatives": [
+        {
+          "form": "accident",
+          "detail": "名詞: 意外；事故"
+        },
+        {
+          "form": "accidental",
+          "detail": "形容詞: 意外的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W002",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "afterward",
+      "pos": "副詞",
+      "meaning": "以後；後來",
+      "derivatives": [
+        {
+          "form": "afterwards",
+          "detail": "副詞: 同 afterward，英式常用"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W003",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "amaze",
+      "pos": "動詞",
+      "meaning": "使人驚奇",
+      "derivatives": [
+        {
+          "form": "amazing",
+          "detail": "形容詞: 令人大感驚奇的"
+        },
+        {
+          "form": "amazement",
+          "detail": "名詞: 驚奇"
+        },
+        {
+          "form": "amazed",
+          "detail": "形容詞: 感到驚奇的"
+        },
+        {
+          "form": "amazingly",
+          "detail": "副詞: 驚人地"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W004",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "astonish",
+      "pos": "動詞",
+      "meaning": "使驚訝",
+      "derivatives": [
+        {
+          "form": "astonished",
+          "detail": "形容詞: 感到驚訝的"
+        },
+        {
+          "form": "astonishing",
+          "detail": "形容詞: 令人驚訝的"
+        },
+        {
+          "form": "astonishment",
+          "detail": "名詞: 驚訝"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W005",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "attention",
+      "pos": "名詞",
+      "meaning": "注意力",
+      "derivatives": [
+        {
+          "form": "attend",
+          "detail": "動詞: 注意；出席"
+        },
+        {
+          "form": "attentive",
+          "detail": "形容詞: 專心的；體貼的"
+        },
+        {
+          "form": "attentively",
+          "detail": "副詞: 專心地"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W006",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "average",
+      "pos": "形容詞/名詞",
+      "meaning": "平均的、一般的；平均、平均數",
+      "derivatives": [
+        {
+          "form": "average",
+          "detail": "動詞: 平均為……"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W007",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "avoid",
+      "pos": "動詞",
+      "meaning": "避免",
+      "derivatives": [
+        {
+          "form": "avoidance",
+          "detail": "名詞: 避免"
+        },
+        {
+          "form": "avoidable",
+          "detail": "形容詞: 可避免的"
+        },
+        {
+          "form": "unavoidable",
+          "detail": "形容詞: 無法避免的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W008",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "awake",
+      "pos": "形容詞/動詞",
+      "meaning": "醒著的；醒來、喚醒",
+      "derivatives": [
+        {
+          "form": "awaken",
+          "detail": "動詞: 喚醒；覺醒"
+        },
+        {
+          "form": "awakening",
+          "detail": "名詞: 覺醒"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W009",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "breathe",
+      "pos": "動詞",
+      "meaning": "呼吸",
+      "derivatives": [
+        {
+          "form": "breath",
+          "detail": "名詞: 呼吸的氣息"
+        },
+        {
+          "form": "breathing",
+          "detail": "名詞: 呼吸"
+        },
+        {
+          "form": "breathless",
+          "detail": "形容詞: 喘不過氣的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W010",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "communicate",
+      "pos": "動詞",
+      "meaning": "溝通",
+      "derivatives": [
+        {
+          "form": "communication",
+          "detail": "名詞: 溝通"
+        },
+        {
+          "form": "communicative",
+          "detail": "形容詞: 樂於溝通的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W011",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "connect",
+      "pos": "動詞",
+      "meaning": "與他人建立良好關係；連接",
+      "derivatives": [
+        {
+          "form": "connection",
+          "detail": "名詞: 關聯；關係"
+        },
+        {
+          "form": "connected",
+          "detail": "形容詞: 連接的；有關聯的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W012",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "creature",
+      "pos": "名詞",
+      "meaning": "生物",
+      "derivatives": [
+        {
+          "form": "create",
+          "detail": "動詞: 創造"
+        },
+        {
+          "form": "creation",
+          "detail": "名詞: 創造；創作物"
+        },
+        {
+          "form": "creative",
+          "detail": "形容詞: 有創意的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W013",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "culture",
+      "pos": "名詞",
+      "meaning": "文化",
+      "derivatives": [
+        {
+          "form": "cultural",
+          "detail": "形容詞: 文化的"
+        },
+        {
+          "form": "culturally",
+          "detail": "副詞: 文化上"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W014",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "custom",
+      "pos": "名詞",
+      "meaning": "習俗",
+      "derivatives": [
+        {
+          "form": "customary",
+          "detail": "形容詞: 習慣的；慣例的"
+        },
+        {
+          "form": "customs",
+          "detail": "名詞: 海關"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W015",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "daily",
+      "pos": "形容詞",
+      "meaning": "日常的",
+      "derivatives": [
+        {
+          "form": "daily",
+          "detail": "副詞: 每天"
+        },
+        {
+          "form": "daily",
+          "detail": "名詞: 日報"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W016",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "deny",
+      "pos": "動詞",
+      "meaning": "否認",
+      "derivatives": [
+        {
+          "form": "denial",
+          "detail": "名詞: 否認"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W017",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "depress",
+      "pos": "動詞",
+      "meaning": "使沮喪；使消沉",
+      "derivatives": [
+        {
+          "form": "depressed",
+          "detail": "形容詞: 沮喪的"
+        },
+        {
+          "form": "depression",
+          "detail": "名詞: 沮喪；消沉時期"
+        },
+        {
+          "form": "depressing",
+          "detail": "形容詞: 令人沮喪的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W018",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "difference",
+      "pos": "名詞",
+      "meaning": "差異；不同之處",
+      "derivatives": [
+        {
+          "form": "differ",
+          "detail": "動詞: 不同"
+        },
+        {
+          "form": "different",
+          "detail": "形容詞: 不同的"
+        },
+        {
+          "form": "differently",
+          "detail": "副詞: 不同地"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W019",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "disappear",
+      "pos": "動詞",
+      "meaning": "消失",
+      "derivatives": [
+        {
+          "form": "disappearance",
+          "detail": "名詞: 消失"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W020",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "disappoint",
+      "pos": "動詞",
+      "meaning": "使……失望",
+      "derivatives": [
+        {
+          "form": "disappointed",
+          "detail": "形容詞: 感到失望的"
+        },
+        {
+          "form": "disappointment",
+          "detail": "名詞: 失望"
+        },
+        {
+          "form": "disappointing",
+          "detail": "形容詞: 令人失望的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W021",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "distance",
+      "pos": "名詞",
+      "meaning": "距離",
+      "derivatives": [
+        {
+          "form": "distant",
+          "detail": "形容詞: 遙遠的"
+        },
+        {
+          "form": "distance",
+          "detail": "動詞: 與……保持距離"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W022",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "embarrass",
+      "pos": "動詞",
+      "meaning": "使尷尬；使難堪",
+      "derivatives": [
+        {
+          "form": "embarrassed",
+          "detail": "形容詞: 感到尷尬的"
+        },
+        {
+          "form": "embarrassing",
+          "detail": "形容詞: 令人尷尬的"
+        },
+        {
+          "form": "embarrassment",
+          "detail": "名詞: 尷尬"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W023",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "embrace",
+      "pos": "動詞",
+      "meaning": "欣然接受",
+      "derivatives": [
+        {
+          "form": "embrace",
+          "detail": "動詞: 擁抱"
+        },
+        {
+          "form": "embrace",
+          "detail": "名詞: 擁抱"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W024",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "expert",
+      "pos": "名詞",
+      "meaning": "專家；行家",
+      "derivatives": [
+        {
+          "form": "expert",
+          "detail": "形容詞: 熟練的；專業的"
+        },
+        {
+          "form": "expertise",
+          "detail": "名詞: 專業知識"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W025",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "failure",
+      "pos": "名詞",
+      "meaning": "失敗",
+      "derivatives": [
+        {
+          "form": "fail",
+          "detail": "動詞: 失敗"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W026",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "flight",
+      "pos": "名詞",
+      "meaning": "飛行；航班",
+      "derivatives": [
+        {
+          "form": "fly",
+          "detail": "動詞: 飛行"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W027",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "float",
+      "pos": "動詞",
+      "meaning": "漂浮；飄動",
+      "derivatives": [
+        {
+          "form": "floating",
+          "detail": "形容詞: 漂浮的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W028",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "focus",
+      "pos": "動詞/名詞",
+      "meaning": "專注、專心；關注的人或事物",
+      "derivatives": [
+        {
+          "form": "focused",
+          "detail": "形容詞: 專注的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W029",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "forever",
+      "pos": "副詞",
+      "meaning": "永遠；永久地",
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W030",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "fortunate",
+      "pos": "形容詞",
+      "meaning": "幸運的",
+      "derivatives": [
+        {
+          "form": "fortunately",
+          "detail": "副詞: 幸運地"
+        },
+        {
+          "form": "fortune",
+          "detail": "名詞: 財富；運氣"
+        },
+        {
+          "form": "unfortunate",
+          "detail": "形容詞: 不幸的"
+        },
+        {
+          "form": "unfortunately",
+          "detail": "副詞: 不幸地"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W031",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "grab",
+      "pos": "動詞",
+      "meaning": "抓住",
+      "derivatives": [
+        {
+          "form": "grab",
+          "detail": "名詞: 抓取"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W032",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "greeting",
+      "pos": "名詞",
+      "meaning": "招呼；迎接",
+      "derivatives": [
+        {
+          "form": "greet",
+          "detail": "動詞: 打招呼；迎接"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W033",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "ignore",
+      "pos": "動詞",
+      "meaning": "忽略",
+      "derivatives": [
+        {
+          "form": "ignorance",
+          "detail": "名詞: 無知"
+        },
+        {
+          "form": "ignorant",
+          "detail": "形容詞: 無知的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W034",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "impress",
+      "pos": "動詞",
+      "meaning": "使人留下深刻印象",
+      "derivatives": [
+        {
+          "form": "impressive",
+          "detail": "形容詞: 令人印象深刻的"
+        },
+        {
+          "form": "impression",
+          "detail": "名詞: 印象"
+        },
+        {
+          "form": "impressed",
+          "detail": "形容詞: 印象深刻的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W035",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "include",
+      "pos": "動詞",
+      "meaning": "包括",
+      "derivatives": [
+        {
+          "form": "including",
+          "detail": "介系詞: 包括"
+        },
+        {
+          "form": "inclusion",
+          "detail": "名詞: 包含"
+        },
+        {
+          "form": "inclusive",
+          "detail": "形容詞: 包含的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W036",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "inspire",
+      "pos": "動詞",
+      "meaning": "激勵；激發靈感",
+      "derivatives": [
+        {
+          "form": "inspiration",
+          "detail": "名詞: 靈感"
+        },
+        {
+          "form": "inspiring",
+          "detail": "形容詞: 激勵人心的"
+        },
+        {
+          "form": "inspired",
+          "detail": "形容詞: 受到啟發的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W037",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "introduce",
+      "pos": "動詞",
+      "meaning": "使某人初次體驗；介紹",
+      "derivatives": [
+        {
+          "form": "introduction",
+          "detail": "名詞: 介紹"
+        },
+        {
+          "form": "introductory",
+          "detail": "形容詞: 介紹的；入門的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W038",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "journey",
+      "pos": "名詞",
+      "meaning": "旅行",
+      "derivatives": [
+        {
+          "form": "journey",
+          "detail": "動詞: 旅行"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W039",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "memorize",
+      "pos": "動詞",
+      "meaning": "記憶；記住",
+      "derivatives": [
+        {
+          "form": "memorable",
+          "detail": "形容詞: 難忘的"
+        },
+        {
+          "form": "memory",
+          "detail": "名詞: 回憶、記憶、記性"
+        },
+        {
+          "form": "memorial",
+          "detail": "名詞: 紀念碑；形容詞: 紀念的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W040",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "message",
+      "pos": "名詞",
+      "meaning": "訊息",
+      "derivatives": [
+        {
+          "form": "messenger",
+          "detail": "名詞: 信差；傳訊者"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W041",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "nap",
+      "pos": "動詞/名詞",
+      "meaning": "小睡",
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W042",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "perfect",
+      "pos": "形容詞",
+      "meaning": "完美的",
+      "derivatives": [
+        {
+          "form": "perfect",
+          "detail": "動詞: 使完美"
+        },
+        {
+          "form": "perfectly",
+          "detail": "副詞: 完美地"
+        },
+        {
+          "form": "perfection",
+          "detail": "名詞: 完美"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W043",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "personally",
+      "pos": "副詞",
+      "meaning": "針對某人地",
+      "derivatives": [
+        {
+          "form": "personal",
+          "detail": "形容詞: 個人的"
+        },
+        {
+          "form": "person",
+          "detail": "名詞: 人"
+        },
+        {
+          "form": "personality",
+          "detail": "名詞: 個性"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W044",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "present",
+      "pos": "動詞",
+      "meaning": "提交；授予、贈送",
+      "derivatives": [
+        {
+          "form": "presentation",
+          "detail": "名詞: 報告；介紹"
+        },
+        {
+          "form": "present",
+          "detail": "名詞: 禮物；現在"
+        },
+        {
+          "form": "present",
+          "detail": "形容詞: 出席的；現在的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W045",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "realize",
+      "pos": "動詞",
+      "meaning": "了解；領悟；實現",
+      "derivatives": [
+        {
+          "form": "realization",
+          "detail": "名詞: 領悟；實現"
+        },
+        {
+          "form": "real",
+          "detail": "形容詞: 真實的"
+        },
+        {
+          "form": "reality",
+          "detail": "名詞: 現實"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W046",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "recall",
+      "pos": "動詞",
+      "meaning": "記起；回想起",
+      "derivatives": [
+        {
+          "form": "recall",
+          "detail": "名詞: 回憶；召回"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W047",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "reflect",
+      "pos": "動詞",
+      "meaning": "認真思考、沉思；映出(影像等)",
+      "derivatives": [
+        {
+          "form": "reflection",
+          "detail": "名詞: 映出的影像"
+        },
+        {
+          "form": "reflective",
+          "detail": "形容詞: 沉思的；反光的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W048",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "refresh",
+      "pos": "動詞",
+      "meaning": "刷新；使某人恢復精神",
+      "derivatives": [
+        {
+          "form": "refreshing",
+          "detail": "形容詞: 提神的；令人耳目一新 的"
+        },
+        {
+          "form": "refreshed",
+          "detail": "形容詞: 恢復精神的"
+        },
+        {
+          "form": "refreshment",
+          "detail": "名詞: 茶點；恢復精神"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W049",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "relate",
+      "pos": "動詞",
+      "meaning": "使兩者有聯繫",
+      "derivatives": [
+        {
+          "form": "relation",
+          "detail": "名詞: 關係"
+        },
+        {
+          "form": "relationship",
+          "detail": "名詞: 戀愛關係、關係"
+        },
+        {
+          "form": "related",
+          "detail": "形容詞: 相關的"
+        },
+        {
+          "form": "relative",
+          "detail": "名詞: 親戚；形容詞: 相對的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W050",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "remind",
+      "pos": "動詞",
+      "meaning": "提醒；使想起",
+      "derivatives": [
+        {
+          "form": "reminder",
+          "detail": "名詞: 提醒物"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W051",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "reply",
+      "pos": "動詞/名詞",
+      "meaning": "回答；回覆",
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W052",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "respond",
+      "pos": "動詞",
+      "meaning": "回應",
+      "derivatives": [
+        {
+          "form": "response",
+          "detail": "名詞: 回應"
+        },
+        {
+          "form": "responsive",
+          "detail": "形容詞: 反應快的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W053",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "romance",
+      "pos": "名詞",
+      "meaning": "浪漫愛情故事",
+      "derivatives": [
+        {
+          "form": "romantic",
+          "detail": "形容詞: 浪漫的；愛情的"
+        },
+        {
+          "form": "romantically",
+          "detail": "副詞: 浪漫地"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W054",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "ruin",
+      "pos": "動詞/名詞",
+      "meaning": "破壞；毀壞",
+      "derivatives": [
+        {
+          "form": "ruins",
+          "detail": "名詞: 廢墟；遺跡"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W055",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "sacred",
+      "pos": "形容詞",
+      "meaning": "神聖的",
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W056",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "satisfy",
+      "pos": "動詞",
+      "meaning": "使……滿意",
+      "derivatives": [
+        {
+          "form": "satisfying",
+          "detail": "形容詞: 令人滿意的"
+        },
+        {
+          "form": "satisfaction",
+          "detail": "名詞: 滿意"
+        },
+        {
+          "form": "satisfied",
+          "detail": "形容詞: 感到滿意的"
+        },
+        {
+          "form": "satisfactory",
+          "detail": "形容詞: 符合要求的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W057",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "schedule",
+      "pos": "名詞",
+      "meaning": "行程",
+      "derivatives": [
+        {
+          "form": "schedule",
+          "detail": "動詞: 安排；預定"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W058",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "skip",
+      "pos": "動詞",
+      "meaning": "故意不參加；略過、跳過",
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W059",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "surface",
+      "pos": "名詞",
+      "meaning": "表面",
+      "derivatives": [
+        {
+          "form": "surface",
+          "detail": "動詞: 浮出水面；顯露"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W060",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "survive",
+      "pos": "動詞",
+      "meaning": "生存；倖存",
+      "derivatives": [
+        {
+          "form": "survival",
+          "detail": "名詞: 生存；倖存"
+        },
+        {
+          "form": "survivor",
+          "detail": "名詞: 倖存者"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W061",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "therefore",
+      "pos": "副詞",
+      "meaning": "因此",
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W062",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "throughout",
+      "pos": "介系詞",
+      "meaning": "自始至終",
+      "derivatives": [
+        {
+          "form": "throughout",
+          "detail": "副詞: 從頭到尾；到處"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W063",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "tradition",
+      "pos": "名詞",
+      "meaning": "傳統",
+      "derivatives": [
+        {
+          "form": "traditional",
+          "detail": "形容詞: 傳統的"
+        },
+        {
+          "form": "traditionally",
+          "detail": "副詞: 傳統上"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W064",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "upset",
+      "pos": "動詞/形容詞",
+      "meaning": "使難過、使沮喪；難過的、沮喪",
+      "derivatives": [
+        {
+          "form": "upset",
+          "detail": "名詞: 苦惱；腸胃不適"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W065",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "valuable",
+      "pos": "形容詞",
+      "meaning": "寶貴的",
+      "derivatives": [
+        {
+          "form": "value",
+          "detail": "名詞: 價值；動詞: 重視"
+        },
+        {
+          "form": "valuables",
+          "detail": "名詞: 貴重物品"
+        },
+        {
+          "form": "invaluable",
+          "detail": "形容詞: 無價的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W066",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "vary",
+      "pos": "動詞",
+      "meaning": "有所不同",
+      "derivatives": [
+        {
+          "form": "various",
+          "detail": "形容詞: 各式各樣的"
+        },
+        {
+          "form": "variety",
+          "detail": "名詞: 多種樣式、變化"
+        },
+        {
+          "form": "variation",
+          "detail": "名詞: 變化"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W067",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "wonder",
+      "pos": "動詞",
+      "meaning": "想知道",
+      "derivatives": [
+        {
+          "form": "wonder",
+          "detail": "名詞: 驚奇"
+        },
+        {
+          "form": "wonderful",
+          "detail": "形容詞: 極好的"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    },
+    {
+      "id": "G1-S1-SUP-W068",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "詞類變化補充",
+      "word": "yell",
+      "pos": "動詞",
+      "meaning": "大喊；大吼",
+      "derivatives": [
+        {
+          "form": "yell",
+          "detail": "名詞: 大喊"
+        }
+      ],
+      "ipa": null,
+      "audioWord": null,
+      "imageWord": null
+    }
+  ],
+  "phrases": [
+    {
+      "id": "G1-S1-SUP-P001",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "the rest (of)",
+      "meaning": "其餘（的……）",
+      "definition": "the remaining part of something or the others in a group",
+      "example": "Daryl took a few bites of the cake and then gave the rest of it to his little sister.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P002",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "in person",
+      "meaning": "親自",
+      "definition": "being physically present somewhere",
+      "example": "Deborah decided to visit the museum in person to see the paintings instead of looking at them online.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P003",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "take...seriously",
+      "meaning": "認真看待……",
+      "definition": "to consider someone or something to be important and worthy of attention",
+      "example": "Archie loves making fun of people, so don't take his words seriously.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P004",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "let...down",
+      "meaning": "讓……失望",
+      "definition": "to fail to meet someone's expectations or keep a promise that you made",
+      "example": "Roy promised his daughter that he would attend her school play, and he didn't let her down.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P005",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "make sure",
+      "meaning": "確保；確定",
+      "definition": "to check something and be certain about it",
+      "example": "Please make sure that you don't go over the speed limit when you are driving.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P006",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "put...first",
+      "meaning": "認為……最重要",
+      "definition": "to regard someone or something as the most important thing",
+      "example": "Most parents put their children's needs first and want them to be happy and healthy.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P007",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 1,
+      "lessonTitle": "Firsts in Life",
+      "unit": "片語 Lesson 1：Firsts in Life",
+      "phrase": "dress up",
+      "meaning": "裝扮",
+      "definition": "to wear a special costume or special clothes, usually for a special occasion",
+      "example": "Every Halloween, the young cousins dress up as their favorite cartoon characters.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P008",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "in fact",
+      "meaning": "事實上",
+      "definition": "used to emphasize that something is true",
+      "example": "December is not cold in Australia. In fact, it's the middle of summer.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P009",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "go through",
+      "meaning": "徹底看過",
+      "definition": "to search through or look at several things one by one",
+      "example": "Bill is going through the list of winners to see if he is one of them.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P010",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "in case",
+      "meaning": "以防萬一",
+      "definition": "done with knowledge of the possibility that something might have happened or will happen",
+      "example": "Each of the hikers brought an umbrella and a raincoat in case it rained.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P011",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "in addition",
+      "meaning": "除此之外",
+      "definition": "also",
+      "example": "Please remember to bring a snack to the party. In addition, you should bring a gift for the birthday boy.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P012",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "hang out （",
+      "meaning": "與某人）一起出去、廝混",
+      "definition": "to spend time together in a fun or casual way",
+      "example": "Alice and her friends always hang out in a café after school on Fridays.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P013",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "turn to",
+      "meaning": "轉向（某人）；求助於（某人）",
+      "definition": "to go to or rely on someone or something for some purpose",
+      "example": "Tracy always turns to her older sister Ivy when she has a problem with one of her friends.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P014",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 2,
+      "lessonTitle": "Goodbye, John",
+      "unit": "片語 Lesson 2：Goodbye, John",
+      "phrase": "take...personally",
+      "meaning": "認為……是針對個人；對……感到不悅",
+      "definition": "to be offended by something",
+      "example": "Please don't take this personally, but I don't like your shirt. You look better in darker colors.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P015",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 3,
+      "lessonTitle": "Do Animals Sleep like You and Me?",
+      "unit": "片語 Lesson 3：Do Animals Sleep like You and Me?",
+      "phrase": "hold on to",
+      "meaning": "緊緊抓住",
+      "definition": "to grab hold of something",
+      "example": "It is a good idea to hold on to one of the poles while you are standing on a moving bus.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P016",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 3,
+      "lessonTitle": "Do Animals Sleep like You and Me?",
+      "unit": "片語 Lesson 3：Do Animals Sleep like You and Me?",
+      "phrase": "look out for",
+      "meaning": "當心……出現",
+      "definition": "to be aware that something exists and that you may see or run into it",
+      "example": "Make sure to look out for bees when you go hiking in the forest.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P017",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 3,
+      "lessonTitle": "Do Animals Sleep like You and Me?",
+      "unit": "片語 Lesson 3：Do Animals Sleep like You and Me?",
+      "phrase": "be on the lookout for",
+      "meaning": "保持警戒；當心……出現",
+      "definition": "to watch carefully for something so you can stay out of danger",
+      "example": "Be on the lookout for falling rocks when you drive through the mountains after a rainstorm.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P018",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 3,
+      "lessonTitle": "Do Animals Sleep like You and Me?",
+      "unit": "片語 Lesson 3：Do Animals Sleep like You and Me?",
+      "phrase": "for example",
+      "meaning": "舉例來說",
+      "definition": "used to demonstrate or provide an instance of something that was just said",
+      "example": "Katie has a really good memory. For example, she can memorize a short passage after she reads it once.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P019",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 3,
+      "lessonTitle": "Do Animals Sleep like You and Me?",
+      "unit": "片語 Lesson 3：Do Animals Sleep like You and Me?",
+      "phrase": "according to",
+      "meaning": "根據",
+      "definition": "as stated by someone or something",
+      "example": "According to this news report, the whole village was ruined by the earthquake.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    },
+    {
+      "id": "G1-S1-SUP-P020",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 3,
+      "lessonTitle": "Do Animals Sleep like You and Me?",
+      "unit": "片語 Lesson 3：Do Animals Sleep like You and Me?",
+      "phrase": "up to",
+      "meaning": "高達",
+      "definition": "as many or as much as",
+      "example": "Amazingly, some swimmers can hold their breath for up to twenty minutes.",
+      "exampleZh": null,
+      "audioPhrase": null,
+      "audioExample": null
+    }
+  ]
+}

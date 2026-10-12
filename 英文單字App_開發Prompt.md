@@ -17,7 +17,8 @@
 4. 新增欄位:`gloss`(含多詞性中文解釋)、`pos`(詞性陣列)、`verbForms`(動詞三態,如 `beat-beat-beaten`)、`notes`(單字層 📝 筆記)、`pageNotes`(頁級 📝 補充)。UI 要呈現這些。
 5. **分組單位改為「頁」**(第 1–72 頁,共 72 頁),取代舊版的 Page 區塊。單元篩選改用頁。
 6. **音檔改為逐例句產生**:`examples[i].audio`(例句)+ `audioWord`(單字);圖片同理 `examples[i].image` + `imageWord`。
-7. **資料已解析完成並隨附**(見 §2、§3),Claude Code **不需再解析原始 md**,直接用 `data/G1-S1.json`;只需補音檔/圖片欄位。
+7. **資料已解析完成並隨附**(見 §2、§3),Claude Code **不需再解析原始 md/pdf**,直接用 `data/*.json`;只需補音檔/圖片欄位。
+8. **新增一本「補充版」`G1-S1-SUP`**(詞類變化 68 字 + 片語 20 條),已隨附 `data/G1-S1-SUP.json`,並登錄於 `data/index.json`。此本卡片結構與主本不同,見 §2B。App 要支援此第二種內容類型。
 > 若從零開始,忽略「更新」字樣,直接依全文實作即可。
 
 ## 1. 產品目標
@@ -74,6 +75,30 @@
 - **建置可增量:** 已存在的音檔/圖片**跳過不重產**(斷點續跑)。
 - **App 端:** 提供「選擇單字本」入口,再進頁篩選;進度、離線下載以 book + 頁為單位管理。
 
+## 2B. 補充版單字本（`G1-S1-SUP`，已隨附）
+補充版與主本結構不同,是獨立一本(透過 §2A 的 manifest 掛入),含**兩種內容(`kind`)**,各自有單元:
+- `kind: "word"`(詞類變化,68 字,單元「詞類變化補充」):
+```json
+{ "id":"G1-S1-SUP-W003","book":"G1-S1-SUP","kind":"word","unit":"詞類變化補充",
+  "word":"amaze","pos":"動詞","meaning":"使人驚奇",
+  "derivatives":[ {"form":"amazing","detail":"形容詞: 令人大感驚奇的"},
+                  {"form":"amazement","detail":"名詞: 驚奇"} ],
+  "ipa":null,"audioWord":null,"imageWord":null }
+```
+- `kind: "phrase"`(片語,20 條,單元依 Lesson:「片語 Lesson 1：Firsts in Life」等):
+```json
+{ "id":"G1-S1-SUP-P001","book":"G1-S1-SUP","kind":"phrase","lesson":1,
+  "lessonTitle":"Firsts in Life","unit":"片語 Lesson 1：Firsts in Life",
+  "phrase":"the rest (of)","meaning":"其餘（的……）",
+  "definition":"the remaining part of something or the others in a group",
+  "example":"Daryl took a few bites of the cake and then gave the rest of it to his little sister.",
+  "exampleZh":null,"audioPhrase":null,"audioExample":null }
+```
+- 檔案頂層:`meta`(wordCount 68 / phraseCount 20)、`units`(4 個單元字串陣列)、`words`、`phrases` 兩陣列。
+- **此本無音標、無例句中譯。** `exampleZh` 預留 null,可日後補中譯(要的話建置時用翻譯 API,一樣只在建置時)。
+- 發音:`word` 的單字、各 `derivatives[].form`、`phrase` 本身、`phrase` 的 `example` 都可做發音檔(真人錄音優先用於單字/衍生字;片語與例句用 §5 的神經語音)。
+- App 要支援選到此本時以對應卡片呈現(見 §7 補充版卡片)。
+
 ## 3. 建置管線
 - **md → json 已完成**(隨附 `data/G1-S1.json`),Claude Code 不需重做解析。若日後要重跑,管線需還原本版欄位(ipa/gloss/pos/verbForms/examples[]/notes/pageNotes)。
 - 仍需建置產出:**音檔(§5)**、(Phase 2)**圖片(§6)**,把路徑寫回對應欄位(`audioWord`、`examples[i].audio`、`imageWord`、`examples[i].image`)。
@@ -114,6 +139,11 @@
 - 正面:`word`(大字)、`ipaRaw` 音標、`pos` 詞性、單字發音鈕。
 - 背面/展開:`gloss`(多詞性中文解釋)、**`examples` 逐句**(英文 + 中譯 + 各自發音鈕)、`verbForms`(有才顯示,標成動詞三態)、`notes`(📝 單字筆記)。
 - 頁級補充:進入某頁時顯示該頁 `pageNotes`(📝)。
+
+**補充版卡片(`G1-S1-SUP`,§2B)**
+- `kind:"word"`:顯示 `word`(大字)+ 單字發音鈕、`pos`、`meaning`,並列出 `derivatives`(每項 `form` + `detail`,`form` 可點擊發音)。無音標/例句。
+- `kind:"phrase"`:顯示 `phrase`(大字)+ 發音鈕、`meaning`(中文)、`definition`(英文定義)、`example`(例句,可發音);`exampleZh` 有才顯示。
+- 補充版以「單字本選擇 → 單元(詞類變化補充 / 片語 Lesson 1–3)」進入,與主本並列。
 
 **畫面與模式**
 - 卡片式瀏覽:一次一字,點擊翻面/展開看解釋與例句。
@@ -171,6 +201,7 @@
 - [ ] iPhone 直式字體夠大、單手可操作、可左右滑動切換。
 - [ ] 加入主畫面後、開飛航模式仍可瀏覽並播放已快取音檔;鎖屏可自動連續朗讀。
 - [ ] 以 HTTPS(GitHub Pages)部署,iOS Safari 可加入主畫面。
+- [ ] 補充版 `G1-S1-SUP` 可正常載入:68 詞類變化字(含衍生詞)+ 20 片語(依 Lesson 1–3 分單元),卡片依 `kind` 正確呈現。
 - [ ] 新增一本單字本只需加 `data/<book>.json` 並在 `data/index.json` 加一列,不改 App 程式。
 - [ ] README 可讓人補音檔/圖片並部署。
 

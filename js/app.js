@@ -84,12 +84,15 @@ async function loadBook(bookCode) {
   const entry = state.manifest.books.find((b) => b.book === bookCode) || state.manifest.books[0];
   const data = await fetchJSON(entry.file);
   state.book = data.meta;
-  state.words = data.words;
-  state.pageNotes = data.pageNotes || {};
+  // 補充本:words + phrases 合併成單一瀏覽陣列(各自帶 kind);主本維持 words
+  const isSup = entry.type === 'supplement' || Array.isArray(data.phrases);
+  state.bookType = isSup ? 'supplement' : 'vocab';
+  state.words = isSup ? [...(data.words || []), ...(data.phrases || [])] : data.words;
+  state.pageNotes = isSup ? {} : (data.pageNotes || {});
   // 每頁第一個字的 id(頁筆記只在該字顯示一次,避免同頁每張卡重複)
   state.pageFirstId = {};
   state.words.forEach((w) => {
-    if (state.pageFirstId[w.page] === undefined) state.pageFirstId[w.page] = w.id;
+    if (w.page != null && state.pageFirstId[w.page] === undefined) state.pageFirstId[w.page] = w.id;
   });
   state.progress = LS.get(keyProgress(bookCode), {});
   state.downloaded = LS.get(keyDl(bookCode), {});
@@ -98,6 +101,7 @@ async function loadBook(bookCode) {
   rebuildView();
   state.pos = clamp(LS.get(keyPos(bookCode), 0), 0, state.view.length - 1);
   $('bookName').textContent = state.book.name || bookCode;
+  const sel = $('bookSelect'); if (sel) sel.value = bookCode;
   renderUnitList();
   render();
   updateStorageLine();
@@ -129,7 +133,8 @@ function rebuildView() {
 
 function updateUnitName() {
   const parts = [];
-  parts.push(state.filter.unit ? state.filter.unit : '全部頁');
+  const allLabel = state.bookType === 'supplement' ? '全部單元' : '全部頁';
+  parts.push(state.filter.unit ? state.filter.unit : allLabel);
   if (state.filter.status === 'review') parts.push('待複習');
   else if (state.filter.status === 'unknown') parts.push('未標記');
   $('unitName').textContent = parts.join(' · ');
@@ -149,49 +154,10 @@ function render() {
   const w = current();
   if (!w) return;
 
-  /* ---- 正面 ---- */
-  // 頁級補充(📝):只在該頁「第一個字」顯示一次,避免同頁每張卡重複
-  const pn = state.pageNotes[String(w.page)];
-  const pnEl = $('pageNote');
-  if (pn && pn.length && state.pageFirstId[w.page] === w.id) {
-    pnEl.innerHTML = `<span class="page-note-tag">本頁補充</span>` +
-      pn.map((t) => `📝 ${esc(t)}`).join('<br>');
-    pnEl.hidden = false;
-  } else { pnEl.hidden = true; pnEl.innerHTML = ''; }
-
-  const posRow = $('posRow');
-  posRow.innerHTML = '';
-  (w.pos || []).forEach((p) => {
-    const s = document.createElement('span');
-    s.className = 'pos-tag'; s.textContent = p; posRow.appendChild(s);
-  });
-  $('wordText').textContent = w.word;
-  const ipa = $('ipaText');
-  const ipaStr = w.ipaRaw || (w.ipa ? `/${w.ipa}/` : '');
-  if (ipaStr) { ipa.textContent = ipaStr; ipa.hidden = false; }
-  else { ipa.hidden = true; }
-  $('playWordBtn').hidden = false;
-  toggleImg($('imgWord'), w.imageWord);
-
-  /* ---- 背面 ---- */
-  // 多詞性:gloss 以 ' / ' 分段,每個詞性分行顯示,詞性縮寫加強標示
-  const glossEl = $('glossText');
-  const segs = (w.gloss || '').split(' / ').filter((s) => s.trim());
-  glossEl.innerHTML = segs.map((seg) => {
-    const m = seg.trim().match(/^([A-Za-z]+\.)\s*(.*)$/);
-    return m
-      ? `<span class="gloss-line"><span class="gloss-pos">${esc(m[1])}</span>${esc(m[2])}</span>`
-      : `<span class="gloss-line">${esc(seg.trim())}</span>`;
-  }).join('');
-  const vf = $('verbForms');
-  if (w.verbForms) { vf.textContent = `動詞三態:${w.verbForms}`; vf.hidden = false; }
-  else { vf.hidden = true; }
-  renderExamples(w);
-  const notesEl = $('wordNotes');
-  if (w.notes && w.notes.length) {
-    notesEl.innerHTML = w.notes.map((n) => `📝 ${esc(n)}`).join('<br>');
-    notesEl.hidden = false;
-  } else { notesEl.hidden = true; notesEl.innerHTML = ''; }
+  // 依卡片類型填入正反面內容
+  if (w.kind === 'word') fillSupWordCard(w);
+  else if (w.kind === 'phrase') fillSupPhraseCard(w);
+  else fillMainCard(w);
 
   /* ---- 來源標記 ---- */
   const badge = $('srcBadge');
@@ -205,6 +171,134 @@ function render() {
   $('progressFill').style.width = ((state.pos + 1) / state.view.length * 100) + '%';
   LS.set(keyPos(state.book.book), state.pos);
   updateMediaMeta();
+}
+
+/* ---- 主本卡片(單字:音標 / 多詞性 / 多例句 / 三態 / 筆記)---- */
+function fillMainCard(w) {
+  // 頁級補充(📝):只在該頁「第一個字」顯示一次,避免同頁每張卡重複
+  const pn = state.pageNotes[String(w.page)];
+  const pnEl = $('pageNote');
+  if (pn && pn.length && state.pageFirstId[w.page] === w.id) {
+    pnEl.innerHTML = `<span class="page-note-tag">本頁補充</span>` +
+      pn.map((t) => `📝 ${esc(t)}`).join('<br>');
+    pnEl.hidden = false;
+  } else { pnEl.hidden = true; pnEl.innerHTML = ''; }
+
+  setPosTags(w.pos || []);
+  $('wordText').textContent = w.word;
+  const ipa = $('ipaText');
+  const ipaStr = w.ipaRaw || (w.ipa ? `/${w.ipa}/` : '');
+  if (ipaStr) { ipa.textContent = ipaStr; ipa.hidden = false; }
+  else { ipa.hidden = true; }
+  $('playWordBtn').hidden = !w.audioWord;
+  toggleImg($('imgWord'), w.imageWord);
+
+  // 多詞性:gloss 以 ' / ' 分段,每個詞性分行顯示
+  $('glossText').innerHTML = formatGloss(w.gloss);
+  const vf = $('verbForms');
+  if (w.verbForms) { vf.textContent = `動詞三態:${w.verbForms}`; vf.hidden = false; }
+  else { vf.hidden = true; }
+  renderExamples(w);
+  const notesEl = $('wordNotes');
+  if (w.notes && w.notes.length) {
+    notesEl.innerHTML = w.notes.map((n) => `📝 ${esc(n)}`).join('<br>');
+    notesEl.hidden = false;
+  } else { notesEl.hidden = true; notesEl.innerHTML = ''; }
+}
+
+/* ---- 補充本:詞類變化(word)---- 正面 word/pos;背面 意思 + 衍生詞 ---- */
+function fillSupWordCard(w) {
+  $('pageNote').hidden = true;
+  setPosTags(w.pos ? [w.pos] : []);
+  $('wordText').textContent = w.word;
+  $('ipaText').hidden = true;
+  $('playWordBtn').hidden = !w.audioWord;
+  toggleImg($('imgWord'), w.imageWord);
+
+  $('glossText').innerHTML = w.meaning
+    ? `<span class="gloss-line">${esc(w.meaning)}</span>` : '';
+  $('verbForms').hidden = true;
+  $('wordNotes').hidden = true;
+  // 衍生詞列到 examplesList(重用結構)
+  const ul = $('examplesList'); ul.innerHTML = '';
+  (w.derivatives || []).forEach((d) => {
+    const li = document.createElement('li');
+    li.className = 'ex-item deriv-item';
+    const head = document.createElement('div');
+    head.className = 'deriv-form';
+    head.innerHTML = `${d.audio ? '🔊 ' : ''}${esc(d.form || '')}`;
+    if (d.audio) {
+      head.classList.add('playable');
+      head.addEventListener('click', (e) => { e.stopPropagation(); unlockAudio(); playSrc(d.audio); });
+    }
+    li.appendChild(head);
+    if (d.detail) {
+      const det = document.createElement('div');
+      det.className = 'ex-zh'; det.textContent = d.detail;
+      li.appendChild(det);
+    }
+    ul.appendChild(li);
+  });
+}
+
+/* ---- 補充本:片語(phrase)---- 正面 phrase;背面 中文 + 英定義 + 例句 ---- */
+function fillSupPhraseCard(w) {
+  $('pageNote').hidden = true;
+  setPosTags(w.lessonTitle ? [`Lesson ${w.lesson}`] : []);
+  $('wordText').textContent = w.phrase;
+  $('ipaText').hidden = true;
+  $('playWordBtn').hidden = !w.audioPhrase;
+  toggleImg($('imgWord'), null);
+
+  $('glossText').innerHTML = w.meaning
+    ? `<span class="gloss-line">${esc(w.meaning)}</span>` : '';
+  $('verbForms').hidden = true;
+  $('wordNotes').hidden = true;
+  const ul = $('examplesList'); ul.innerHTML = '';
+  if (w.definition) {
+    const li = document.createElement('li');
+    li.className = 'ex-item';
+    li.innerHTML = `<div class="def-label">英文定義</div><div class="ex-def" lang="en">${esc(w.definition)}</div>`;
+    ul.appendChild(li);
+  }
+  if (w.example) {
+    const li = document.createElement('li');
+    li.className = 'ex-item';
+    const en = document.createElement('button');
+    en.className = 'ex-en'; en.lang = 'en';
+    en.innerHTML = `${w.audioExample ? '🔊 ' : ''}${esc(w.example)}`;
+    en.addEventListener('click', (e) => {
+      e.stopPropagation(); unlockAudio();
+      if (w.audioExample) { if (!state.flipped) showFace(true); markPlaying(en, true); playSrc(w.audioExample).then(() => markPlaying(en, false)); }
+      else toast('此例句尚無音檔');
+    });
+    li.appendChild(en);
+    if (w.exampleZh) {
+      const zh = document.createElement('div');
+      zh.className = 'ex-zh'; zh.textContent = w.exampleZh;
+      li.appendChild(zh);
+    }
+    ul.appendChild(li);
+  }
+}
+
+function setPosTags(tags) {
+  const posRow = $('posRow');
+  posRow.innerHTML = '';
+  tags.forEach((p) => {
+    const s = document.createElement('span');
+    s.className = 'pos-tag'; s.textContent = p; posRow.appendChild(s);
+  });
+}
+
+function formatGloss(gloss) {
+  const segs = (gloss || '').split(' / ').filter((s) => s.trim());
+  return segs.map((seg) => {
+    const m = seg.trim().match(/^([A-Za-z]+\.)\s*(.*)$/);
+    return m
+      ? `<span class="gloss-line"><span class="gloss-pos">${esc(m[1])}</span>${esc(m[2])}</span>`
+      : `<span class="gloss-line">${esc(seg.trim())}</span>`;
+  }).join('');
 }
 
 function renderExamples(w) {
@@ -324,10 +418,14 @@ function playSrc(src) {
   });
 }
 
+function headwordAudio(w) { return w ? (w.audioWord || w.audioPhrase || null) : null; }
+function headwordText(w) { return w ? (w.word || w.phrase || '') : ''; }
+
 async function playWord(fromUser) {
-  const w = current(); if (!w || !w.audioWord) { if (fromUser) toast('此單字尚無音檔'); return; }
+  const w = current(); const src = headwordAudio(w);
+  if (!src) { if (fromUser) toast('尚無音檔'); return; }
   markPlaying($('playWordBtn'), true);
-  await playSrc(w.audioWord);
+  await playSrc(src);
   markPlaying($('playWordBtn'), false);
 }
 async function playExample(i, fromUser) {
@@ -367,35 +465,40 @@ function toggleAuto() { state.auto.on ? stopAuto() : startAuto(); }
 
 function wait(sec) { return new Promise((r) => { state.auto.timer = setTimeout(r, sec * 1000); }); }
 
+// 一張卡在「主字發音」後要連播的段落:主本=各例句;片語=例句;詞類變化=有音檔的衍生詞
+function autoSegments(w) {
+  if (w.kind === 'phrase') return w.audioExample ? [{ src: w.audioExample, zh: w.exampleZh }] : [];
+  if (w.kind === 'word') return (w.derivatives || []).filter((d) => d.audio).map((d) => ({ src: d.audio }));
+  return (w.examples || []).map((e) => ({ src: e.audio, zh: e.zh })).filter((s) => s.src);
+}
+
 async function autoLoop() {
   while (state.auto.on) {
     const w = current();
     if (!w) break;
-    setAutoNow(`${w.word}`);
+    setAutoNow(headwordText(w));
     showFace(false);
-    if (w.audioWord) { markPlaying($('playWordBtn'), true); await playSrc(w.audioWord); markPlaying($('playWordBtn'), false); }
+    const head = headwordAudio(w);
+    if (head) { markPlaying($('playWordBtn'), true); await playSrc(head); markPlaying($('playWordBtn'), false); }
     if (!state.auto.on) break;
     await wait(state.settings.gap * 0.6);
     if (state.settings.autoFlip) { showFace(true); beat(); }
 
-    // 逐例句朗讀(含中譯選項)
-    const exs = w.examples || [];
-    for (let i = 0; i < exs.length; i++) {
+    // 逐段朗讀(例句/片語例句;含中譯選項)
+    const segs = autoSegments(w);
+    for (let i = 0; i < segs.length; i++) {
       if (!state.auto.on) break;
-      const src = exampleAudio(w, i);
-      if (src) {
-        setAutoNow(`${w.word} — 例句 ${i + 1}/${exs.length}`);
-        await playExample(i, false);
-      }
+      setAutoNow(`${headwordText(w)} — ${i + 1}/${segs.length}`);
+      await playSrc(segs[i].src);
       if (!state.auto.on) break;
-      if (state.settings.readZh && exs[i].zh) { await speak(exs[i].zh); }
-      if (i < exs.length - 1) await wait(state.settings.gap * 0.5);
+      if (state.settings.readZh && segs[i].zh) { await speak(segs[i].zh); }
+      if (i < segs.length - 1) await wait(state.settings.gap * 0.5);
     }
     if (!state.auto.on) break;
     await wait(state.settings.gap);
     if (!state.auto.on) break;
     if (!state.settings.repeat) {
-      if (state.pos >= state.view.length - 1) { stopAuto(); toast('已播完本頁單字'); break; }
+      if (state.pos >= state.view.length - 1) { stopAuto(); toast('已播完本組'); break; }
       state.pos += 1; render();
     } else { render(); }
   }
@@ -426,9 +529,9 @@ function updateMediaMeta() {
   const firstEx = (w.examples || [])[0];
   try {
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: w.word,
-      artist: (firstEx && firstEx.en) || w.gloss || '',
-      album: `${state.book.name || ''} · ${w.unit}`,
+      title: headwordText(w),
+      artist: (firstEx && firstEx.en) || w.example || w.gloss || w.meaning || '',
+      album: `${state.book.name || ''} · ${w.unit || ''}`,
       artwork: [
         { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
         { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },
@@ -545,17 +648,24 @@ function runSearch(q) {
   q = q.trim().toLowerCase();
   if (!q) return;
   const hits = state.words.filter((w) => {
-    if (w.word.toLowerCase().includes(q)) return true;
+    const head = headwordText(w).toLowerCase();
+    if (head.includes(q)) return true;
     if ((w.gloss || '').toLowerCase().includes(q)) return true;
+    if ((w.meaning || '').toLowerCase().includes(q)) return true;
+    if ((w.definition || '').toLowerCase().includes(q)) return true;
+    if ((w.example || '').toLowerCase().includes(q)) return true;
+    if ((w.derivatives || []).some((d) => (d.form || '').toLowerCase().includes(q))) return true;
     return (w.examples || []).some((ex) =>
       (ex.en || '').toLowerCase().includes(q) || (ex.zh || '').toLowerCase().includes(q));
   }).slice(0, 40);
-  if (!hits.length) { box.innerHTML = '<li class="search-empty">找不到符合的單字</li>'; return; }
+  if (!hits.length) { box.innerHTML = '<li class="search-empty">找不到符合的項目</li>'; return; }
   hits.forEach((w) => {
     const li = document.createElement('li');
     li.className = 'search-item';
-    li.innerHTML = `<div class="sw">${esc(w.word)} <span class="st">${esc((w.pos || []).join(' '))}</span></div>
-      <div class="st">${esc(w.gloss || '')} · ${esc(w.unit)}</div>`;
+    const posStr = Array.isArray(w.pos) ? w.pos.join(' ') : (w.pos || '');
+    const sub = w.gloss || w.meaning || '';
+    li.innerHTML = `<div class="sw">${esc(headwordText(w))} <span class="st">${esc(posStr)}</span></div>
+      <div class="st">${esc(sub)} · ${esc(w.unit || '')}</div>`;
     li.onclick = () => {
       state.filter = { unit: null, status: 'all' }; rebuildView();
       const idx = state.view.findIndex((x) => x.id === w.id);
@@ -659,7 +769,10 @@ function buildBookSelect() {
   const sel = $('bookSelect'); sel.innerHTML = '';
   state.manifest.books.forEach((b) => {
     const o = document.createElement('option');
-    o.value = b.book; o.textContent = `${b.name || b.book}(${b.count}字)`;
+    const total = b.count != null ? `${b.count}字`
+      : (b.wordCount != null || b.phraseCount != null
+        ? `${(b.wordCount || 0)}字＋${(b.phraseCount || 0)}片語` : '');
+    o.value = b.book; o.textContent = `${b.name || b.book}${total ? '(' + total + ')' : ''}`;
     sel.appendChild(o);
   });
 }

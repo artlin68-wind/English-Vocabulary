@@ -1,13 +1,26 @@
 {
-  "version": "2026-10-12",
+  "version": "2026-10-12b",
   "books": [
     {
       "book": "G1-S1",
       "name": "高一上 (Level 2)",
       "file": "data/G1-S1.json",
+      "type": "vocab",
       "count": 1003,
       "pages": 72,
       "exampleCount": 1169
+    },
+    {
+      "book": "G1-S1-SUP",
+      "name": "高一上 補充（詞類變化＋片語）",
+      "file": "data/G1-S1-SUP.json",
+      "type": "supplement",
+      "kinds": [
+        "word",
+        "phrase"
+      ],
+      "wordCount": 68,
+      "phraseCount": 20
     }
   ]
 }

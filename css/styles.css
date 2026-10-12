@@ -150,6 +150,15 @@ img{max-width:100%;}
 .ex-zh{font-size:calc(18px*var(--fs)); color:var(--muted); line-height:1.5; padding:2px 4px;}
 .ex-img{max-height:160px; margin-top:8px;}
 .ex-empty{color:var(--muted); font-size:calc(18px*var(--fs)); padding:8px 4px;}
+/* 補充本:詞類變化衍生詞 / 片語定義 */
+.deriv-form{
+  font-size:calc(20px*var(--fs)); font-weight:700; line-height:1.4;
+  color:var(--fg); padding:2px 4px; border-radius:8px; display:inline-block;
+}
+.deriv-form.playable:active{color:var(--accent);}
+.deriv-form.playing{background:rgba(255,134,54,.16); color:var(--accent);}
+.def-label{font-size:calc(12px*var(--fs)); color:var(--accent); font-weight:700; margin-bottom:2px;}
+.ex-def{font-size:calc(18px*var(--fs)); line-height:1.5; color:var(--fg); padding:0 4px;}
 .word-notes{
   margin-top:2px; padding:10px 12px; border-radius:12px;
   background:var(--bg2); border:1px solid var(--line);
