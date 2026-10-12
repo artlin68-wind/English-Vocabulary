@@ -29,6 +29,7 @@ build_data.py (v2) — 把 Markdown 單字本解析成 data/<book>.json 並更�
   python scripts/build_data.py --md Level2_單字本_p1-72.md --book G1-S1 --check   # 只比對不寫檔
 """
 import argparse
+import datetime
 import json
 import os
 import re
@@ -287,6 +288,8 @@ def main():
     if os.path.exists(MANIFEST):
         manifest = json.load(open(MANIFEST, encoding="utf-8"))
     books = manifest.setdefault("books", [])
+    # 每次重建資料都更新版本號 → App 端自動清除舊的離線音檔/圖片快取
+    manifest["version"] = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     row = {"book": args.book, "name": meta["name"], "file": out_rel,
            "count": meta["count"], "pages": meta["pages"], "exampleCount": example_count}
     for i, b in enumerate(books):

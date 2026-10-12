@@ -53,8 +53,25 @@ async function init() {
     return fatal('無法載入單字本清單 (data/index.json)。');
   }
   buildBookSelect();
+  await reconcileDataVersion();   // 資料改版 → 自動清掉舊的離線音檔/圖片快取
   const firstBook = state.manifest.books[0].book;
   await loadBook(firstBook);
+}
+
+/* 偵測資料版本:與上次不同時,清除 AUDIO_CACHE(舊音檔/圖片可能對不上新內容)
+ * 並重設各書的「已下載」狀態,提示使用者重新下載。首次安裝不提示。 */
+async function reconcileDataVersion() {
+  const cur = state.manifest.version;
+  if (cur == null) return;                       // 無版本欄位則不處理
+  const prev = LS.get('vocab.dataVersion', null);
+  if (prev === cur) return;                       // 版本相同,不動作
+  try { if ('caches' in window) await caches.delete(AUDIO_CACHE); } catch {}
+  try { (state.manifest.books || []).forEach((b) => LS.set(keyDl(b.book), {})); } catch {}
+  state.downloaded = {};
+  LS.set('vocab.dataVersion', cur);
+  if (prev != null) {                             // 曾有舊版才提示(非首次安裝)
+    setTimeout(() => toast('資料已更新,已清除舊離線音檔,請於設定重新下載'), 900);
+  }
 }
 
 async function fetchJSON(url) {
