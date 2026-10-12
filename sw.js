@@ -6,7 +6,7 @@
  *    「分單元下載」寫入 AUDIO_CACHE。此處對音檔採 cache-first,快取沒有才走網路。
  * 版本升級:改 SHELL_VERSION 觸發 precache 更新,舊殼快取自動清除;音檔快取保留。
  * ============================================================ */
-const SHELL_VERSION = 'vocab-shell-v5';
+const SHELL_VERSION = 'vocab-shell-v6';
 const AUDIO_CACHE = 'vocab-audio';
 
 const SHELL_ASSETS = [

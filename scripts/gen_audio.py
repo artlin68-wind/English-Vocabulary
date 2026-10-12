@@ -378,6 +378,62 @@ async def process_book(bookfile: str, args):
           f"例句:OK {stats['sent_ok']} / 失敗 {stats['sent_fail']} | 略過(已存在) {stats['skip']}")
 
 
+async def process_supplement_book(bookfile: str, args):
+    """補充本:為單字 / 各衍生詞 / 片語 / 片語例句產音檔。
+    路徑:audioWord=audio/word/{id}.mp3、derivatives[n].audio=audio/word/{id}-d{n}.mp3、
+          audioPhrase=audio/word/{id}.mp3、audioExample=audio/sentence/{id}-1.mp3。"""
+    full = os.path.join(ROOT, bookfile)
+    with open(full, encoding="utf-8") as f:
+        data = json.load(f)
+    word_dir = os.path.join(ROOT, "audio", "word")
+    sent_dir = os.path.join(ROOT, "audio", "sentence")
+    os.makedirs(word_dir, exist_ok=True)
+    os.makedirs(sent_dir, exist_ok=True)
+    st = {"ok": 0, "fail": 0, "skip": 0}
+
+    async def one(text, dest, rel):
+        """產一個音檔,回傳 rel(成功)或 None。斷點續跑。"""
+        text = (text or "").strip()
+        if not text:
+            return None
+        if os.path.exists(dest) and os.path.getsize(dest) > 500:
+            st["skip"] += 1
+            return rel
+        ok = await synth(text, dest, args.voice, args)
+        st["ok" if ok else "fail"] += 1
+        return rel if ok else None
+
+    words = data.get("words", [])
+    phrases = data.get("phrases", [])
+    if args.limit:
+        words = words[: args.limit]
+        phrases = phrases[: max(0, args.limit - len(words))]
+
+    done = 0
+    for w in words:
+        wid = w["id"]
+        w["audioWord"] = await one(w.get("word"), os.path.join(word_dir, f"{wid}.mp3"),
+                                   f"audio/word/{wid}.mp3")
+        if w.get("audioWord"):
+            w.setdefault("audioWordSource", "piper" if args.piper else "tts")
+        for n, d in enumerate(w.get("derivatives", []), start=1):
+            d["audio"] = await one(d.get("form"), os.path.join(word_dir, f"{wid}-d{n}.mp3"),
+                                   f"audio/word/{wid}-d{n}.mp3")
+        done += 1
+        if done % 20 == 0:
+            print(f"  word {done}/{len(words)}  ok={st['ok']} skip={st['skip']} fail={st['fail']}", flush=True)
+            save_json_atomic(data, full)
+
+    for p in phrases:
+        pid = p["id"]
+        p["audioPhrase"] = await one(p.get("phrase"), os.path.join(word_dir, f"{pid}.mp3"),
+                                     f"audio/word/{pid}.mp3")
+        p["audioExample"] = await one(p.get("example"), os.path.join(sent_dir, f"{pid}-1.mp3"),
+                                      f"audio/sentence/{pid}-1.mp3")
+    save_json_atomic(data, full)
+    print(f"[{data['meta']['book']}] 補充本完成 | OK {st['ok']} / 略過 {st['skip']} / 失敗 {st['fail']}")
+
+
 async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--book", help="只處理指定 book code")
@@ -414,7 +470,10 @@ async def main():
     t0 = time.time()
     for b in books:
         print(f"== 產生音檔 {b['book']} ({b['file']}) ==", flush=True)
-        await process_book(b["file"], args)
+        if b.get("type") == "supplement":
+            await process_supplement_book(b["file"], args)
+        else:
+            await process_book(b["file"], args)
     print(f"全部完成,耗時 {time.time()-t0:.0f}s")
 
 

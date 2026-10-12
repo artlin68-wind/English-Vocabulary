@@ -344,6 +344,51 @@ def _flush(data, full, credits, credits_path):
     _write_atomic(credits, credits_path)
 
 
+def process_supplement(bookfile, args):
+    """補充本:僅為 words[] 的基本字抓單字圖(imageWord)。片語多為抽象,略過。"""
+    full = os.path.join(ROOT, bookfile)
+    data = json.load(open(full, encoding="utf-8"))
+    words = data.get("words", [])
+    if args.limit:
+        words = words[: args.limit]
+    wdir = os.path.join(ROOT, "images", "word")
+    os.makedirs(wdir, exist_ok=True)
+    credits_path = os.path.join(ROOT, "images", "credits.json")
+    credits = json.load(open(credits_path, encoding="utf-8")) if os.path.exists(credits_path) else {}
+
+    tasks = []  # (word_obj, query, dest, rel)
+    skip = 0
+    for w in words:
+        wid = w["id"]
+        dest = os.path.join(wdir, f"{wid}.jpg"); rel = f"images/word/{wid}.jpg"
+        if os.path.exists(dest):
+            w["imageWord"] = rel; skip += 1
+        else:
+            tasks.append((w, (w.get("lookup") or w.get("word") or "").strip(), dest, rel))
+    print(f"  待抓 {len(tasks)} 張(略過已存在 {skip})", flush=True)
+
+    url_map = wiki_images_batch([t[1] for t in tasks])
+    print(f"  Wikipedia 命中 {len(url_map)} 個查詢字", flush=True)
+    ok = blank = 0
+    for (w, query, dest, rel) in tasks:
+        pair = url_map.get(query.lower())
+        if not pair and args.openverse:
+            u2, c2 = openverse_image(query, clean=True)
+            if u2:
+                pair = (u2, c2)
+        got = False
+        if pair:
+            url, credit = pair
+            got = save_image(url, dest)
+            if got:
+                credits[rel] = credit
+        w["imageWord"] = rel if got else None
+        ok += got; blank += (not got)
+    _write_atomic(data, full)
+    _write_atomic(credits, credits_path)
+    print(f"[{data['meta']['book']}] 補充本單字圖 OK {ok} / 留白 {blank} / 略過 {skip}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--book")
@@ -360,7 +405,10 @@ def main():
             sys.exit(f"manifest 找不到 book: {args.book}")
     for b in books:
         print(f"== 產生圖片 {b['book']} ({b['file']}) ==", flush=True)
-        process(b["file"], args)
+        if b.get("type") == "supplement":
+            process_supplement(b["file"], args)
+        else:
+            process(b["file"], args)
 
 
 if __name__ == "__main__":

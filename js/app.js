@@ -84,11 +84,26 @@ async function loadBook(bookCode) {
   const entry = state.manifest.books.find((b) => b.book === bookCode) || state.manifest.books[0];
   const data = await fetchJSON(entry.file);
   state.book = data.meta;
-  // 補充本:words + phrases 合併成單一瀏覽陣列(各自帶 kind);主本維持 words
   const isSup = entry.type === 'supplement' || Array.isArray(data.phrases);
-  state.bookType = isSup ? 'supplement' : 'vocab';
-  state.words = isSup ? [...(data.words || []), ...(data.phrases || [])] : data.words;
-  state.pageNotes = isSup ? {} : (data.pageNotes || {});
+  if (isSup) {
+    // 直接載入某補充本(words + phrases 合併,各自帶 kind)
+    state.bookType = 'supplement';
+    state.words = [...(data.words || []), ...(data.phrases || [])];
+    state.pageNotes = {};
+  } else {
+    // 主本:把所有「補充本」的單元一併併入(接在頁數之後,同一個單元清單)
+    state.bookType = 'vocab';
+    state.words = [...(data.words || [])];
+    state.pageNotes = data.pageNotes || {};
+    for (const b of state.manifest.books) {
+      if (b.type === 'supplement') {
+        try {
+          const sd = await fetchJSON(b.file);
+          state.words.push(...(sd.words || []), ...(sd.phrases || []));
+        } catch (e) { /* 補充本載入失敗不影響主本 */ }
+      }
+    }
+  }
   // 每頁第一個字的 id(頁筆記只在該字顯示一次,避免同頁每張卡重複)
   state.pageFirstId = {};
   state.words.forEach((w) => {
@@ -133,8 +148,7 @@ function rebuildView() {
 
 function updateUnitName() {
   const parts = [];
-  const allLabel = state.bookType === 'supplement' ? '全部單元' : '全部頁';
-  parts.push(state.filter.unit ? state.filter.unit : allLabel);
+  parts.push(state.filter.unit ? state.filter.unit : '全部');
   if (state.filter.status === 'review') parts.push('待複習');
   else if (state.filter.status === 'unknown') parts.push('未標記');
   $('unitName').textContent = parts.join(' · ');
@@ -562,7 +576,15 @@ function mark(kind) {
 /* ================= 單元(頁)清單 / 下載 ================= */
 function renderUnitList() {
   const ul = $('unitList'); ul.innerHTML = '';
+  let supHeaderDone = false;
   state.units.forEach((u) => {
+    // 補充教材(含 kind 的項目)前插一條分隔標題
+    const isSup = !!(u.words[0] && u.words[0].kind);
+    if (isSup && !supHeaderDone) {
+      const h = document.createElement('li');
+      h.className = 'unit-section'; h.textContent = '補充教材';
+      ul.appendChild(h); supHeaderDone = true;
+    }
     const li = document.createElement('li');
     li.className = 'unit-item' + (state.filter.unit === u.name ? ' current' : '');
     const known = u.words.filter((w) => state.progress[w.id] === 'known').length;
@@ -767,14 +789,17 @@ function syncFilterChips() {
 
 function buildBookSelect() {
   const sel = $('bookSelect'); sel.innerHTML = '';
-  state.manifest.books.forEach((b) => {
+  // 補充本已併入主本單元清單,選單只列出主(vocab)本
+  const vocabBooks = state.manifest.books.filter((b) => b.type !== 'supplement');
+  vocabBooks.forEach((b) => {
     const o = document.createElement('option');
-    const total = b.count != null ? `${b.count}字`
-      : (b.wordCount != null || b.phraseCount != null
-        ? `${(b.wordCount || 0)}字＋${(b.phraseCount || 0)}片語` : '');
+    const total = b.count != null ? `${b.count}字` : '';
     o.value = b.book; o.textContent = `${b.name || b.book}${total ? '(' + total + ')' : ''}`;
     sel.appendChild(o);
   });
+  // 只有一本可選時,隱藏整列選單(避免無意義的下拉)
+  const row = sel.closest('.book-select-row');
+  if (row) row.hidden = vocabBooks.length <= 1;
 }
 
 /* ================= 設定 / 字級 ================= */

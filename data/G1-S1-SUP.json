@@ -26,16 +26,19 @@
       "derivatives": [
         {
           "form": "accident",
-          "detail": "名詞: 意外；事故"
+          "detail": "名詞: 意外；事故",
+          "audio": "audio/word/G1-S1-SUP-W001-d1.mp3"
         },
         {
           "form": "accidental",
-          "detail": "形容詞: 意外的"
+          "detail": "形容詞: 意外的",
+          "audio": "audio/word/G1-S1-SUP-W001-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W001.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W001.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W002",
@@ -48,12 +51,14 @@
       "derivatives": [
         {
           "form": "afterwards",
-          "detail": "副詞: 同 afterward，英式常用"
+          "detail": "副詞: 同 afterward，英式常用",
+          "audio": "audio/word/G1-S1-SUP-W002-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W002.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W003",
@@ -66,24 +71,29 @@
       "derivatives": [
         {
           "form": "amazing",
-          "detail": "形容詞: 令人大感驚奇的"
+          "detail": "形容詞: 令人大感驚奇的",
+          "audio": "audio/word/G1-S1-SUP-W003-d1.mp3"
         },
         {
           "form": "amazement",
-          "detail": "名詞: 驚奇"
+          "detail": "名詞: 驚奇",
+          "audio": "audio/word/G1-S1-SUP-W003-d2.mp3"
         },
         {
           "form": "amazed",
-          "detail": "形容詞: 感到驚奇的"
+          "detail": "形容詞: 感到驚奇的",
+          "audio": "audio/word/G1-S1-SUP-W003-d3.mp3"
         },
         {
           "form": "amazingly",
-          "detail": "副詞: 驚人地"
+          "detail": "副詞: 驚人地",
+          "audio": "audio/word/G1-S1-SUP-W003-d4.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W003.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W004",
@@ -96,20 +106,24 @@
       "derivatives": [
         {
           "form": "astonished",
-          "detail": "形容詞: 感到驚訝的"
+          "detail": "形容詞: 感到驚訝的",
+          "audio": "audio/word/G1-S1-SUP-W004-d1.mp3"
         },
         {
           "form": "astonishing",
-          "detail": "形容詞: 令人驚訝的"
+          "detail": "形容詞: 令人驚訝的",
+          "audio": "audio/word/G1-S1-SUP-W004-d2.mp3"
         },
         {
           "form": "astonishment",
-          "detail": "名詞: 驚訝"
+          "detail": "名詞: 驚訝",
+          "audio": "audio/word/G1-S1-SUP-W004-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W004.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W005",
@@ -122,20 +136,24 @@
       "derivatives": [
         {
           "form": "attend",
-          "detail": "動詞: 注意；出席"
+          "detail": "動詞: 注意；出席",
+          "audio": "audio/word/G1-S1-SUP-W005-d1.mp3"
         },
         {
           "form": "attentive",
-          "detail": "形容詞: 專心的；體貼的"
+          "detail": "形容詞: 專心的；體貼的",
+          "audio": "audio/word/G1-S1-SUP-W005-d2.mp3"
         },
         {
           "form": "attentively",
-          "detail": "副詞: 專心地"
+          "detail": "副詞: 專心地",
+          "audio": "audio/word/G1-S1-SUP-W005-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W005.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W005.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W006",
@@ -148,12 +166,14 @@
       "derivatives": [
         {
           "form": "average",
-          "detail": "動詞: 平均為……"
+          "detail": "動詞: 平均為……",
+          "audio": "audio/word/G1-S1-SUP-W006-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W006.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W007",
@@ -166,20 +186,24 @@
       "derivatives": [
         {
           "form": "avoidance",
-          "detail": "名詞: 避免"
+          "detail": "名詞: 避免",
+          "audio": "audio/word/G1-S1-SUP-W007-d1.mp3"
         },
         {
           "form": "avoidable",
-          "detail": "形容詞: 可避免的"
+          "detail": "形容詞: 可避免的",
+          "audio": "audio/word/G1-S1-SUP-W007-d2.mp3"
         },
         {
           "form": "unavoidable",
-          "detail": "形容詞: 無法避免的"
+          "detail": "形容詞: 無法避免的",
+          "audio": "audio/word/G1-S1-SUP-W007-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W007.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W008",
@@ -192,16 +216,19 @@
       "derivatives": [
         {
           "form": "awaken",
-          "detail": "動詞: 喚醒；覺醒"
+          "detail": "動詞: 喚醒；覺醒",
+          "audio": "audio/word/G1-S1-SUP-W008-d1.mp3"
         },
         {
           "form": "awakening",
-          "detail": "名詞: 覺醒"
+          "detail": "名詞: 覺醒",
+          "audio": "audio/word/G1-S1-SUP-W008-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W008.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W009",
@@ -214,20 +241,24 @@
       "derivatives": [
         {
           "form": "breath",
-          "detail": "名詞: 呼吸的氣息"
+          "detail": "名詞: 呼吸的氣息",
+          "audio": "audio/word/G1-S1-SUP-W009-d1.mp3"
         },
         {
           "form": "breathing",
-          "detail": "名詞: 呼吸"
+          "detail": "名詞: 呼吸",
+          "audio": "audio/word/G1-S1-SUP-W009-d2.mp3"
         },
         {
           "form": "breathless",
-          "detail": "形容詞: 喘不過氣的"
+          "detail": "形容詞: 喘不過氣的",
+          "audio": "audio/word/G1-S1-SUP-W009-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W009.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W010",
@@ -240,16 +271,19 @@
       "derivatives": [
         {
           "form": "communication",
-          "detail": "名詞: 溝通"
+          "detail": "名詞: 溝通",
+          "audio": "audio/word/G1-S1-SUP-W010-d1.mp3"
         },
         {
           "form": "communicative",
-          "detail": "形容詞: 樂於溝通的"
+          "detail": "形容詞: 樂於溝通的",
+          "audio": "audio/word/G1-S1-SUP-W010-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W010.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W011",
@@ -262,16 +296,19 @@
       "derivatives": [
         {
           "form": "connection",
-          "detail": "名詞: 關聯；關係"
+          "detail": "名詞: 關聯；關係",
+          "audio": "audio/word/G1-S1-SUP-W011-d1.mp3"
         },
         {
           "form": "connected",
-          "detail": "形容詞: 連接的；有關聯的"
+          "detail": "形容詞: 連接的；有關聯的",
+          "audio": "audio/word/G1-S1-SUP-W011-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W011.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W012",
@@ -284,20 +321,24 @@
       "derivatives": [
         {
           "form": "create",
-          "detail": "動詞: 創造"
+          "detail": "動詞: 創造",
+          "audio": "audio/word/G1-S1-SUP-W012-d1.mp3"
         },
         {
           "form": "creation",
-          "detail": "名詞: 創造；創作物"
+          "detail": "名詞: 創造；創作物",
+          "audio": "audio/word/G1-S1-SUP-W012-d2.mp3"
         },
         {
           "form": "creative",
-          "detail": "形容詞: 有創意的"
+          "detail": "形容詞: 有創意的",
+          "audio": "audio/word/G1-S1-SUP-W012-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W012.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W013",
@@ -310,16 +351,19 @@
       "derivatives": [
         {
           "form": "cultural",
-          "detail": "形容詞: 文化的"
+          "detail": "形容詞: 文化的",
+          "audio": "audio/word/G1-S1-SUP-W013-d1.mp3"
         },
         {
           "form": "culturally",
-          "detail": "副詞: 文化上"
+          "detail": "副詞: 文化上",
+          "audio": "audio/word/G1-S1-SUP-W013-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W013.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W013.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W014",
@@ -332,16 +376,19 @@
       "derivatives": [
         {
           "form": "customary",
-          "detail": "形容詞: 習慣的；慣例的"
+          "detail": "形容詞: 習慣的；慣例的",
+          "audio": "audio/word/G1-S1-SUP-W014-d1.mp3"
         },
         {
           "form": "customs",
-          "detail": "名詞: 海關"
+          "detail": "名詞: 海關",
+          "audio": "audio/word/G1-S1-SUP-W014-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W014.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W015",
@@ -354,16 +401,19 @@
       "derivatives": [
         {
           "form": "daily",
-          "detail": "副詞: 每天"
+          "detail": "副詞: 每天",
+          "audio": "audio/word/G1-S1-SUP-W015-d1.mp3"
         },
         {
           "form": "daily",
-          "detail": "名詞: 日報"
+          "detail": "名詞: 日報",
+          "audio": "audio/word/G1-S1-SUP-W015-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W015.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W016",
@@ -376,12 +426,14 @@
       "derivatives": [
         {
           "form": "denial",
-          "detail": "名詞: 否認"
+          "detail": "名詞: 否認",
+          "audio": "audio/word/G1-S1-SUP-W016-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W016.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W017",
@@ -394,20 +446,24 @@
       "derivatives": [
         {
           "form": "depressed",
-          "detail": "形容詞: 沮喪的"
+          "detail": "形容詞: 沮喪的",
+          "audio": "audio/word/G1-S1-SUP-W017-d1.mp3"
         },
         {
           "form": "depression",
-          "detail": "名詞: 沮喪；消沉時期"
+          "detail": "名詞: 沮喪；消沉時期",
+          "audio": "audio/word/G1-S1-SUP-W017-d2.mp3"
         },
         {
           "form": "depressing",
-          "detail": "形容詞: 令人沮喪的"
+          "detail": "形容詞: 令人沮喪的",
+          "audio": "audio/word/G1-S1-SUP-W017-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W017.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W018",
@@ -420,20 +476,24 @@
       "derivatives": [
         {
           "form": "differ",
-          "detail": "動詞: 不同"
+          "detail": "動詞: 不同",
+          "audio": "audio/word/G1-S1-SUP-W018-d1.mp3"
         },
         {
           "form": "different",
-          "detail": "形容詞: 不同的"
+          "detail": "形容詞: 不同的",
+          "audio": "audio/word/G1-S1-SUP-W018-d2.mp3"
         },
         {
           "form": "differently",
-          "detail": "副詞: 不同地"
+          "detail": "副詞: 不同地",
+          "audio": "audio/word/G1-S1-SUP-W018-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W018.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W019",
@@ -446,12 +506,14 @@
       "derivatives": [
         {
           "form": "disappearance",
-          "detail": "名詞: 消失"
+          "detail": "名詞: 消失",
+          "audio": "audio/word/G1-S1-SUP-W019-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W019.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W020",
@@ -464,20 +526,24 @@
       "derivatives": [
         {
           "form": "disappointed",
-          "detail": "形容詞: 感到失望的"
+          "detail": "形容詞: 感到失望的",
+          "audio": "audio/word/G1-S1-SUP-W020-d1.mp3"
         },
         {
           "form": "disappointment",
-          "detail": "名詞: 失望"
+          "detail": "名詞: 失望",
+          "audio": "audio/word/G1-S1-SUP-W020-d2.mp3"
         },
         {
           "form": "disappointing",
-          "detail": "形容詞: 令人失望的"
+          "detail": "形容詞: 令人失望的",
+          "audio": "audio/word/G1-S1-SUP-W020-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W020.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W021",
@@ -490,16 +556,19 @@
       "derivatives": [
         {
           "form": "distant",
-          "detail": "形容詞: 遙遠的"
+          "detail": "形容詞: 遙遠的",
+          "audio": "audio/word/G1-S1-SUP-W021-d1.mp3"
         },
         {
           "form": "distance",
-          "detail": "動詞: 與……保持距離"
+          "detail": "動詞: 與……保持距離",
+          "audio": "audio/word/G1-S1-SUP-W021-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W021.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W022",
@@ -512,20 +581,24 @@
       "derivatives": [
         {
           "form": "embarrassed",
-          "detail": "形容詞: 感到尷尬的"
+          "detail": "形容詞: 感到尷尬的",
+          "audio": "audio/word/G1-S1-SUP-W022-d1.mp3"
         },
         {
           "form": "embarrassing",
-          "detail": "形容詞: 令人尷尬的"
+          "detail": "形容詞: 令人尷尬的",
+          "audio": "audio/word/G1-S1-SUP-W022-d2.mp3"
         },
         {
           "form": "embarrassment",
-          "detail": "名詞: 尷尬"
+          "detail": "名詞: 尷尬",
+          "audio": "audio/word/G1-S1-SUP-W022-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W022.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W023",
@@ -538,16 +611,19 @@
       "derivatives": [
         {
           "form": "embrace",
-          "detail": "動詞: 擁抱"
+          "detail": "動詞: 擁抱",
+          "audio": "audio/word/G1-S1-SUP-W023-d1.mp3"
         },
         {
           "form": "embrace",
-          "detail": "名詞: 擁抱"
+          "detail": "名詞: 擁抱",
+          "audio": "audio/word/G1-S1-SUP-W023-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W023.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W024",
@@ -560,16 +636,19 @@
       "derivatives": [
         {
           "form": "expert",
-          "detail": "形容詞: 熟練的；專業的"
+          "detail": "形容詞: 熟練的；專業的",
+          "audio": "audio/word/G1-S1-SUP-W024-d1.mp3"
         },
         {
           "form": "expertise",
-          "detail": "名詞: 專業知識"
+          "detail": "名詞: 專業知識",
+          "audio": "audio/word/G1-S1-SUP-W024-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W024.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W024.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W025",
@@ -582,12 +661,14 @@
       "derivatives": [
         {
           "form": "fail",
-          "detail": "動詞: 失敗"
+          "detail": "動詞: 失敗",
+          "audio": "audio/word/G1-S1-SUP-W025-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W025.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W026",
@@ -600,12 +681,14 @@
       "derivatives": [
         {
           "form": "fly",
-          "detail": "動詞: 飛行"
+          "detail": "動詞: 飛行",
+          "audio": "audio/word/G1-S1-SUP-W026-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W026.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W026.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W027",
@@ -618,12 +701,14 @@
       "derivatives": [
         {
           "form": "floating",
-          "detail": "形容詞: 漂浮的"
+          "detail": "形容詞: 漂浮的",
+          "audio": "audio/word/G1-S1-SUP-W027-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W027.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W028",
@@ -636,12 +721,14 @@
       "derivatives": [
         {
           "form": "focused",
-          "detail": "形容詞: 專注的"
+          "detail": "形容詞: 專注的",
+          "audio": "audio/word/G1-S1-SUP-W028-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W028.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W029",
@@ -653,8 +740,9 @@
       "meaning": "永遠；永久地",
       "derivatives": [],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W029.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W030",
@@ -667,24 +755,29 @@
       "derivatives": [
         {
           "form": "fortunately",
-          "detail": "副詞: 幸運地"
+          "detail": "副詞: 幸運地",
+          "audio": "audio/word/G1-S1-SUP-W030-d1.mp3"
         },
         {
           "form": "fortune",
-          "detail": "名詞: 財富；運氣"
+          "detail": "名詞: 財富；運氣",
+          "audio": "audio/word/G1-S1-SUP-W030-d2.mp3"
         },
         {
           "form": "unfortunate",
-          "detail": "形容詞: 不幸的"
+          "detail": "形容詞: 不幸的",
+          "audio": "audio/word/G1-S1-SUP-W030-d3.mp3"
         },
         {
           "form": "unfortunately",
-          "detail": "副詞: 不幸地"
+          "detail": "副詞: 不幸地",
+          "audio": "audio/word/G1-S1-SUP-W030-d4.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W030.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W031",
@@ -697,12 +790,14 @@
       "derivatives": [
         {
           "form": "grab",
-          "detail": "名詞: 抓取"
+          "detail": "名詞: 抓取",
+          "audio": "audio/word/G1-S1-SUP-W031-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W031.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W032",
@@ -715,12 +810,14 @@
       "derivatives": [
         {
           "form": "greet",
-          "detail": "動詞: 打招呼；迎接"
+          "detail": "動詞: 打招呼；迎接",
+          "audio": "audio/word/G1-S1-SUP-W032-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W032.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W032.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W033",
@@ -733,16 +830,19 @@
       "derivatives": [
         {
           "form": "ignorance",
-          "detail": "名詞: 無知"
+          "detail": "名詞: 無知",
+          "audio": "audio/word/G1-S1-SUP-W033-d1.mp3"
         },
         {
           "form": "ignorant",
-          "detail": "形容詞: 無知的"
+          "detail": "形容詞: 無知的",
+          "audio": "audio/word/G1-S1-SUP-W033-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W033.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W034",
@@ -755,20 +855,24 @@
       "derivatives": [
         {
           "form": "impressive",
-          "detail": "形容詞: 令人印象深刻的"
+          "detail": "形容詞: 令人印象深刻的",
+          "audio": "audio/word/G1-S1-SUP-W034-d1.mp3"
         },
         {
           "form": "impression",
-          "detail": "名詞: 印象"
+          "detail": "名詞: 印象",
+          "audio": "audio/word/G1-S1-SUP-W034-d2.mp3"
         },
         {
           "form": "impressed",
-          "detail": "形容詞: 印象深刻的"
+          "detail": "形容詞: 印象深刻的",
+          "audio": "audio/word/G1-S1-SUP-W034-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W034.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W035",
@@ -781,20 +885,24 @@
       "derivatives": [
         {
           "form": "including",
-          "detail": "介系詞: 包括"
+          "detail": "介系詞: 包括",
+          "audio": "audio/word/G1-S1-SUP-W035-d1.mp3"
         },
         {
           "form": "inclusion",
-          "detail": "名詞: 包含"
+          "detail": "名詞: 包含",
+          "audio": "audio/word/G1-S1-SUP-W035-d2.mp3"
         },
         {
           "form": "inclusive",
-          "detail": "形容詞: 包含的"
+          "detail": "形容詞: 包含的",
+          "audio": "audio/word/G1-S1-SUP-W035-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W035.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W036",
@@ -807,20 +915,24 @@
       "derivatives": [
         {
           "form": "inspiration",
-          "detail": "名詞: 靈感"
+          "detail": "名詞: 靈感",
+          "audio": "audio/word/G1-S1-SUP-W036-d1.mp3"
         },
         {
           "form": "inspiring",
-          "detail": "形容詞: 激勵人心的"
+          "detail": "形容詞: 激勵人心的",
+          "audio": "audio/word/G1-S1-SUP-W036-d2.mp3"
         },
         {
           "form": "inspired",
-          "detail": "形容詞: 受到啟發的"
+          "detail": "形容詞: 受到啟發的",
+          "audio": "audio/word/G1-S1-SUP-W036-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W036.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W037",
@@ -833,16 +945,19 @@
       "derivatives": [
         {
           "form": "introduction",
-          "detail": "名詞: 介紹"
+          "detail": "名詞: 介紹",
+          "audio": "audio/word/G1-S1-SUP-W037-d1.mp3"
         },
         {
           "form": "introductory",
-          "detail": "形容詞: 介紹的；入門的"
+          "detail": "形容詞: 介紹的；入門的",
+          "audio": "audio/word/G1-S1-SUP-W037-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W037.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W038",
@@ -855,12 +970,14 @@
       "derivatives": [
         {
           "form": "journey",
-          "detail": "動詞: 旅行"
+          "detail": "動詞: 旅行",
+          "audio": "audio/word/G1-S1-SUP-W038-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W038.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W039",
@@ -873,20 +990,24 @@
       "derivatives": [
         {
           "form": "memorable",
-          "detail": "形容詞: 難忘的"
+          "detail": "形容詞: 難忘的",
+          "audio": "audio/word/G1-S1-SUP-W039-d1.mp3"
         },
         {
           "form": "memory",
-          "detail": "名詞: 回憶、記憶、記性"
+          "detail": "名詞: 回憶、記憶、記性",
+          "audio": "audio/word/G1-S1-SUP-W039-d2.mp3"
         },
         {
           "form": "memorial",
-          "detail": "名詞: 紀念碑；形容詞: 紀念的"
+          "detail": "名詞: 紀念碑；形容詞: 紀念的",
+          "audio": "audio/word/G1-S1-SUP-W039-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W039.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W040",
@@ -899,12 +1020,14 @@
       "derivatives": [
         {
           "form": "messenger",
-          "detail": "名詞: 信差；傳訊者"
+          "detail": "名詞: 信差；傳訊者",
+          "audio": "audio/word/G1-S1-SUP-W040-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W040.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W041",
@@ -916,8 +1039,9 @@
       "meaning": "小睡",
       "derivatives": [],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W041.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W041.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W042",
@@ -930,20 +1054,24 @@
       "derivatives": [
         {
           "form": "perfect",
-          "detail": "動詞: 使完美"
+          "detail": "動詞: 使完美",
+          "audio": "audio/word/G1-S1-SUP-W042-d1.mp3"
         },
         {
           "form": "perfectly",
-          "detail": "副詞: 完美地"
+          "detail": "副詞: 完美地",
+          "audio": "audio/word/G1-S1-SUP-W042-d2.mp3"
         },
         {
           "form": "perfection",
-          "detail": "名詞: 完美"
+          "detail": "名詞: 完美",
+          "audio": "audio/word/G1-S1-SUP-W042-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W042.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W043",
@@ -956,20 +1084,24 @@
       "derivatives": [
         {
           "form": "personal",
-          "detail": "形容詞: 個人的"
+          "detail": "形容詞: 個人的",
+          "audio": "audio/word/G1-S1-SUP-W043-d1.mp3"
         },
         {
           "form": "person",
-          "detail": "名詞: 人"
+          "detail": "名詞: 人",
+          "audio": "audio/word/G1-S1-SUP-W043-d2.mp3"
         },
         {
           "form": "personality",
-          "detail": "名詞: 個性"
+          "detail": "名詞: 個性",
+          "audio": "audio/word/G1-S1-SUP-W043-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W043.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W044",
@@ -982,20 +1114,24 @@
       "derivatives": [
         {
           "form": "presentation",
-          "detail": "名詞: 報告；介紹"
+          "detail": "名詞: 報告；介紹",
+          "audio": "audio/word/G1-S1-SUP-W044-d1.mp3"
         },
         {
           "form": "present",
-          "detail": "名詞: 禮物；現在"
+          "detail": "名詞: 禮物；現在",
+          "audio": "audio/word/G1-S1-SUP-W044-d2.mp3"
         },
         {
           "form": "present",
-          "detail": "形容詞: 出席的；現在的"
+          "detail": "形容詞: 出席的；現在的",
+          "audio": "audio/word/G1-S1-SUP-W044-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W044.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W045",
@@ -1008,20 +1144,24 @@
       "derivatives": [
         {
           "form": "realization",
-          "detail": "名詞: 領悟；實現"
+          "detail": "名詞: 領悟；實現",
+          "audio": "audio/word/G1-S1-SUP-W045-d1.mp3"
         },
         {
           "form": "real",
-          "detail": "形容詞: 真實的"
+          "detail": "形容詞: 真實的",
+          "audio": "audio/word/G1-S1-SUP-W045-d2.mp3"
         },
         {
           "form": "reality",
-          "detail": "名詞: 現實"
+          "detail": "名詞: 現實",
+          "audio": "audio/word/G1-S1-SUP-W045-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W045.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W046",
@@ -1034,12 +1174,14 @@
       "derivatives": [
         {
           "form": "recall",
-          "detail": "名詞: 回憶；召回"
+          "detail": "名詞: 回憶；召回",
+          "audio": "audio/word/G1-S1-SUP-W046-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W046.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W047",
@@ -1052,16 +1194,19 @@
       "derivatives": [
         {
           "form": "reflection",
-          "detail": "名詞: 映出的影像"
+          "detail": "名詞: 映出的影像",
+          "audio": "audio/word/G1-S1-SUP-W047-d1.mp3"
         },
         {
           "form": "reflective",
-          "detail": "形容詞: 沉思的；反光的"
+          "detail": "形容詞: 沉思的；反光的",
+          "audio": "audio/word/G1-S1-SUP-W047-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W047.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W048",
@@ -1074,20 +1219,24 @@
       "derivatives": [
         {
           "form": "refreshing",
-          "detail": "形容詞: 提神的；令人耳目一新 的"
+          "detail": "形容詞: 提神的；令人耳目一新 的",
+          "audio": "audio/word/G1-S1-SUP-W048-d1.mp3"
         },
         {
           "form": "refreshed",
-          "detail": "形容詞: 恢復精神的"
+          "detail": "形容詞: 恢復精神的",
+          "audio": "audio/word/G1-S1-SUP-W048-d2.mp3"
         },
         {
           "form": "refreshment",
-          "detail": "名詞: 茶點；恢復精神"
+          "detail": "名詞: 茶點；恢復精神",
+          "audio": "audio/word/G1-S1-SUP-W048-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W048.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W049",
@@ -1100,24 +1249,29 @@
       "derivatives": [
         {
           "form": "relation",
-          "detail": "名詞: 關係"
+          "detail": "名詞: 關係",
+          "audio": "audio/word/G1-S1-SUP-W049-d1.mp3"
         },
         {
           "form": "relationship",
-          "detail": "名詞: 戀愛關係、關係"
+          "detail": "名詞: 戀愛關係、關係",
+          "audio": "audio/word/G1-S1-SUP-W049-d2.mp3"
         },
         {
           "form": "related",
-          "detail": "形容詞: 相關的"
+          "detail": "形容詞: 相關的",
+          "audio": "audio/word/G1-S1-SUP-W049-d3.mp3"
         },
         {
           "form": "relative",
-          "detail": "名詞: 親戚；形容詞: 相對的"
+          "detail": "名詞: 親戚；形容詞: 相對的",
+          "audio": "audio/word/G1-S1-SUP-W049-d4.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W049.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W050",
@@ -1130,12 +1284,14 @@
       "derivatives": [
         {
           "form": "reminder",
-          "detail": "名詞: 提醒物"
+          "detail": "名詞: 提醒物",
+          "audio": "audio/word/G1-S1-SUP-W050-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W050.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W051",
@@ -1147,8 +1303,9 @@
       "meaning": "回答；回覆",
       "derivatives": [],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W051.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W052",
@@ -1161,16 +1318,19 @@
       "derivatives": [
         {
           "form": "response",
-          "detail": "名詞: 回應"
+          "detail": "名詞: 回應",
+          "audio": "audio/word/G1-S1-SUP-W052-d1.mp3"
         },
         {
           "form": "responsive",
-          "detail": "形容詞: 反應快的"
+          "detail": "形容詞: 反應快的",
+          "audio": "audio/word/G1-S1-SUP-W052-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W052.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W053",
@@ -1183,16 +1343,19 @@
       "derivatives": [
         {
           "form": "romantic",
-          "detail": "形容詞: 浪漫的；愛情的"
+          "detail": "形容詞: 浪漫的；愛情的",
+          "audio": "audio/word/G1-S1-SUP-W053-d1.mp3"
         },
         {
           "form": "romantically",
-          "detail": "副詞: 浪漫地"
+          "detail": "副詞: 浪漫地",
+          "audio": "audio/word/G1-S1-SUP-W053-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W053.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W053.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W054",
@@ -1205,12 +1368,14 @@
       "derivatives": [
         {
           "form": "ruins",
-          "detail": "名詞: 廢墟；遺跡"
+          "detail": "名詞: 廢墟；遺跡",
+          "audio": "audio/word/G1-S1-SUP-W054-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W054.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W054.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W055",
@@ -1222,8 +1387,9 @@
       "meaning": "神聖的",
       "derivatives": [],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W055.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W056",
@@ -1236,24 +1402,29 @@
       "derivatives": [
         {
           "form": "satisfying",
-          "detail": "形容詞: 令人滿意的"
+          "detail": "形容詞: 令人滿意的",
+          "audio": "audio/word/G1-S1-SUP-W056-d1.mp3"
         },
         {
           "form": "satisfaction",
-          "detail": "名詞: 滿意"
+          "detail": "名詞: 滿意",
+          "audio": "audio/word/G1-S1-SUP-W056-d2.mp3"
         },
         {
           "form": "satisfied",
-          "detail": "形容詞: 感到滿意的"
+          "detail": "形容詞: 感到滿意的",
+          "audio": "audio/word/G1-S1-SUP-W056-d3.mp3"
         },
         {
           "form": "satisfactory",
-          "detail": "形容詞: 符合要求的"
+          "detail": "形容詞: 符合要求的",
+          "audio": "audio/word/G1-S1-SUP-W056-d4.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W056.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W057",
@@ -1266,12 +1437,14 @@
       "derivatives": [
         {
           "form": "schedule",
-          "detail": "動詞: 安排；預定"
+          "detail": "動詞: 安排；預定",
+          "audio": "audio/word/G1-S1-SUP-W057-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W057.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W057.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W058",
@@ -1283,8 +1456,9 @@
       "meaning": "故意不參加；略過、跳過",
       "derivatives": [],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W058.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W059",
@@ -1297,12 +1471,14 @@
       "derivatives": [
         {
           "form": "surface",
-          "detail": "動詞: 浮出水面；顯露"
+          "detail": "動詞: 浮出水面；顯露",
+          "audio": "audio/word/G1-S1-SUP-W059-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W059.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W059.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W060",
@@ -1315,16 +1491,19 @@
       "derivatives": [
         {
           "form": "survival",
-          "detail": "名詞: 生存；倖存"
+          "detail": "名詞: 生存；倖存",
+          "audio": "audio/word/G1-S1-SUP-W060-d1.mp3"
         },
         {
           "form": "survivor",
-          "detail": "名詞: 倖存者"
+          "detail": "名詞: 倖存者",
+          "audio": "audio/word/G1-S1-SUP-W060-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W060.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W060.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W061",
@@ -1336,8 +1515,9 @@
       "meaning": "因此",
       "derivatives": [],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W061.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W062",
@@ -1350,12 +1530,14 @@
       "derivatives": [
         {
           "form": "throughout",
-          "detail": "副詞: 從頭到尾；到處"
+          "detail": "副詞: 從頭到尾；到處",
+          "audio": "audio/word/G1-S1-SUP-W062-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W062.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W063",
@@ -1368,16 +1550,19 @@
       "derivatives": [
         {
           "form": "traditional",
-          "detail": "形容詞: 傳統的"
+          "detail": "形容詞: 傳統的",
+          "audio": "audio/word/G1-S1-SUP-W063-d1.mp3"
         },
         {
           "form": "traditionally",
-          "detail": "副詞: 傳統上"
+          "detail": "副詞: 傳統上",
+          "audio": "audio/word/G1-S1-SUP-W063-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W063.mp3",
+      "imageWord": "images/word/G1-S1-SUP-W063.jpg",
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W064",
@@ -1390,12 +1575,14 @@
       "derivatives": [
         {
           "form": "upset",
-          "detail": "名詞: 苦惱；腸胃不適"
+          "detail": "名詞: 苦惱；腸胃不適",
+          "audio": "audio/word/G1-S1-SUP-W064-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W064.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W065",
@@ -1408,20 +1595,24 @@
       "derivatives": [
         {
           "form": "value",
-          "detail": "名詞: 價值；動詞: 重視"
+          "detail": "名詞: 價值；動詞: 重視",
+          "audio": "audio/word/G1-S1-SUP-W065-d1.mp3"
         },
         {
           "form": "valuables",
-          "detail": "名詞: 貴重物品"
+          "detail": "名詞: 貴重物品",
+          "audio": "audio/word/G1-S1-SUP-W065-d2.mp3"
         },
         {
           "form": "invaluable",
-          "detail": "形容詞: 無價的"
+          "detail": "形容詞: 無價的",
+          "audio": "audio/word/G1-S1-SUP-W065-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W065.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W066",
@@ -1434,20 +1625,24 @@
       "derivatives": [
         {
           "form": "various",
-          "detail": "形容詞: 各式各樣的"
+          "detail": "形容詞: 各式各樣的",
+          "audio": "audio/word/G1-S1-SUP-W066-d1.mp3"
         },
         {
           "form": "variety",
-          "detail": "名詞: 多種樣式、變化"
+          "detail": "名詞: 多種樣式、變化",
+          "audio": "audio/word/G1-S1-SUP-W066-d2.mp3"
         },
         {
           "form": "variation",
-          "detail": "名詞: 變化"
+          "detail": "名詞: 變化",
+          "audio": "audio/word/G1-S1-SUP-W066-d3.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W066.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W067",
@@ -1460,16 +1655,19 @@
       "derivatives": [
         {
           "form": "wonder",
-          "detail": "名詞: 驚奇"
+          "detail": "名詞: 驚奇",
+          "audio": "audio/word/G1-S1-SUP-W067-d1.mp3"
         },
         {
           "form": "wonderful",
-          "detail": "形容詞: 極好的"
+          "detail": "形容詞: 極好的",
+          "audio": "audio/word/G1-S1-SUP-W067-d2.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W067.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     },
     {
       "id": "G1-S1-SUP-W068",
@@ -1482,12 +1680,14 @@
       "derivatives": [
         {
           "form": "yell",
-          "detail": "名詞: 大喊"
+          "detail": "名詞: 大喊",
+          "audio": "audio/word/G1-S1-SUP-W068-d1.mp3"
         }
       ],
       "ipa": null,
-      "audioWord": null,
-      "imageWord": null
+      "audioWord": "audio/word/G1-S1-SUP-W068.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     }
   ],
   "phrases": [
@@ -1503,8 +1703,8 @@
       "definition": "the remaining part of something or the others in a group",
       "example": "Daryl took a few bites of the cake and then gave the rest of it to his little sister.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P001.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P001-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P002",
@@ -1518,8 +1718,8 @@
       "definition": "being physically present somewhere",
       "example": "Deborah decided to visit the museum in person to see the paintings instead of looking at them online.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P002.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P002-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P003",
@@ -1533,8 +1733,8 @@
       "definition": "to consider someone or something to be important and worthy of attention",
       "example": "Archie loves making fun of people, so don't take his words seriously.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P003.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P003-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P004",
@@ -1548,8 +1748,8 @@
       "definition": "to fail to meet someone's expectations or keep a promise that you made",
       "example": "Roy promised his daughter that he would attend her school play, and he didn't let her down.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P004.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P004-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P005",
@@ -1563,8 +1763,8 @@
       "definition": "to check something and be certain about it",
       "example": "Please make sure that you don't go over the speed limit when you are driving.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P005.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P005-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P006",
@@ -1578,8 +1778,8 @@
       "definition": "to regard someone or something as the most important thing",
       "example": "Most parents put their children's needs first and want them to be happy and healthy.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P006.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P006-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P007",
@@ -1593,8 +1793,8 @@
       "definition": "to wear a special costume or special clothes, usually for a special occasion",
       "example": "Every Halloween, the young cousins dress up as their favorite cartoon characters.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P007.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P007-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P008",
@@ -1608,8 +1808,8 @@
       "definition": "used to emphasize that something is true",
       "example": "December is not cold in Australia. In fact, it's the middle of summer.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P008.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P008-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P009",
@@ -1623,8 +1823,8 @@
       "definition": "to search through or look at several things one by one",
       "example": "Bill is going through the list of winners to see if he is one of them.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P009.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P009-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P010",
@@ -1638,8 +1838,8 @@
       "definition": "done with knowledge of the possibility that something might have happened or will happen",
       "example": "Each of the hikers brought an umbrella and a raincoat in case it rained.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P010.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P010-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P011",
@@ -1653,8 +1853,8 @@
       "definition": "also",
       "example": "Please remember to bring a snack to the party. In addition, you should bring a gift for the birthday boy.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P011.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P011-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P012",
@@ -1668,8 +1868,8 @@
       "definition": "to spend time together in a fun or casual way",
       "example": "Alice and her friends always hang out in a café after school on Fridays.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P012.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P012-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P013",
@@ -1683,8 +1883,8 @@
       "definition": "to go to or rely on someone or something for some purpose",
       "example": "Tracy always turns to her older sister Ivy when she has a problem with one of her friends.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P013.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P013-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P014",
@@ -1698,8 +1898,8 @@
       "definition": "to be offended by something",
       "example": "Please don't take this personally, but I don't like your shirt. You look better in darker colors.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P014.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P014-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P015",
@@ -1713,8 +1913,8 @@
       "definition": "to grab hold of something",
       "example": "It is a good idea to hold on to one of the poles while you are standing on a moving bus.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P015.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P015-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P016",
@@ -1728,8 +1928,8 @@
       "definition": "to be aware that something exists and that you may see or run into it",
       "example": "Make sure to look out for bees when you go hiking in the forest.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P016.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P016-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P017",
@@ -1743,8 +1943,8 @@
       "definition": "to watch carefully for something so you can stay out of danger",
       "example": "Be on the lookout for falling rocks when you drive through the mountains after a rainstorm.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P017.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P017-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P018",
@@ -1758,8 +1958,8 @@
       "definition": "used to demonstrate or provide an instance of something that was just said",
       "example": "Katie has a really good memory. For example, she can memorize a short passage after she reads it once.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P018.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P018-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P019",
@@ -1773,8 +1973,8 @@
       "definition": "as stated by someone or something",
       "example": "According to this news report, the whole village was ruined by the earthquake.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P019.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P019-1.mp3"
     },
     {
       "id": "G1-S1-SUP-P020",
@@ -1788,8 +1988,8 @@
       "definition": "as many or as much as",
       "example": "Amazingly, some swimmers can hold their breath for up to twenty minutes.",
       "exampleZh": null,
-      "audioPhrase": null,
-      "audioExample": null
+      "audioPhrase": "audio/word/G1-S1-SUP-P020.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P020-1.mp3"
     }
   ]
 }
