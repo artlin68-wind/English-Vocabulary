@@ -4,6 +4,9 @@ scripts/__pycache__/
 __pycache__/
 *.pyc
 
+# Piper 離線語音模型(約 60MB,只在建置時需要,不必入庫)
+scripts/voices/
+
 # API KEY:嚴禁入庫(若日後改用需 KEY 的 TTS 引擎)
 .env
 *.key

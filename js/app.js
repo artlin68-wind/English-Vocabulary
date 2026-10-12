@@ -1,7 +1,10 @@
-/* ================= 背單字 App — vanilla JS ================= *
+/* ================= 背單字 App — vanilla JS (v2 schema) ================= *
  * 資料:data/index.json (manifest) + data/<book>.json
- * 功能:卡片瀏覽 / 翻面 / 左右滑動 / 發音 / 單元篩選 / 搜尋 /
- *       進度標記 / 自動播放(MediaSession 鎖屏連播)/ 分單元離線下載
+ * 單字 schema(v2):word / ipa / ipaRaw / pos[] / gloss / verbForms /
+ *   examples[{en,zh,audio,image}] / notes[] / audioWord / imageWord /
+ *   page / unit(「第 N 頁」);頂層另含 meta 與 pageNotes{頁碼:[...]}。
+ * 功能:卡片瀏覽 / 翻面(多例句)/ 左右滑動 / 單字+逐句發音 / 頁篩選 /
+ *       搜尋 / 進度標記 / 自動播放(MediaSession 鎖屏連播)/ 分頁離線下載
  * ============================================================ */
 'use strict';
 
@@ -13,7 +16,8 @@ const state = {
   manifest: null,
   book: null,          // 目前 book meta
   words: [],           // 目前 book 全部單字
-  units: [],           // [{name, from, to, count}]
+  pageNotes: {},       // { 頁碼字串: [補充字串...] }
+  units: [],           // [{name, count, words}]
   view: [],            // 篩選後的單字陣列
   pos: 0,              // view 內目前索引
   flipped: false,
@@ -23,7 +27,7 @@ const state = {
   settings: {
     font: 1, rate: 1, autoFlip: true, readZh: false, repeat: false, gap: 0.9
   },
-  auto: { on: false, timer: null, step: null },
+  auto: { on: false, timer: null },
 };
 
 /* ---------- localStorage 小工具 ---------- */
@@ -64,6 +68,7 @@ async function loadBook(bookCode) {
   const data = await fetchJSON(entry.file);
   state.book = data.meta;
   state.words = data.words;
+  state.pageNotes = data.pageNotes || {};
   state.progress = LS.get(keyProgress(bookCode), {});
   state.downloaded = LS.get(keyDl(bookCode), {});
   buildUnits();
@@ -76,7 +81,7 @@ async function loadBook(bookCode) {
   updateStorageLine();
 }
 
-/* ================= 單元 / 篩選 ================= */
+/* ================= 單元(頁)/ 篩選 ================= */
 function buildUnits() {
   const map = new Map();
   state.words.forEach((w) => {
@@ -102,7 +107,7 @@ function rebuildView() {
 
 function updateUnitName() {
   const parts = [];
-  parts.push(state.filter.unit ? state.filter.unit : '全部單元');
+  parts.push(state.filter.unit ? state.filter.unit : '全部頁');
   if (state.filter.status === 'review') parts.push('待複習');
   else if (state.filter.status === 'unknown') parts.push('未標記');
   $('unitName').textContent = parts.join(' · ');
@@ -111,10 +116,26 @@ function updateUnitName() {
 /* ================= 卡片渲染 ================= */
 function current() { return state.view[state.pos]; }
 
+// 例句音檔路徑:優先用資料內 examples[i].audio;無則回退慣例路徑(供已下載舊檔)
+function exampleAudio(w, i) {
+  const ex = (w.examples || [])[i];
+  if (ex && ex.audio) return ex.audio;
+  return null;
+}
+
 function render() {
   const w = current();
   if (!w) return;
-  // 正面
+
+  /* ---- 正面 ---- */
+  // 頁級補充(📝)
+  const pn = state.pageNotes[String(w.page)];
+  const pnEl = $('pageNote');
+  if (pn && pn.length) {
+    pnEl.innerHTML = pn.map((t) => `📝 ${esc(t)}`).join('<br>');
+    pnEl.hidden = false;
+  } else { pnEl.hidden = true; pnEl.innerHTML = ''; }
+
   const posRow = $('posRow');
   posRow.innerHTML = '';
   (w.pos || []).forEach((p) => {
@@ -123,20 +144,27 @@ function render() {
   });
   $('wordText').textContent = w.word;
   const ipa = $('ipaText');
-  if (w.ipa) { ipa.textContent = w.ipa; ipa.hidden = false; }
+  const ipaStr = w.ipaRaw || (w.ipa ? `/${w.ipa}/` : '');
+  if (ipaStr) { ipa.textContent = ipaStr; ipa.hidden = false; }
   else { ipa.hidden = true; }
   $('playWordBtn').hidden = false;
   toggleImg($('imgWord'), w.imageWord);
-  // 背面(來源無例句時以「—」表示,視為空)
-  const hasEx = w.example && w.example.trim() && w.example.trim() !== '—';
-  $('exampleText').textContent = hasEx ? w.example : '(此字無例句)';
-  $('translationText').textContent = hasEx ? (w.translation || '') : '';
-  $('playSentenceBtn').hidden = !w.audioSentence;
-  toggleImg($('imgSentence'), w.imageSentence);
-  // 來源標記
+
+  /* ---- 背面 ---- */
+  $('glossText').textContent = w.gloss || '';
+  const vf = $('verbForms');
+  if (w.verbForms) { vf.textContent = `動詞三態:${w.verbForms}`; vf.hidden = false; }
+  else { vf.hidden = true; }
+  renderExamples(w);
+  const notesEl = $('wordNotes');
+  if (w.notes && w.notes.length) {
+    notesEl.innerHTML = w.notes.map((n) => `📝 ${esc(n)}`).join('<br>');
+    notesEl.hidden = false;
+  } else { notesEl.hidden = true; notesEl.innerHTML = ''; }
+
+  /* ---- 來源標記 ---- */
   const badge = $('srcBadge');
   if (w.audioWordSource === 'human') { badge.textContent = '🎙 真人'; badge.hidden = false; }
-  else if (w.ipaSource === 'auto') { badge.textContent = '音標自動推定'; badge.hidden = false; }
   else badge.hidden = true;
 
   showFace(false);
@@ -148,6 +176,44 @@ function render() {
   updateMediaMeta();
 }
 
+function renderExamples(w) {
+  const ul = $('examplesList');
+  ul.innerHTML = '';
+  const exs = w.examples || [];
+  if (!exs.length) {
+    const li = document.createElement('li');
+    li.className = 'ex-empty';
+    li.textContent = '(此字無例句)';
+    ul.appendChild(li);
+    return;
+  }
+  exs.forEach((ex, i) => {
+    const li = document.createElement('li');
+    li.className = 'ex-item';
+    const hasAudio = !!exampleAudio(w, i);
+    const en = document.createElement('button');
+    en.className = 'ex-en';
+    en.lang = 'en';
+    en.dataset.i = i;
+    en.innerHTML = `${hasAudio ? '🔊 ' : ''}${esc(ex.en || '')}`;
+    en.setAttribute('aria-label', '播放例句發音');
+    en.addEventListener('click', (e) => { e.stopPropagation(); unlockAudio(); playExample(i, true); });
+    li.appendChild(en);
+    if (ex.zh) {
+      const zh = document.createElement('div');
+      zh.className = 'ex-zh'; zh.textContent = ex.zh;
+      li.appendChild(zh);
+    }
+    if (ex.image) {
+      const img = document.createElement('img');
+      img.className = 'card-img ex-img'; img.alt = '';
+      img.src = ex.image; img.onerror = () => (img.hidden = true);
+      li.appendChild(img);
+    }
+    ul.appendChild(li);
+  });
+}
+
 function toggleImg(el, src) {
   if (src) { el.src = src; el.hidden = false; el.onerror = () => (el.hidden = true); }
   else { el.hidden = true; el.removeAttribute('src'); }
@@ -157,6 +223,7 @@ function showFace(back) {
   state.flipped = back;
   $('cardFront').hidden = back;
   $('cardBack').hidden = !back;
+  if (back) $('backScroll').scrollTop = 0;
 }
 function flip() { showFace(!state.flipped); if (state.flipped) beat(); }
 
@@ -232,17 +299,20 @@ async function playWord(fromUser) {
   await playSrc(w.audioWord);
   markPlaying($('playWordBtn'), false);
 }
-async function playSentence(fromUser) {
-  const w = current(); if (!w || !w.audioSentence) { if (fromUser) toast('此例句尚無音檔'); return; }
-  markPlaying($('playSentenceBtn'), true);
-  await playSrc(w.audioSentence);
-  markPlaying($('playSentenceBtn'), false);
+async function playExample(i, fromUser) {
+  const w = current(); if (!w) return;
+  const src = exampleAudio(w, i);
+  if (!src) { if (fromUser) toast('此例句尚無音檔'); return; }
+  if (!state.flipped) showFace(true);
+  const btn = $('examplesList').querySelector(`.ex-en[data-i="${i}"]`);
+  markPlaying(btn, true);
+  await playSrc(src);
+  markPlaying(btn, false);
 }
 function markPlaying(btn, on) { btn && btn.classList.toggle('playing', on); }
 
 /* ================= 自動播放 ================= *
- * 以持久 <audio> 串接播放清單,'ended' 由 playSrc 的 Promise 接續。
- * readZh 用 speechSynthesis 唸中譯(次要、開螢幕時較可靠)。 */
+ * 以持久 <audio> 串接:單字 → 逐例句。readZh 用 speechSynthesis 唸中譯。 */
 async function startAuto() {
   unlockAudio();
   if (state.auto.on) return;
@@ -276,17 +346,25 @@ async function autoLoop() {
     if (!state.auto.on) break;
     await wait(state.settings.gap * 0.6);
     if (state.settings.autoFlip) { showFace(true); beat(); }
-    if (w.audioSentence) {
-      setAutoNow(`${w.word} — 例句`);
-      markPlaying($('playSentenceBtn'), true); await playSrc(w.audioSentence); markPlaying($('playSentenceBtn'), false);
+
+    // 逐例句朗讀(含中譯選項)
+    const exs = w.examples || [];
+    for (let i = 0; i < exs.length; i++) {
+      if (!state.auto.on) break;
+      const src = exampleAudio(w, i);
+      if (src) {
+        setAutoNow(`${w.word} — 例句 ${i + 1}/${exs.length}`);
+        await playExample(i, false);
+      }
+      if (!state.auto.on) break;
+      if (state.settings.readZh && exs[i].zh) { await speak(exs[i].zh); }
+      if (i < exs.length - 1) await wait(state.settings.gap * 0.5);
     }
-    if (!state.auto.on) break;
-    if (state.settings.readZh && w.translation) { await speak(w.translation); }
     if (!state.auto.on) break;
     await wait(state.settings.gap);
     if (!state.auto.on) break;
     if (!state.settings.repeat) {
-      if (state.pos >= state.view.length - 1) { stopAuto(); toast('已播完本組單字'); break; }
+      if (state.pos >= state.view.length - 1) { stopAuto(); toast('已播完本頁單字'); break; }
       state.pos += 1; render();
     } else { render(); }
   }
@@ -314,10 +392,11 @@ function speak(text) {
 function updateMediaMeta() {
   if (!('mediaSession' in navigator)) return;
   const w = current(); if (!w) return;
+  const firstEx = (w.examples || [])[0];
   try {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: w.word,
-      artist: w.example || '',
+      artist: (firstEx && firstEx.en) || w.gloss || '',
       album: `${state.book.name || ''} · ${w.unit}`,
       artwork: [
         { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
@@ -346,7 +425,7 @@ function mark(kind) {
   renderUnitList();
 }
 
-/* ================= 單元清單 / 下載 ================= */
+/* ================= 單元(頁)清單 / 下載 ================= */
 function renderUnitList() {
   const ul = $('unitList'); ul.innerHTML = '';
   state.units.forEach((u) => {
@@ -370,9 +449,11 @@ function unitMediaUrls(u) {
   const urls = [];
   u.words.forEach((w) => {
     if (w.audioWord) urls.push(w.audioWord);
-    if (w.audioSentence) urls.push(w.audioSentence);
     if (w.imageWord) urls.push(w.imageWord);
-    if (w.imageSentence) urls.push(w.imageSentence);
+    (w.examples || []).forEach((ex) => {
+      if (ex.audio) urls.push(ex.audio);
+      if (ex.image) urls.push(ex.image);
+    });
   });
   return urls;
 }
@@ -380,7 +461,7 @@ function unitMediaUrls(u) {
 async function downloadUnit(u, btn) {
   if (!('caches' in window)) return toast('此瀏覽器不支援離線快取');
   const urls = unitMediaUrls(u);
-  if (!urls.length) return toast('此單元尚無音檔');
+  if (!urls.length) return toast('此頁尚無音檔');
   btn.classList.add('busy'); btn.disabled = true;
   try {
     const cache = await caches.open(AUDIO_CACHE);
@@ -424,7 +505,7 @@ async function updateStorageLine() {
     }
   } catch {}
   const n = Object.values(state.downloaded).filter(Boolean).length;
-  el.textContent = `已下載單元:${n} 個${txt ? ' · ' + txt : ''}`;
+  el.textContent = `已下載頁數:${n} 頁${txt ? ' · ' + txt : ''}`;
 }
 
 /* ================= 搜尋 ================= */
@@ -432,16 +513,18 @@ function runSearch(q) {
   const box = $('searchResults'); box.innerHTML = '';
   q = q.trim().toLowerCase();
   if (!q) return;
-  const hits = state.words.filter((w) =>
-    w.word.toLowerCase().includes(q) ||
-    (w.translation || '').toLowerCase().includes(q) ||
-    (w.example || '').toLowerCase().includes(q)).slice(0, 40);
+  const hits = state.words.filter((w) => {
+    if (w.word.toLowerCase().includes(q)) return true;
+    if ((w.gloss || '').toLowerCase().includes(q)) return true;
+    return (w.examples || []).some((ex) =>
+      (ex.en || '').toLowerCase().includes(q) || (ex.zh || '').toLowerCase().includes(q));
+  }).slice(0, 40);
   if (!hits.length) { box.innerHTML = '<li class="search-empty">找不到符合的單字</li>'; return; }
   hits.forEach((w) => {
     const li = document.createElement('li');
     li.className = 'search-item';
     li.innerHTML = `<div class="sw">${esc(w.word)} <span class="st">${esc((w.pos || []).join(' '))}</span></div>
-      <div class="st">${esc(w.translation || '')} · ${esc(w.unit)}</div>`;
+      <div class="st">${esc(w.gloss || '')} · ${esc(w.unit)}</div>`;
     li.onclick = () => {
       state.filter = { unit: null, status: 'all' }; rebuildView();
       const idx = state.view.findIndex((x) => x.id === w.id);
@@ -453,15 +536,13 @@ function runSearch(q) {
 
 /* ================= UI 綁定 ================= */
 function bindStaticUI() {
-  // 卡片:點空白翻面;點字播音
+  // 卡片:點空白翻面;例句的點擊在 renderExamples 內各自綁定
   $('card').addEventListener('click', (e) => {
-    if (e.target.closest('.word,.example,.play-word-btn,.play-sentence-btn,.card-img')) return;
+    if (e.target.closest('.word,.ex-en,.play-word-btn,.card-img')) return;
     unlockAudio(); flip();
   });
   $('wordText').addEventListener('click', () => { unlockAudio(); playWord(true); });
-  $('exampleText').addEventListener('click', () => { unlockAudio(); playSentence(true); });
   $('playWordBtn').addEventListener('click', (e) => { e.stopPropagation(); unlockAudio(); playWord(true); });
-  $('playSentenceBtn').addEventListener('click', (e) => { e.stopPropagation(); unlockAudio(); playSentence(true); });
 
   $('btnPrev').onclick = () => { unlockAudio(); stopAuto(); go(-1); };
   $('btnNext').onclick = () => { unlockAudio(); stopAuto(); go(1); };

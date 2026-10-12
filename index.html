@@ -38,28 +38,31 @@
     <section class="card" id="card" aria-live="polite">
       <!-- 正面 -->
       <div class="card-face card-front" id="cardFront">
-        <div class="pos-row" id="posRow"></div>
-        <button class="word" id="wordText" aria-label="播放單字發音">ancient</button>
-        <div class="ipa" id="ipaText">/ˈeɪnʃənt/</div>
-        <button class="play-word-btn" id="playWordBtn">🔊 單字</button>
-        <div class="tap-hint" id="tapHint">點卡片看例句 ▸</div>
-        <img class="card-img" id="imgWord" alt="" hidden />
+        <div class="page-note" id="pageNote" hidden></div>
+        <div class="front-mid">
+          <div class="pos-row" id="posRow"></div>
+          <button class="word" id="wordText" aria-label="播放單字發音">ancient</button>
+          <div class="ipa" id="ipaText">[ˈeɪnʃənt]</div>
+          <button class="play-word-btn" id="playWordBtn">🔊 單字</button>
+          <img class="card-img" id="imgWord" alt="" hidden />
+        </div>
+        <div class="tap-hint" id="tapHint">點卡片看解釋 ▸</div>
       </div>
       <!-- 背面 -->
       <div class="card-face card-back" id="cardBack" hidden>
-        <button class="example" id="exampleText" lang="en" aria-label="播放例句發音">
-          We were impressed by the ruins of an ancient building.
-        </button>
-        <div class="translation" id="translationText">我們對一處古建築廢墟印象頗深。</div>
-        <button class="play-sentence-btn" id="playSentenceBtn">🔊 例句</button>
-        <img class="card-img" id="imgSentence" alt="" hidden />
-        <div class="tap-hint" id="tapHintBack">◂ 點卡片回單字</div>
+        <div class="back-scroll" id="backScroll">
+          <div class="gloss" id="glossText"></div>
+          <div class="verb-forms" id="verbForms" hidden></div>
+          <ul class="examples" id="examplesList"></ul>
+          <div class="word-notes" id="wordNotes" hidden></div>
+        </div>
+        <div class="tap-hint" id="tapHintBack">◂ 點空白回單字</div>
       </div>
 
       <div class="src-badge" id="srcBadge" hidden></div>
     </section>
 
-    <div class="counter" id="counter">1 / 923</div>
+    <div class="counter" id="counter">載入中…</div>
   </main>
 
   <!-- ===== 底部操作列 ===== -->

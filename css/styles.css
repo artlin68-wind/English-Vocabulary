@@ -81,6 +81,15 @@ img{max-width:100%;}
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap:14px; text-align:center;
 }
+/* 正面:頁補充固定在上、主體置中 */
+.card-front{justify-content:flex-start;}
+.front-mid{flex:1; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:14px; width:100%; min-height:0;}
+.page-note{
+  align-self:stretch; margin:2px 0 0; padding:8px 12px;
+  background:var(--bg2); border:1px solid var(--line); border-radius:12px;
+  color:var(--review); font-size:calc(13px*var(--fs)); line-height:1.5; text-align:left;
+}
 .pos-row{display:flex; gap:6px; flex-wrap:wrap; justify-content:center; min-height:22px;}
 .pos-tag{
   font-size:calc(13px*var(--fs)); color:var(--accent);
@@ -94,25 +103,50 @@ img{max-width:100%;}
 }
 .word:active{color:var(--accent);}
 .ipa{font-size:calc(22px*var(--fs)); color:var(--muted); font-family:"Times New Roman",serif;}
-.example{
-  border:none; background:transparent;
-  font-size:calc(24px * var(--fs)); font-weight:600; line-height:1.45;
-  word-break:break-word; padding:4px 6px; max-width:36ch;
-}
-.example:active{color:var(--accent);}
-.translation{font-size:calc(19px*var(--fs)); color:var(--muted); line-height:1.5; max-width:34ch;}
 
-.play-word-btn,.play-sentence-btn{
+.play-word-btn{
   margin-top:4px; border:1px solid var(--accent2);
   background:rgba(255,134,54,.14); color:var(--accent);
   font-size:calc(18px*var(--fs)); font-weight:700;
   padding:12px 26px; border-radius:999px; min-height:48px;
 }
-.play-word-btn:active,.play-sentence-btn:active{background:rgba(255,134,54,.30);}
-.play-word-btn.playing,.play-sentence-btn.playing{background:var(--accent); color:#1b1c1f;}
+.play-word-btn:active{background:rgba(255,134,54,.30);}
+.play-word-btn.playing{background:var(--accent); color:#1b1c1f;}
 
-.tap-hint{color:var(--muted); font-size:calc(14px*var(--fs)); opacity:.8; margin-top:2px;}
-.card-img{max-height:34%; border-radius:12px; object-fit:contain;}
+/* ===== 背面:可捲動,呈現解釋 / 多例句 / 三態 / 筆記 ===== */
+.card-back{justify-content:flex-start; gap:8px;}
+.back-scroll{
+  width:100%; flex:1; min-height:0; overflow-y:auto; -webkit-overflow-scrolling:touch;
+  display:flex; flex-direction:column; gap:14px; text-align:left;
+  padding:2px 2px 4px;
+}
+.gloss{font-size:calc(21px*var(--fs)); font-weight:700; line-height:1.45; color:var(--fg);}
+.verb-forms{
+  align-self:flex-start; font-size:calc(14px*var(--fs)); color:var(--accent);
+  border:1px solid var(--accent2); background:rgba(255,134,54,.09);
+  border-radius:999px; padding:4px 12px; font-weight:700;
+}
+.examples{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;}
+.ex-item{border-top:1px solid var(--line); padding-top:12px;}
+.ex-item:first-child{border-top:none; padding-top:0;}
+.ex-en{
+  display:block; width:100%; text-align:left; border:none; background:transparent;
+  font-size:calc(21px*var(--fs)); font-weight:600; line-height:1.45;
+  word-break:break-word; padding:2px 4px; border-radius:8px;
+}
+.ex-en:active{color:var(--accent);}
+.ex-en.playing{background:rgba(255,134,54,.16); color:var(--accent);}
+.ex-zh{font-size:calc(18px*var(--fs)); color:var(--muted); line-height:1.5; padding:2px 4px;}
+.ex-img{max-height:160px; margin-top:8px;}
+.ex-empty{color:var(--muted); font-size:calc(18px*var(--fs)); padding:8px 4px;}
+.word-notes{
+  margin-top:2px; padding:10px 12px; border-radius:12px;
+  background:var(--bg2); border:1px solid var(--line);
+  color:var(--review); font-size:calc(15px*var(--fs)); line-height:1.6;
+}
+
+.tap-hint{color:var(--muted); font-size:calc(14px*var(--fs)); opacity:.8; margin-top:2px; text-align:center;}
+.card-img{max-width:100%; max-height:30vh; border-radius:12px; object-fit:contain;}
 .src-badge{
   position:absolute; top:10px; right:12px;
   font-size:calc(11px*var(--fs)); color:var(--muted);
@@ -243,5 +277,6 @@ img{max-width:100%;}
 /* 大字級時避免溢出 */
 @media (max-height:620px){
   .word{font-size:calc(34px*var(--fs));}
-  .example{font-size:calc(21px*var(--fs));}
+  .gloss{font-size:calc(19px*var(--fs));}
+  .ex-en{font-size:calc(19px*var(--fs));}
 }

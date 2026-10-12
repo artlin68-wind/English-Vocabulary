@@ -7,10 +7,10 @@ gen_audio.py — 建置時預先產生單字/例句音檔(執行期不需任何 
           加 --human 則優先抓 Wikimedia Commons 真人母語錄音(En-us / Lingua Libre),
           用內附 ffmpeg 轉成 mp3,查無者退回 TTS,並在 JSON 以 audioWordSource
           標記 human / tts,方便日後把 TTS 版換成真人版。
-例句發音:一律用 edge-tts(微軟 Neural 語音,免費、無需 KEY、音質自然)合成。
+例句發音:逐例句用 edge-tts(微軟 Neural 語音,免費、無需 KEY、音質自然)合成。
 
-輸出:audio/word/{id}.mp3、audio/sentence/{id}.mp3(mono mp3,iOS Safari 保證支援)。
-JSON 寫回:audioWord / audioWordSource / audioSentence。
+輸出:audio/word/{id}.mp3、audio/sentence/{id}-{n}.mp3(n 為例句序號;mono mp3,iOS Safari 保證支援)。
+JSON 寫回:audioWord / audioWordSource / examples[i].audio。
 
 特性:斷點續跑(已存在的音檔跳過、不重產)、進度輸出、對外部來源重試 + 速率控制。
 
@@ -200,8 +200,74 @@ async def tts_save(text: str, dest: str, voice: str, rate: str = "+0%") -> bool:
     return False
 
 
+# ---------- Piper 離線合成(不需網路 / KEY,免受 edge-tts 端點限制) ----------
+# 預設語音模型(可用 --piper-model 覆寫);以 scripts/download 的 lessac medium 為準。
+PIPER_MODEL = os.path.join(ROOT, "scripts", "voices", "en_US-lessac-medium.onnx")
+_piper_voice = None
+_piper_lock = threading.Lock()   # onnxruntime 推論序列化,避免多執行緒競用
+
+
+def _get_piper(model, config):
+    global _piper_voice
+    if _piper_voice is None:
+        from piper import PiperVoice
+        _piper_voice = PiperVoice.load(model, config_path=config)
+    return _piper_voice
+
+
+def _piper_wav_bytes(text, model, config) -> bytes:
+    import io
+    import wave
+    v = _get_piper(model, config)
+    buf = io.BytesIO()
+    with _piper_lock:
+        with wave.open(buf, "wb") as wf:
+            v.synthesize_wav(text, wf)
+    return buf.getvalue()
+
+
+def piper_save_sync(text: str, dest: str, model: str, config: str) -> bool:
+    """Piper 合成 WAV → 用 ffmpeg 轉 mono mp3 存 dest。成功回 True。"""
+    try:
+        wav = _piper_wav_bytes(text, model, config)
+        if wav and len(wav) > 500:
+            return transcode_to_mp3(wav, dest)
+    except Exception as ex:
+        print(f"    ! Piper 失敗 ({text[:24]}...): {ex}", flush=True)
+    return False
+
+
+async def synth(text: str, dest: str, voice: str, args) -> bool:
+    """依引擎合成:--piper 用 Piper(離線);否則 edge-tts。"""
+    if args.piper:
+        return await asyncio.to_thread(
+            piper_save_sync, text, dest, args.piper_model, args.piper_config)
+    return await tts_save(text, dest, voice)
+
+
 # ---------- 主流程 ----------
-def rel_audio(kind: str, wid: str) -> str:
+def save_json_atomic(data, full, retries: int = 5):
+    """原子寫入(temp + os.replace)並重試,避免 Windows 偶發的檔案鎖 / EINVAL。"""
+    tmp = full + ".tmp"
+    for attempt in range(retries):
+        try:
+            with open(tmp, encoding="utf-8", mode="w") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            os.replace(tmp, full)
+            return True
+        except OSError as ex:
+            if attempt == retries - 1:
+                print(f"    ! 寫回 JSON 失敗(已重試 {retries} 次): {ex}", flush=True)
+            else:
+                time.sleep(0.5 * (attempt + 1))
+    return False
+
+
+def rel_audio(kind: str, wid: str, idx=None) -> str:
+    """kind='word' → audio/word/{id}.mp3;
+       kind='sentence' → audio/sentence/{id}-{n}.mp3(n 為 1-based 例句序號)。"""
+    if kind == "sentence" and idx is not None:
+        return f"audio/sentence/{wid}-{idx}.mp3"
     return f"audio/{kind}/{wid}.mp3"
 
 
@@ -252,10 +318,10 @@ async def process_book(bookfile: str, args):
                         async with lock:
                             stats["word_dict"] += 1
                 if not got:
-                    ok = await tts_save(w["word"], dest, args.word_voice)
+                    ok = await synth(w["word"], dest, args.word_voice, args)
                     if ok:
                         w["audioWord"] = rel
-                        w["audioWordSource"] = "tts"
+                        w["audioWordSource"] = "piper" if args.piper else "tts"
                         async with lock:
                             stats["word_tts"] += 1
                     else:
@@ -264,22 +330,27 @@ async def process_book(bookfile: str, args):
                         async with lock:
                             stats["word_fail"] += 1
 
-        # --- 例句音 ---
-        if do_sent and (w.get("example") or "").strip():
-            dest = os.path.join(sent_dir, f"{wid}.mp3")
-            rel = rel_audio("sentence", wid)
-            if os.path.exists(dest) and os.path.getsize(dest) > 500:
-                w["audioSentence"] = rel
-                async with lock:
-                    stats["skip"] += 1
-            else:
-                ok = await tts_save(w["example"], dest, args.voice)
+        # --- 例句音(逐例句,每句一檔 {id}-{n}.mp3) ---
+        if do_sent:
+            for idx, ex in enumerate(w.get("examples") or [], start=1):
+                en = (ex.get("en") or "").strip()
+                if not en or en == "—":
+                    ex["audio"] = None
+                    continue
+                dest = os.path.join(sent_dir, f"{wid}-{idx}.mp3")
+                rel = rel_audio("sentence", wid, idx)
+                if os.path.exists(dest) and os.path.getsize(dest) > 500:
+                    ex["audio"] = rel
+                    async with lock:
+                        stats["skip"] += 1
+                    continue
+                ok = await synth(en, dest, args.voice, args)
                 if ok:
-                    w["audioSentence"] = rel
+                    ex["audio"] = rel
                     async with lock:
                         stats["sent_ok"] += 1
                 else:
-                    w["audioSentence"] = None
+                    ex["audio"] = None
                     async with lock:
                         stats["sent_fail"] += 1
 
@@ -300,8 +371,7 @@ async def process_book(bookfile: str, args):
     for i in range(0, len(words), batch):
         chunk = words[i:i + batch]
         await asyncio.gather(*(guarded(w) for w in chunk))
-        with open(full, encoding="utf-8", mode="w") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        save_json_atomic(data, full)
 
     print(f"[{data['meta']['book']}] 完成 {total} 筆 | "
           f"單字:真人 {stats['word_dict']} / TTS {stats['word_tts']} / 失敗 {stats['word_fail']} | "
@@ -319,7 +389,19 @@ async def main():
                          "查無退回 TTS。預設關閉:全部用 edge-tts 神經語音(穩定、音質自然)。")
     ap.add_argument("--voice", default=VOICE, help="例句 TTS 語音")
     ap.add_argument("--word-voice", default=WORD_VOICE, help="單字 TTS 退路語音")
+    ap.add_argument("--piper", action="store_true",
+                    help="改用 Piper 離線 TTS(不需網路/KEY,不受 edge-tts 端點限制)。"
+                         "預設語音模型為 scripts/voices/en_US-lessac-medium.onnx。")
+    ap.add_argument("--piper-model", default=PIPER_MODEL, help="Piper .onnx 模型路徑")
+    ap.add_argument("--piper-config", default=None, help="Piper .onnx.json 設定路徑(預設為模型路徑 + .json)")
     args = ap.parse_args()
+    if args.piper_config is None:
+        args.piper_config = args.piper_model + ".json"
+    if args.piper:
+        if not os.path.exists(args.piper_model) or not os.path.exists(args.piper_config):
+            sys.exit(f"找不到 Piper 模型:{args.piper_model}(.json)。"
+                     f"請先下載,例:python -m piper.download_voices en_US-lessac-medium --data-dir scripts/voices")
+        print(f"引擎:Piper(離線)— {os.path.basename(args.piper_model)}")
 
     with open(MANIFEST, encoding="utf-8") as f:
         manifest = json.load(f)

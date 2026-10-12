@@ -54,12 +54,16 @@ except ImportError:
     sys.exit("缺少 Pillow,請先執行:pip install Pillow")
 
 _session = requests.Session()
-_session.headers.update({"User-Agent": "vocab-app-build/1.0 (educational; images)"})
+# Wikimedia 要求具描述性、含聯絡方式的 User-Agent(否則較易被限流/封鎖)
+_session.headers.update({
+    "User-Agent": "vocab-app-build/1.0 (educational vocab PWA; contact: local build) "
+                  "python-requests"
+})
 
 # ---- 禮貌限速(所有呼叫共用) ----
 _rate_lock = threading.Lock()
 _last = [0.0]
-_GAP = 0.25
+_GAP = 0.3   # 秒;禮貌限速(API 批次查詢次數本來就少;圖片下載為另一主機)
 
 
 def _throttle():
@@ -72,16 +76,19 @@ def _throttle():
 
 def _get(url, **kw):
     _throttle()
-    for attempt in range(3):
+    for attempt in range(5):
         try:
-            r = _session.get(url, timeout=15, **kw)
+            r = _session.get(url, timeout=20, **kw)
             if r.status_code == 200:
                 return r
-            if r.status_code in (429,) or r.status_code >= 500:
-                time.sleep(1.2 * (attempt + 1)); continue
+            if r.status_code == 429 or r.status_code >= 500:
+                # 尊重 Retry-After;否則退避
+                ra = r.headers.get("Retry-After")
+                delay = float(ra) if (ra and ra.isdigit()) else 2.0 * (attempt + 1)
+                time.sleep(min(delay, 30)); continue
             return r
         except requests.RequestException:
-            time.sleep(1.0 * (attempt + 1))
+            time.sleep(1.5 * (attempt + 1))
     return None
 
 
@@ -96,6 +103,7 @@ def wiki_images_batch(queries):
         r = _get(WIKI_API, params={
             "action": "query", "format": "json", "redirects": "1",
             "prop": "pageimages", "piprop": "thumbnail", "pithumbsize": str(MAXW),
+            "pilimit": "50", "maxlag": "5",
             "titles": "|".join(chunk),
         })
         if not r or r.status_code != 200:
@@ -160,8 +168,21 @@ def openverse_image(query, clean=True):
 
 
 # ---------- 下載 + 縮圖 ----------
+def _fetch_image(url):
+    """圖片下載:快速失敗(短 timeout、最多 2 次),避免單一壞/卡住的 URL 拖垮整批。"""
+    _throttle()
+    for attempt in range(2):
+        try:
+            r = _session.get(url, timeout=(5, 12))  # (connect, read)
+            return r
+        except requests.RequestException:
+            if attempt == 0:
+                time.sleep(0.5)
+    return None
+
+
 def save_image(url, dest):
-    r = _get(url)
+    r = _fetch_image(url)
     if not r or r.status_code != 200 or not r.content or len(r.content) < 800:
         return False
     try:
@@ -227,7 +248,9 @@ def process(bookfile, args):
     st = {"w_ok": 0, "w_blank": 0, "s_ok": 0, "s_blank": 0, "skip": 0}
 
     # 1) 收集待處理任務(略過已存在的圖檔),並記錄每筆的查詢字
-    tasks = []   # (word_obj, kind, query, dest, rel)
+    #    task = (word_obj, example_obj_or_None, kind, query, dest, rel)
+    #    kind='word' → 寫回 w["imageWord"];'sentence' → 寫回 example["image"]。
+    tasks = []
     for w in words:
         wid = w["id"]
         if do_w:
@@ -235,32 +258,34 @@ def process(bookfile, args):
             if os.path.exists(dest):
                 w["imageWord"] = rel; st["skip"] += 1
             else:
-                tasks.append((w, "word", w["lookup"], dest, rel))
+                tasks.append((w, None, "word", w["lookup"], dest, rel))
         if do_s:
-            dest = os.path.join(sdir, f"{wid}.jpg"); rel = f"images/sentence/{wid}.jpg"
-            ex = (w.get("example") or "").strip()
-            if os.path.exists(dest):
-                w["imageSentence"] = rel; st["skip"] += 1
-            elif ex and ex != "—":
-                kw = sentence_keywords(ex, w["word"])
-                if kw:
-                    tasks.append((w, "sentence", kw, dest, rel))
+            for idx, ex in enumerate(w.get("examples") or [], start=1):
+                dest = os.path.join(sdir, f"{wid}-{idx}.jpg")
+                rel = f"images/sentence/{wid}-{idx}.jpg"
+                en = (ex.get("en") or "").strip()
+                if os.path.exists(dest):
+                    ex["image"] = rel; st["skip"] += 1
+                elif en and en != "—":
+                    kw = sentence_keywords(en, w["word"])
+                    if kw:
+                        tasks.append((w, ex, "sentence", kw, dest, rel))
+                    else:
+                        ex["image"] = None
                 else:
-                    w["imageSentence"] = None
-            else:
-                w["imageSentence"] = None
+                    ex["image"] = None
 
     print(f"  待抓 {len(tasks)} 張(略過已存在 {st['skip']})", flush=True)
 
     # 2) 批次向 Wikipedia 解析所有查詢字 → 圖片 URL(一次 50 標題,快又不易被限速)
-    all_queries = [t[2] for t in tasks]
+    all_queries = [t[3] for t in tasks]
     url_map = wiki_images_batch(all_queries)   # {query.lower(): (url, credit)}
     print(f"  Wikipedia 命中 {len(url_map)} 個查詢字", flush=True)
 
     # 3) 逐筆下載(相同 URL 只下載一次),寫檔 + 回填 JSON
     downloaded = {}   # url -> local first dest(供相同圖複用)
     n = 0
-    for (w, kind, query, dest, rel) in tasks:
+    for (w, ex, kind, query, dest, rel) in tasks:
         pair = url_map.get(query.lower())
         if not pair and args.openverse:
             url2, credit2 = openverse_image(query, clean=True)
@@ -285,7 +310,7 @@ def process(bookfile, args):
             w["imageWord"] = rel if ok else None
             st["w_ok" if ok else "w_blank"] += 1
         else:
-            w["imageSentence"] = rel if ok else None
+            ex["image"] = rel if ok else None
             st["s_ok" if ok else "s_blank"] += 1
         n += 1
         if n % 50 == 0:
@@ -297,9 +322,26 @@ def process(bookfile, args):
           f"情境圖 OK {st['s_ok']} / 留白 {st['s_blank']} | 略過 {st['skip']}")
 
 
+def _write_atomic(obj, path, retries: int = 5):
+    """原子寫入(temp + os.replace)並重試,避免 Windows 偶發的檔案鎖 / EINVAL。"""
+    tmp = path + ".tmp"
+    for attempt in range(retries):
+        try:
+            with open(tmp, "w", encoding="utf-8") as f:
+                json.dump(obj, f, ensure_ascii=False, indent=2)
+            os.replace(tmp, path)
+            return True
+        except OSError as ex:
+            if attempt == retries - 1:
+                print(f"    ! 寫回 JSON 失敗(已重試 {retries} 次): {ex}", flush=True)
+            else:
+                time.sleep(0.5 * (attempt + 1))
+    return False
+
+
 def _flush(data, full, credits, credits_path):
-    json.dump(data, open(full, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-    json.dump(credits, open(credits_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    _write_atomic(data, full)
+    _write_atomic(credits, credits_path)
 
 
 def main():

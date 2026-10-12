@@ -1,149 +1,215 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_data.py — Phase 0:把單字 docx 轉成 data/<book>.json 並更新 data/index.json。
+build_data.py (v2) — 把 Markdown 單字本解析成 data/<book>.json 並更新 data/index.json。
 
-docx 結構:每個「Page 區塊」= 一段標題(如「Page 5–6 (Level 2)」)+ 一個 4 欄表格
-          (單字 / 詞性 / 例句 / 中譯)。以文件實際先後順序把標題配對到其後的表格。
+來源 Markdown 格式(見 Level2_單字本_p1-72.md):
+  ## 第 N 頁                          → 一頁(unit = 「第 N 頁」, page = N)
+  > 📝 ...                            → 該頁的頁級筆記(pageNotes[N],每行一則)
+  ### word  `[ipa]`                   → 一個單字;反引號內為音標(含方括號)
+  **gloss**                          → 中文解釋(可含多詞性,以 / 分段;動詞三態寫在括號內)
+  - 英文例句                          → 例句,下一行縮排為中譯
+    中譯
+  - 📝 note                          → 該單字的筆記(notes[])
 
-產出每筆:id(book 前綴、各本獨立四位數流水號)、book、unit、word、lookup、
-         pos[]、example、translation,以及 ipa/audio/image 等欄位(此腳本一律留 null)。
+產出每筆 word(v2 schema):
+  id / book / page / unit / word / lookup / ipa / ipaRaw / pos[] / gloss /
+  verbForms / examples[{en,zh,audio,image}] / notes[] / audioWord / imageWord
+頂層另含 meta 與 pageNotes。
 
-可擴充:任何同格式 docx 都能 build 成新的一本;新增一本只在 index.json 加一列,
-       既有本的 ID 不重編。
+安全(冪等):若目標 json 已存在,會以 id 保留既有的音檔/圖片「加值欄位」
+  (audioWord/audioWordSource/imageWord 與 examples[i].audio/image),
+  只在「文字內容一致」時沿用,避免內容改了還配到舊音檔/圖。
 
-安全(冪等):若目標 json 已存在,會以 id 保留既有的 ipa / 音檔 / 圖片等「加值欄位」,
-             只更新文字內容並補上新字——重跑整條管線不會清掉已產好的音標/音檔。
+可擴充:任何同格式 md 都能 build 成新的一本;新增一本只在 index.json 加一列,
+       既有本 ID 不重編。
 
 用法:
-  python scripts/build_data.py --docx 單字.docx --book G1-S1 --name 高一上
-  python scripts/build_data.py --docx 單字.docx --book G1-S1 --name 高一上 --check   # 只比對不寫檔
+  python scripts/build_data.py --md Level2_單字本_p1-72.md --book G1-S1 --name "高一上 (Level 2)"
+  python scripts/build_data.py --md Level2_單字本_p1-72.md --book G1-S1 --check   # 只比對不寫檔
 """
 import argparse
 import json
 import os
 import re
 import sys
+import unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8")
-
-try:
-    import docx  # python-docx
-    from docx.oxml.ns import qn
-except ImportError:
-    sys.exit("缺少 python-docx,請先執行:pip install python-docx")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "data", "index.json")
 
-# 這些是「加值欄位」,重建時從既有檔沿用(以 id 對應),避免清掉音標/音檔/圖片
-ENRICH_FIELDS = ["ipa", "ipaSource", "audioWord", "audioWordSource",
-                 "audioSentence", "imageWord", "imageSentence"]
+# 重建時從既有檔沿用的「加值欄位」(單字層);例句層的 audio/image 另行處理
+ENRICH_WORD_FIELDS = ["audioWord", "audioWordSource", "imageWord"]
+
+# 詞性縮寫白名單(用來從 gloss 取 pos[];可依需要增補)
+POS_SET = {"n", "v", "vi", "vt", "adj", "adv", "prep", "conj",
+           "pron", "aux", "art", "int", "pl", "abbr"}
+POS_TOKEN_RE = re.compile(r"([A-Za-z]+)\.")
+# 單一方括號音標:[ ... ](不含其他括號);用來判斷能否安全去括號
+SINGLE_IPA_RE = re.compile(r"^\[[^\[\]]*\]$")
+# 動詞三態:gloss 括號(全形或半形)內的 a-b-c
+VERBFORMS_RE = re.compile(r"[（(]\s*([A-Za-z]+-[A-Za-z]+-[A-Za-z]+)\s*[)）]")
+
+
+def strip_md(s: str) -> str:
+    """去除 Markdown 粗體標記與行尾換行空白。"""
+    s = s.replace("**", "")
+    return s.strip()
+
+
+def fold_accents(s: str) -> str:
+    """café → cafe:去掉拉丁字母上的重音(NFKD 後移除組合記號)。"""
+    return "".join(c for c in unicodedata.normalize("NFKD", s)
+                   if not unicodedata.combining(c))
 
 
 def clean_lookup(word: str) -> str:
-    """乾淨查詢字:去括號變體、取斜線前主要拼法。lookup 保留原字母(含重音)。"""
-    w = word.strip()
-    w = re.split(r"[\/,;]", w)[0]
-    w = re.sub(r"\([^)]*\)", "", w)
-    w = re.sub(r"\s+", " ", w)
+    """乾淨查詢字(供抓真人錄音):取斜線前主要拼法、去重音、處理括號、
+    僅留字母/連字號/撇號/空白。
+    - 括號在開頭(前綴變體,如 '(cock)roach')→ 去括號字元、保留內文 → 'cockroach'
+    - 括號在字尾/字中(後綴變體,如 'backward(s)')→ 連內容一併去除 → 'backward'"""
+    w = fold_accents(word.strip())
+    w = re.split(r"[\/,;]", w)[0].strip()   # 取第一個拼法
+    if w.startswith("("):
+        w = w.replace("(", "").replace(")", "")
+    else:
+        w = re.sub(r"\([^)]*\)", "", w)
+    w = re.sub(r"[^A-Za-z\-' ]", "", w)
     return w.strip().lower()
 
 
-def norm_unit(heading: str) -> str:
-    """『Page 5–6 (Level 2)』→『Page 5-6』;抓不到就用整段標題。"""
-    m = re.search(r"Page\s*([0-9]+)\s*[–\-~]\s*([0-9]+)", heading)
-    if m:
-        return f"Page {m.group(1)}-{m.group(2)}"
-    return heading.strip() or "Unit"
+def ipa_from_raw(ipa_raw: str) -> str:
+    """單一 [..] → 去方括號取內容;多音標(含 (n.)/(v.) 兩式)→ 原樣保留。"""
+    if SINGLE_IPA_RE.match(ipa_raw):
+        return ipa_raw[1:-1].strip()
+    return ipa_raw
 
 
-def split_pos(cell: str):
-    parts = re.split(r"[\/,、;&]|\s{2,}", cell.strip())
-    return [p.strip() for p in parts if p.strip()]
+def parse_pos(gloss: str):
+    """從 gloss 取詞性陣列:掃描所有 'xxx.' 型 token,保留屬於詞性白名單者
+    (依出現順序)。支援 'adj./adv.'(無空格)與 'n. ... / v. ...'(有空格)。"""
+    pos = []
+    for m in POS_TOKEN_RE.finditer(gloss):
+        tok = m.group(1)
+        if tok.lower() in POS_SET:
+            pos.append(tok + ".")
+    return pos
 
 
-def iter_blocks(document):
-    """依文件實際順序產出 ('p', text) / ('tbl', table)。"""
-    body = document.element.body
-    tbl_iter = iter(document.tables)
-    para_by_elem = {p._p: p for p in document.paragraphs}
-    for child in body.iterchildren():
-        if child.tag == qn("w:p"):
-            p = para_by_elem.get(child)
-            if p is not None:
-                yield ("p", p.text)
-        elif child.tag == qn("w:tbl"):
-            yield ("tbl", next(tbl_iter))
+def parse_verbforms(gloss: str):
+    m = VERBFORMS_RE.search(gloss)
+    return m.group(1) if m else None
 
 
-def parse_docx(path, book):
-    document = docx.Document(path)
-    blocks = list(iter_blocks(document))
-
-    # 本 docx 的版面是「表格在前、Page 標題緊接在後」;故每個表格的單元名
-    # 取其後方第一個非空段落。找不到就沿用前一個標題。
-    def heading_after(idx):
-        for j in range(idx + 1, len(blocks)):
-            k, v = blocks[j]
-            if k == "p" and v.strip():
-                return v.strip()
-            if k == "tbl":
-                break
-        return None
+def parse_md(path, book):
+    with open(path, encoding="utf-8") as f:
+        lines = f.read().splitlines()
 
     words = []
+    page_notes = {}
+    pages_seen = []
     seq = 0
-    last_end = None      # 上一個單元的結束頁碼
-    units_order = []
-    for i, (kind, val) in enumerate(blocks):
-        if kind == "p":
-            continue
-        # 表格 → 決定單元名
-        h = heading_after(i)
-        m = re.search(r"Page\s*([0-9]+)\s*[–\-~]\s*([0-9]+)", h or "")
+    page = None
+    unit = None
+    cur = None          # 目前單字 dict
+
+    def flush_word():
+        nonlocal cur
+        cur = None
+
+    i = 0
+    n = len(lines)
+    while i < n:
+        line = lines[i]
+        s = line.strip()
+
+        # 頁標題
+        m = re.match(r"^##\s*第\s*(\d+)\s*頁", s)
         if m:
-            unit = f"Page {m.group(1)}-{m.group(2)}"
-            last_end = int(m.group(2))
-        elif last_end is not None:
-            # docx 缺此表格的 Page 標題(如最後一塊):沿頁碼 +2 推定下一組
-            unit = f"Page {last_end + 1}-{last_end + 2}"
-            last_end += 2
-        else:
-            unit = norm_unit(h or "Unit")
-        if unit not in units_order:
-            units_order.append(unit)
-        rows = val.rows
-        for r in rows:
-            cells = [c.text.strip() for c in r.cells]
-            if len(cells) < 4:
-                continue
-            word = cells[0]
-            # 跳過表頭 / 空列
-            if not word or word.startswith("單字") or "(Word)" in word:
-                continue
+            page = int(m.group(1))
+            unit = f"第 {page} 頁"
+            if page not in pages_seen:
+                pages_seen.append(page)
+            cur = None
+            i += 1
+            continue
+
+        # 頁級筆記
+        m = re.match(r"^>\s*📝\s*(.+)$", s)
+        if m and page is not None:
+            page_notes.setdefault(str(page), []).append(m.group(1).strip())
+            i += 1
+            continue
+
+        # 單字標題:### word  `[ipa]`
+        m = re.match(r"^###\s+(.+?)\s*(?:`([^`]*)`)?\s*$", s)
+        if m and page is not None:
             seq += 1
-            words.append({
+            word = strip_md(m.group(1)).strip()
+            ipa_raw = (m.group(2) or "").strip()
+            ipa = ipa_from_raw(ipa_raw) if ipa_raw else None
+            cur = {
                 "id": f"{book}-{seq:04d}",
                 "book": book,
+                "page": page,
                 "unit": unit,
                 "word": word,
                 "lookup": clean_lookup(word),
-                "pos": split_pos(cells[1]),
-                "example": cells[2],
-                "translation": cells[3],
-                "ipa": None,
+                "ipa": ipa or None,
+                "ipaRaw": ipa_raw or None,
+                "pos": [],
+                "gloss": "",
+                "verbForms": None,
+                "examples": [],
+                "notes": [],
                 "audioWord": None,
-                "audioWordSource": None,
-                "audioSentence": None,
                 "imageWord": None,
-                "imageSentence": None,
-            })
-    return words, units_order
+            }
+            words.append(cur)
+            i += 1
+            continue
+
+        # gloss 行:**...**(單字標題後第一個粗體行)
+        if cur is not None and s.startswith("**") and not cur["gloss"]:
+            gloss = strip_md(s)
+            cur["gloss"] = gloss
+            cur["pos"] = parse_pos(gloss)
+            cur["verbForms"] = parse_verbforms(gloss)
+            i += 1
+            continue
+
+        # 單字筆記:- 📝 ...
+        m = re.match(r"^-\s*📝\s*(.+)$", s)
+        if m and cur is not None:
+            cur["notes"].append(strip_md(m.group(1)).strip())
+            i += 1
+            continue
+
+        # 例句:- 英文(下一行縮排為中譯)
+        m = re.match(r"^-\s+(.+)$", line)
+        if m and cur is not None and "📝" not in s:
+            en = strip_md(m.group(1))
+            zh = ""
+            # 下一行若非空、非新項目/標題,視為中譯
+            if i + 1 < n:
+                nxt = lines[i + 1]
+                nstrip = nxt.strip()
+                if nstrip and not nstrip.startswith(("-", "#", ">", "###")):
+                    zh = strip_md(nstrip)
+                    i += 1
+            cur["examples"].append({"en": en, "zh": zh, "audio": None, "image": None})
+            i += 1
+            continue
+
+        i += 1
+
+    return words, page_notes, pages_seen
 
 
 def merge_enrichment(new_words, out_path):
-    """把既有檔的加值欄位(音標/音檔/圖片)依 id 沿用到新資料上。"""
+    """把既有檔的音檔/圖片依 id + 內容一致 沿用到新資料上。"""
     if not os.path.exists(out_path):
         return
     try:
@@ -153,37 +219,47 @@ def merge_enrichment(new_words, out_path):
         return
     for w in new_words:
         o = old_by_id.get(w["id"])
-        if not o:
+        if not o or o.get("word") != w["word"]:
             continue
-        # 只有在「文字內容一致」時才沿用音檔,避免內容變了還配到舊音檔
-        if o.get("word") == w["word"] and o.get("example") == w["example"]:
-            for f in ENRICH_FIELDS:
-                if o.get(f) is not None:
-                    w[f] = o[f]
+        # 單字層加值欄位
+        for f in ENRICH_WORD_FIELDS:
+            if o.get(f) is not None:
+                w[f] = o[f]
+        # 例句層:逐句比對 en 一致才沿用 audio/image
+        old_ex = {e.get("en"): e for e in o.get("examples", [])}
+        for e in w["examples"]:
+            oe = old_ex.get(e["en"])
+            if oe:
+                if oe.get("audio") is not None:
+                    e["audio"] = oe["audio"]
+                if oe.get("image") is not None:
+                    e["image"] = oe["image"]
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--docx", required=True, help="來源 docx 路徑")
+    ap.add_argument("--md", required=True, help="來源 Markdown 單字本")
     ap.add_argument("--book", required=True, help="book code,如 G1-S1")
-    ap.add_argument("--name", default=None, help="顯示名稱,如 高一上")
+    ap.add_argument("--name", default=None, help="顯示名稱,如 高一上 (Level 2)")
     ap.add_argument("--desc", default="", help="描述")
     ap.add_argument("--check", action="store_true", help="只比對既有檔、不寫入")
     args = ap.parse_args()
 
-    docx_path = args.docx if os.path.isabs(args.docx) else os.path.join(ROOT, args.docx)
-    words, units_order = parse_docx(docx_path, args.book)
+    md_path = args.md if os.path.isabs(args.md) else os.path.join(ROOT, args.md)
+    words, page_notes, pages_seen = parse_md(md_path, args.book)
+    example_count = sum(len(w["examples"]) for w in words)
     out_rel = f"data/{args.book}.json"
     out_path = os.path.join(ROOT, out_rel)
 
-    print(f"解析完成:{len(words)} 字、{len(units_order)} 單元")
+    print(f"解析完成:{len(words)} 字、{len(pages_seen)} 頁、{example_count} 例句、"
+          f"{len(page_notes)} 頁有筆記")
 
     if args.check:
         if os.path.exists(out_path):
             old = json.load(open(out_path, encoding="utf-8"))["words"]
             same = len(old) == len(words) and all(
                 a["word"] == b["word"] and a["unit"] == b["unit"] and
-                a["example"] == b["example"]
+                [e["en"] for e in a.get("examples", [])] == [e["en"] for e in b["examples"]]
                 for a, b in zip(old, words))
             print("與既有檔比對:", "一致 ✓" if same else "不一致 ✗")
         else:
@@ -196,12 +272,14 @@ def main():
         "name": args.name or args.book,
         "description": args.desc,
         "count": len(words),
-        "units": len(units_order),
-        "source": os.path.basename(docx_path),
+        "pages": len(pages_seen),
+        "exampleCount": example_count,
+        "source": os.path.basename(md_path),
     }
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump({"meta": meta, "words": words}, f, ensure_ascii=False, indent=2)
+        json.dump({"meta": meta, "pageNotes": page_notes, "words": words},
+                  f, ensure_ascii=False, indent=2)
     print(f"已寫入 {out_rel}")
 
     # 更新 manifest
@@ -210,7 +288,7 @@ def main():
         manifest = json.load(open(MANIFEST, encoding="utf-8"))
     books = manifest.setdefault("books", [])
     row = {"book": args.book, "name": meta["name"], "file": out_rel,
-           "count": meta["count"], "units": meta["units"]}
+           "count": meta["count"], "pages": meta["pages"], "exampleCount": example_count}
     for i, b in enumerate(books):
         if b["book"] == args.book:
             books[i] = row

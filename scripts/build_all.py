@@ -2,16 +2,18 @@
 # -*- coding: utf-8 -*-
 """build_all.py — 一鍵重跑整條建置管線(全部斷點續跑,已產好的會跳過)。
 
+v2:單字來源為 Markdown 單字本(已含音標/gloss/多例句/三態/筆記),
+   故不再跑 gen_ipa(音標已內含於資料)。
+
 依序執行:
-  1) build_data.py  docx → data/<book>.json + 更新 index.json
-  2) gen_ipa.py     補音標
-  3) gen_audio.py   產單字/例句音檔(預設 TTS;--human 則優先真人錄音)
-  4) gen_images.py  產單字/例句圖片(Wikipedia 免費授權;--openverse 補更多)
-  5) gen_icons.py   產 PWA / iOS 圖示
+  1) build_data.py  md → data/<book>.json + 更新 index.json(--md 指定來源)
+  2) gen_audio.py   產單字/逐例句音檔(預設 TTS;--human 則單字優先真人錄音)
+  3) gen_images.py  產單字/逐例句圖片(Wikipedia 免費授權;--openverse 補更多)
+  4) gen_icons.py   產 PWA / iOS 圖示
 
 用法:
-  python scripts/build_all.py --docx 單字.docx --book G1-S1 --name 高一上
-  python scripts/build_all.py --docx 單字.docx --book G1-S1 --name 高一上 --human --images
+  python scripts/build_all.py --md Level2_單字本_p1-72.md --book G1-S1 --name "高一上 (Level 2)"
+  python scripts/build_all.py --md Level2_單字本_p1-72.md --book G1-S1 --human --images
 """
 import argparse
 import os
@@ -33,7 +35,7 @@ def run(script, *args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--docx", required=True)
+    ap.add_argument("--md", required=True, help="來源 Markdown 單字本(v2)")
     ap.add_argument("--book", required=True)
     ap.add_argument("--name", default=None)
     ap.add_argument("--human", action="store_true", help="單字優先抓真人錄音")
@@ -41,9 +43,8 @@ def main():
     ap.add_argument("--openverse", action="store_true", help="圖片額外用 Openverse 補圖")
     args = ap.parse_args()
 
-    run("build_data.py", "--docx", args.docx, "--book", args.book,
+    run("build_data.py", "--md", args.md, "--book", args.book,
         *(["--name", args.name] if args.name else []))
-    run("gen_ipa.py", "--book", args.book)
     audio_args = ["--book", args.book]
     if args.human:
         audio_args.append("--human")
