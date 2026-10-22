@@ -40,7 +40,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W001.mp3",
       "imageWord": "images/word/G1-S1-SUP-W001.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W002",
@@ -60,7 +60,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W002.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W003",
@@ -95,7 +95,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W003.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W004",
@@ -125,7 +125,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W004.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W005",
@@ -155,7 +155,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W005.mp3",
       "imageWord": "images/word/G1-S1-SUP-W005.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W006",
@@ -175,7 +175,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W006.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W007",
@@ -205,7 +205,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W007.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W008",
@@ -230,7 +230,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W008.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W009",
@@ -260,7 +260,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W009.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W010",
@@ -285,7 +285,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W010.mp3",
       "imageWord": "images/word/G1-S1-SUP-W010.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W011",
@@ -310,7 +310,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W011.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W012",
@@ -340,7 +340,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W012.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W013",
@@ -365,7 +365,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W013.mp3",
       "imageWord": "images/word/G1-S1-SUP-W013.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W014",
@@ -390,7 +390,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W014.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W015",
@@ -415,7 +415,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W015.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W016",
@@ -435,7 +435,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W016.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W017",
@@ -465,7 +465,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W017.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W018",
@@ -495,7 +495,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W018.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W019",
@@ -515,7 +515,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W019.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W020",
@@ -545,7 +545,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W020.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W021",
@@ -570,7 +570,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W021.mp3",
       "imageWord": "images/word/G1-S1-SUP-W021.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W022",
@@ -600,7 +600,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W022.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W023",
@@ -625,7 +625,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W023.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W024",
@@ -650,7 +650,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W024.mp3",
       "imageWord": "images/word/G1-S1-SUP-W024.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W025",
@@ -670,7 +670,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W025.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W026",
@@ -690,7 +690,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W026.mp3",
       "imageWord": "images/word/G1-S1-SUP-W026.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W027",
@@ -710,7 +710,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W027.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W028",
@@ -730,7 +730,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W028.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W029",
@@ -744,7 +744,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W029.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W030",
@@ -779,7 +779,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W030.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W031",
@@ -799,7 +799,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W031.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W032",
@@ -819,7 +819,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W032.mp3",
       "imageWord": "images/word/G1-S1-SUP-W032.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W033",
@@ -844,7 +844,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W033.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W034",
@@ -874,7 +874,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W034.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W035",
@@ -904,7 +904,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W035.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W036",
@@ -934,7 +934,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W036.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W037",
@@ -959,7 +959,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W037.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W038",
@@ -979,7 +979,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W038.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W039",
@@ -1009,7 +1009,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W039.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W040",
@@ -1029,7 +1029,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W040.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W041",
@@ -1043,7 +1043,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W041.mp3",
       "imageWord": "images/word/G1-S1-SUP-W041.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W042",
@@ -1073,7 +1073,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W042.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W043",
@@ -1103,7 +1103,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W043.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W044",
@@ -1133,7 +1133,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W044.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W045",
@@ -1163,7 +1163,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W045.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W046",
@@ -1183,7 +1183,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W046.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W047",
@@ -1208,7 +1208,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W047.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W048",
@@ -1238,7 +1238,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W048.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W049",
@@ -1273,7 +1273,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W049.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W050",
@@ -1293,7 +1293,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W050.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W051",
@@ -1307,7 +1307,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W051.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W052",
@@ -1332,7 +1332,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W052.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W053",
@@ -1357,7 +1357,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W053.mp3",
       "imageWord": "images/word/G1-S1-SUP-W053.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W054",
@@ -1377,7 +1377,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W054.mp3",
       "imageWord": "images/word/G1-S1-SUP-W054.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W055",
@@ -1391,7 +1391,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W055.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W056",
@@ -1426,7 +1426,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W056.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W057",
@@ -1446,7 +1446,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W057.mp3",
       "imageWord": "images/word/G1-S1-SUP-W057.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W058",
@@ -1460,7 +1460,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W058.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W059",
@@ -1480,7 +1480,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W059.mp3",
       "imageWord": "images/word/G1-S1-SUP-W059.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W060",
@@ -1505,7 +1505,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W060.mp3",
       "imageWord": "images/word/G1-S1-SUP-W060.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W061",
@@ -1519,7 +1519,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W061.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W062",
@@ -1539,7 +1539,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W062.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W063",
@@ -1564,7 +1564,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W063.mp3",
       "imageWord": "images/word/G1-S1-SUP-W063.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W064",
@@ -1584,7 +1584,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W064.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W065",
@@ -1614,7 +1614,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W065.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W066",
@@ -1644,7 +1644,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W066.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W067",
@@ -1669,7 +1669,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W067.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W068",
@@ -1689,7 +1689,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W068.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W069",
@@ -1706,7 +1706,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W069.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W070",
@@ -1729,7 +1729,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W070.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W071",
@@ -1752,7 +1752,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W071.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W072",
@@ -1767,7 +1767,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W072.mp3",
       "imageWord": "images/word/G1-S1-SUP-W072.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W073",
@@ -1790,7 +1790,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W073.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W074",
@@ -1818,7 +1818,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W074.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W075",
@@ -1846,7 +1846,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W075.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W076",
@@ -1870,7 +1870,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W076.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W077",
@@ -1893,7 +1893,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W077.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W078",
@@ -1916,7 +1916,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W078.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W079",
@@ -1933,7 +1933,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W079.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W080",
@@ -1966,7 +1966,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W080.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W081",
@@ -1989,7 +1989,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W081.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W082",
@@ -2006,7 +2006,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W082.mp3",
       "imageWord": "images/word/G1-S1-SUP-W082.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W083",
@@ -2024,7 +2024,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W083.mp3",
       "imageWord": "images/word/G1-S1-SUP-W083.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W084",
@@ -2041,7 +2041,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W084.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W085",
@@ -2064,7 +2064,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W085.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W086",
@@ -2088,7 +2088,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W086.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W087",
@@ -2111,7 +2111,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W087.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W088",
@@ -2134,7 +2134,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W088.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W089",
@@ -2157,7 +2157,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W089.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W090",
@@ -2174,7 +2174,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W090.mp3",
       "imageWord": "images/word/G1-S1-SUP-W090.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W091",
@@ -2197,7 +2197,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W091.mp3",
       "imageWord": "images/word/G1-S1-SUP-W091.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W092",
@@ -2225,7 +2225,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W092.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W093",
@@ -2248,7 +2248,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W093.mp3",
       "imageWord": "images/word/G1-S1-SUP-W093.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W094",
@@ -2276,7 +2276,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W094.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W095",
@@ -2293,7 +2293,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W095.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W096",
@@ -2311,7 +2311,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W096.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W097",
@@ -2328,7 +2328,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W097.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W098",
@@ -2351,7 +2351,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W098.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W099",
@@ -2375,7 +2375,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W099.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W100",
@@ -2392,7 +2392,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W100.mp3",
       "imageWord": "images/word/G1-S1-SUP-W100.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W101",
@@ -2413,7 +2413,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W101.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W102",
@@ -2436,7 +2436,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W102.mp3",
       "imageWord": "images/word/G1-S1-SUP-W102.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W103",
@@ -2460,7 +2460,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W103.mp3",
       "imageWord": "images/word/G1-S1-SUP-W103.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W104",
@@ -2488,7 +2488,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W104.mp3",
       "imageWord": "images/word/G1-S1-SUP-W104.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W105",
@@ -2505,7 +2505,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W105.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W106",
@@ -2533,7 +2533,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W106.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W107",
@@ -2556,7 +2556,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W107.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W108",
@@ -2579,7 +2579,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W108.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W109",
@@ -2596,7 +2596,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W109.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W110",
@@ -2619,7 +2619,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W110.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W111",
@@ -2642,7 +2642,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W111.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W112",
@@ -2659,7 +2659,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W112.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W113",
@@ -2682,7 +2682,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W113.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W114",
@@ -2699,7 +2699,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W114.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W115",
@@ -2716,7 +2716,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W115.mp3",
       "imageWord": "images/word/G1-S1-SUP-W115.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W116",
@@ -2733,7 +2733,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W116.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W117",
@@ -2756,7 +2756,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W117.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W118",
@@ -2789,7 +2789,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W118.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W119",
@@ -2812,7 +2812,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W119.mp3",
       "imageWord": "images/word/G1-S1-SUP-W119.jpg",
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W120",
@@ -2829,7 +2829,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W120.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     },
     {
       "id": "G1-S1-SUP-W121",
@@ -2844,7 +2844,7 @@
       "ipa": null,
       "audioWord": "audio/word/G1-S1-SUP-W121.mp3",
       "imageWord": null,
-      "audioWordSource": "piper"
+      "audioWordSource": "tts"
     }
   ],
   "phrases": [

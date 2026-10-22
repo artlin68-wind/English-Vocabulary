@@ -36,8 +36,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "data", "index.json")
 COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 
-VOICE = "en-US-AriaNeural"   # 例句 + 單字 TTS 退路;可用 --voice 覆寫
-WORD_VOICE = "en-US-AriaNeural"
+VOICE = "en-US-EmmaNeural"   # 例句 + 單字 TTS(年輕清楚的女聲);可用 --voice 覆寫
+WORD_VOICE = "en-US-EmmaNeural"
 
 try:
     import edge_tts

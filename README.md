@@ -141,8 +141,8 @@ python scripts/build_all.py --md Level2_單字本_p1-72.md --book G1-S1 --name "
 python scripts/build_data.py --md Level2_單字本_p1-72.md --book G1-S1 --name "高一上 (Level 2)"
 
 # 2) 產音檔(單字 + 逐例句)——見下方「發音引擎」
-python scripts/gen_audio.py --book G1-S1 --piper        # 離線 Piper(推薦)
-#   或 python scripts/gen_audio.py --book G1-S1          # edge-tts(需網路,端點偶有限制)
+python scripts/gen_audio.py --book G1-S1                # edge-tts Emma(現行,年輕清楚)
+#   或 python scripts/gen_audio.py --book G1-S1 --piper  # 離線 Piper(edge-tts 被擋時的備案)
 
 # 3) 產單字 / 逐例句圖片(Phase 2;Wikipedia 免費授權,乾淨無浮水印)
 python scripts/gen_images.py --book G1-S1
@@ -159,7 +159,7 @@ python scripts/gen_icons.py
 
 兩種引擎,都免 API KEY、產出 mono **mp3**(iOS Safari 保證支援,不用 Opus/OGG):
 
-- **Piper(`--piper`,推薦):完全離線**神經語音,不需網路、不受任何雲端端點限制。
+- **Piper(`--piper`,備案):完全離線**神經語音,不需網路、不受任何雲端端點限制。
   需先下載語音模型到 `scripts/voices/`:
   ```bash
   python -m piper.download_voices en_US-lessac-medium --data-dir scripts/voices
@@ -168,7 +168,7 @@ python scripts/gen_icons.py
   #   (來源:huggingface.co/rhasspy/piper-voices …/en/en_US/lessac/medium/)
   ```
   可用 `--piper-model` 指定其他 `.onnx`。單字音以 `audioWordSource=piper` 標記。
-- **edge-tts(預設):** 微軟 Neural 線上合成,音質自然但**需要連到微軟端點**(某些網路 / 系統時間不符時會回 403)。單字加 `--human` 可優先抓 Wikimedia Commons 真人母語錄音,查無退回 TTS,以 `audioWordSource` 記 `human`/`tts`。
+- **edge-tts(預設,現行音檔):** 微軟 Neural 線上合成,語音 `en-US-EmmaNeural`(年輕、清楚,適合高中生),比 Piper 清晰。**需要連到微軟端點**;若回 403,先 `pip install -U edge-tts` 再試。單字加 `--human` 可優先抓 Wikimedia Commons 真人母語錄音,查無退回 TTS,以 `audioWordSource` 記 `human`/`tts`。
 
 > **KEY 安全**:本專案預設引擎皆免 KEY。若改用需 KEY 的引擎(Azure/Google/OpenAI/ElevenLabs 等),KEY **只在建置腳本於本機用**,從環境變數讀取、加入 `.gitignore`,**嚴禁寫進前端 / JSON / 版控**;產完只把 `.mp3` 打包進 App。
 
