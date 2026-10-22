@@ -231,7 +231,11 @@ function fillSupWordCard(w) {
 
   $('glossText').innerHTML = w.meaning
     ? `<span class="gloss-line">${esc(w.meaning)}</span>` : '';
-  $('verbForms').hidden = true;
+  // 搭配詞(Unit 4–6 單字補充才有)重用 verbForms 那一行顯示
+  const vf = $('verbForms');
+  if (w.collocations && w.collocations.length) {
+    vf.textContent = `搭配詞:${w.collocations.join(' / ')}`; vf.hidden = false;
+  } else { vf.hidden = true; }
   $('wordNotes').hidden = true;
   // 衍生詞列到 examplesList(重用結構)
   const ul = $('examplesList'); ul.innerHTML = '';
@@ -258,7 +262,7 @@ function fillSupWordCard(w) {
 /* ---- 補充本:片語(phrase)---- 正面 phrase;背面 中文 + 英定義 + 例句 ---- */
 function fillSupPhraseCard(w) {
   $('pageNote').hidden = true;
-  setPosTags(w.lessonTitle ? [`Lesson ${w.lesson}`] : []);
+  setPosTags(w.lesson ? [`Lesson ${w.lesson}`] : []);
   $('wordText').textContent = w.phrase;
   $('ipaText').hidden = true;
   $('playWordBtn').hidden = !w.audioPhrase;

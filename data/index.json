@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-12c",
+  "version": "2026-10-22b",
   "books": [
     {
       "book": "G1-S1",
@@ -19,8 +19,8 @@
         "word",
         "phrase"
       ],
-      "wordCount": 68,
-      "phraseCount": 20
+      "wordCount": 121,
+      "phraseCount": 35
     }
   ]
 }

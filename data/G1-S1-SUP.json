@@ -2,17 +2,19 @@
   "meta": {
     "book": "G1-S1-SUP",
     "name": "高一上 補充（詞類變化＋片語）",
-    "description": "補充版：68 個詞類變化單字 + 20 個片語（Lesson 1–3）",
-    "wordCount": 68,
-    "phraseCount": 20,
-    "source": "英文單字與片語整理.pdf",
+    "description": "補充版：121 個單字（詞類變化 68 + Unit 4–6 單字 53） + 35 個片語（Lesson 1–4）",
+    "wordCount": 121,
+    "phraseCount": 35,
+    "source": "英文單字與片語整理.pdf；高一片語_U4-6.xlsx（Lesson 4）；高一單字_U4-6.xlsx（單字補充 Unit 4–6）",
     "note": "本補充版無音標與例句中譯；audio 欄位待建置管線產生；exampleZh 可日後補中譯。"
   },
   "units": [
     "詞類變化補充",
+    "單字補充 Unit 4–6",
     "片語 Lesson 1：Firsts in Life",
     "片語 Lesson 2：Goodbye, John",
-    "片語 Lesson 3：Do Animals Sleep like You and Me?"
+    "片語 Lesson 3：Do Animals Sleep like You and Me?",
+    "片語 Lesson 4"
   ],
   "words": [
     {
@@ -1688,6 +1690,1161 @@
       "audioWord": "audio/word/G1-S1-SUP-W068.mp3",
       "imageWord": null,
       "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W069",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "ability",
+      "pos": "名詞",
+      "meaning": "能力",
+      "collocations": [
+        "ability to + V"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W069.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W070",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "accomplish",
+      "pos": "動詞",
+      "meaning": "達成",
+      "collocations": [
+        "accomplish something great"
+      ],
+      "derivatives": [
+        {
+          "form": "accomplishment",
+          "detail": "名詞: 成就",
+          "audio": "audio/word/G1-S1-SUP-W070-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W070.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W071",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "alert",
+      "pos": "名詞",
+      "meaning": "警示",
+      "collocations": [
+        "bomb alert"
+      ],
+      "derivatives": [
+        {
+          "form": "alert",
+          "detail": "形容詞: 警覺的(stay alert to)",
+          "audio": "audio/word/G1-S1-SUP-W071-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W071.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W072",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "ancient",
+      "pos": "形容詞",
+      "meaning": "古代的",
+      "collocations": [],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W072.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W073",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "assign",
+      "pos": "動詞",
+      "meaning": "指派",
+      "collocations": [
+        "be assigned the task of V-ing"
+      ],
+      "derivatives": [
+        {
+          "form": "assignment",
+          "detail": "名詞: 作業;工作",
+          "audio": "audio/word/G1-S1-SUP-W073-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W073.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W074",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "attraction",
+      "pos": "名詞",
+      "meaning": "有吸引力的事物或地點",
+      "collocations": [
+        "main attractions"
+      ],
+      "derivatives": [
+        {
+          "form": "attract",
+          "detail": "動詞: 吸引",
+          "audio": "audio/word/G1-S1-SUP-W074-d1.mp3"
+        },
+        {
+          "form": "attractive",
+          "detail": "形容詞: 吸引人的",
+          "audio": "audio/word/G1-S1-SUP-W074-d2.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W074.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W075",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "behavior",
+      "pos": "名詞",
+      "meaning": "行為",
+      "collocations": [
+        "animal behavior"
+      ],
+      "derivatives": [
+        {
+          "form": "behave",
+          "detail": "動詞: 表現",
+          "audio": "audio/word/G1-S1-SUP-W075-d1.mp3"
+        },
+        {
+          "form": "behaviour",
+          "detail": "英式拼法",
+          "audio": "audio/word/G1-S1-SUP-W075-d2.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W075.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W076",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "celebration",
+      "pos": "名詞",
+      "meaning": "慶祝活動",
+      "collocations": [
+        "in celebration of",
+        "national celebration"
+      ],
+      "derivatives": [
+        {
+          "form": "celebrate",
+          "detail": "動詞: 慶祝",
+          "audio": "audio/word/G1-S1-SUP-W076-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W076.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W077",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "complete",
+      "pos": "形容詞",
+      "meaning": "已完成的;完整的",
+      "collocations": [
+        "complete works"
+      ],
+      "derivatives": [
+        {
+          "form": "complete",
+          "detail": "動詞: 完成",
+          "audio": "audio/word/G1-S1-SUP-W077-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W077.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W078",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "consume",
+      "pos": "動詞",
+      "meaning": "吃喝;消耗",
+      "collocations": [
+        "consume beer or wine"
+      ],
+      "derivatives": [
+        {
+          "form": "consumer",
+          "detail": "名詞: 消費者",
+          "audio": "audio/word/G1-S1-SUP-W078-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W078.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W079",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "convenience",
+      "pos": "名詞",
+      "meaning": "便利",
+      "collocations": [
+        "the convenience of the public"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W079.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W080",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "create",
+      "pos": "動詞",
+      "meaning": "創造",
+      "collocations": [
+        "create a new way"
+      ],
+      "derivatives": [
+        {
+          "form": "creation",
+          "detail": "名詞: 創造",
+          "audio": "audio/word/G1-S1-SUP-W080-d1.mp3"
+        },
+        {
+          "form": "creative",
+          "detail": "形容詞: 有創意的",
+          "audio": "audio/word/G1-S1-SUP-W080-d2.mp3"
+        },
+        {
+          "form": "creativity",
+          "detail": "名詞: 創意",
+          "audio": "audio/word/G1-S1-SUP-W080-d3.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W080.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W081",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "crowded",
+      "pos": "形容詞",
+      "meaning": "擁擠的",
+      "collocations": [
+        "be crowded with"
+      ],
+      "derivatives": [
+        {
+          "form": "crowd",
+          "detail": "名詞: 人群",
+          "audio": "audio/word/G1-S1-SUP-W081-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W081.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W082",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "detect",
+      "pos": "動詞",
+      "meaning": "偵測到",
+      "collocations": [
+        "detect a small change"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W082.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W083",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "disease",
+      "pos": "名詞",
+      "meaning": "疾病",
+      "collocations": [
+        "suffer from disease",
+        "spread of disease"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W083.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W084",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "drift",
+      "pos": "動詞",
+      "meaning": "漂流",
+      "collocations": [
+        "drift toward"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W084.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W085",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "eagerly",
+      "pos": "副詞",
+      "meaning": "渴望地",
+      "collocations": [
+        "eagerly wait for"
+      ],
+      "derivatives": [
+        {
+          "form": "eager",
+          "detail": "形容詞: 渴望的(eager for)",
+          "audio": "audio/word/G1-S1-SUP-W085-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W085.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W086",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "environment",
+      "pos": "名詞",
+      "meaning": "自然環境;環境",
+      "collocations": [
+        "natural environment",
+        "safe working environment"
+      ],
+      "derivatives": [
+        {
+          "form": "environmental",
+          "detail": "形容詞: 自然環境的",
+          "audio": "audio/word/G1-S1-SUP-W086-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W086.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W087",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "envy",
+      "pos": "名詞",
+      "meaning": "羨慕",
+      "collocations": [
+        "with envy"
+      ],
+      "derivatives": [
+        {
+          "form": "envy",
+          "detail": "動詞: 羨慕",
+          "audio": "audio/word/G1-S1-SUP-W087-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W087.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W088",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "expose",
+      "pos": "動詞",
+      "meaning": "使接觸;使暴露",
+      "collocations": [
+        "be exposed to"
+      ],
+      "derivatives": [
+        {
+          "form": "exposure",
+          "detail": "名詞: 暴露",
+          "audio": "audio/word/G1-S1-SUP-W088-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W088.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W089",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "firmly",
+      "pos": "副詞",
+      "meaning": "牢固地",
+      "collocations": [
+        "firmly closed"
+      ],
+      "derivatives": [
+        {
+          "form": "firm",
+          "detail": "形容詞: 堅硬的;結實的",
+          "audio": "audio/word/G1-S1-SUP-W089-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W089.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W090",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "freedom",
+      "pos": "名詞",
+      "meaning": "自由",
+      "collocations": [
+        "freedom to + V"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W090.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W091",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "globe",
+      "pos": "名詞",
+      "meaning": "地球;世界",
+      "collocations": [
+        "around the globe"
+      ],
+      "derivatives": [
+        {
+          "form": "global",
+          "detail": "形容詞: 全球的",
+          "audio": "audio/word/G1-S1-SUP-W091-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W091.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W092",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "harm",
+      "pos": "名詞",
+      "meaning": "傷害",
+      "collocations": [
+        "do harm to"
+      ],
+      "derivatives": [
+        {
+          "form": "harm",
+          "detail": "動詞: 傷害",
+          "audio": "audio/word/G1-S1-SUP-W092-d1.mp3"
+        },
+        {
+          "form": "harmful",
+          "detail": "形容詞: 有害的",
+          "audio": "audio/word/G1-S1-SUP-W092-d2.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W092.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W093",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "independence",
+      "pos": "名詞",
+      "meaning": "獨立",
+      "collocations": [
+        "independence from"
+      ],
+      "derivatives": [
+        {
+          "form": "independent",
+          "detail": "形容詞: 獨立的",
+          "audio": "audio/word/G1-S1-SUP-W093-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W093.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W094",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "infected",
+      "pos": "形容詞",
+      "meaning": "遭感染的",
+      "collocations": [
+        "be infected with"
+      ],
+      "derivatives": [
+        {
+          "form": "infect",
+          "detail": "動詞: 感染",
+          "audio": "audio/word/G1-S1-SUP-W094-d1.mp3"
+        },
+        {
+          "form": "infection",
+          "detail": "名詞: 感染(infection on)",
+          "audio": "audio/word/G1-S1-SUP-W094-d2.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W094.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W095",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "item",
+      "pos": "名詞",
+      "meaning": "項目;物品",
+      "collocations": [
+        "items on sale"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W095.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W096",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "keen",
+      "pos": "形容詞",
+      "meaning": "敏銳的;渴望的",
+      "collocations": [
+        "keen on V-ing",
+        "keen sense of"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W096.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W097",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "landmark",
+      "pos": "名詞",
+      "meaning": "地標",
+      "collocations": [
+        "famous landmarks"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W097.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W098",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "locate",
+      "pos": "動詞",
+      "meaning": "找到...的位置",
+      "collocations": [
+        "locate places"
+      ],
+      "derivatives": [
+        {
+          "form": "location",
+          "detail": "名詞: 地點",
+          "audio": "audio/word/G1-S1-SUP-W098-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W098.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W099",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "manage",
+      "pos": "動詞",
+      "meaning": "設法成功做到;管理",
+      "collocations": [
+        "manage to + V",
+        "manage money"
+      ],
+      "derivatives": [
+        {
+          "form": "management",
+          "detail": "名詞: 管理",
+          "audio": "audio/word/G1-S1-SUP-W099-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W099.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W100",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "monument",
+      "pos": "名詞",
+      "meaning": "紀念碑",
+      "collocations": [
+        "monument to remember..."
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W100.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W101",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "obviously",
+      "pos": "副詞",
+      "meaning": "顯然",
+      "collocations": [],
+      "derivatives": [
+        {
+          "form": "obvious",
+          "detail": "形容詞: 明顯的(obvious to)",
+          "audio": "audio/word/G1-S1-SUP-W101-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W101.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W102",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "perform",
+      "pos": "動詞",
+      "meaning": "做某事;表演",
+      "collocations": [
+        "perform daily tasks"
+      ],
+      "derivatives": [
+        {
+          "form": "performance",
+          "detail": "名詞: 表演",
+          "audio": "audio/word/G1-S1-SUP-W102-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W102.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W103",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "plastic",
+      "pos": "形容詞",
+      "meaning": "塑膠的",
+      "collocations": [
+        "plastic bottles",
+        "made of plastic"
+      ],
+      "derivatives": [
+        {
+          "form": "plastic",
+          "detail": "名詞: 塑膠",
+          "audio": "audio/word/G1-S1-SUP-W103-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W103.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W104",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "poisonous",
+      "pos": "形容詞",
+      "meaning": "有毒的",
+      "collocations": [
+        "poisonous to"
+      ],
+      "derivatives": [
+        {
+          "form": "poison",
+          "detail": "動詞: 下毒",
+          "audio": "audio/word/G1-S1-SUP-W104-d1.mp3"
+        },
+        {
+          "form": "poison",
+          "detail": "名詞: 毒藥",
+          "audio": "audio/word/G1-S1-SUP-W104-d2.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W104.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W105",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "predict",
+      "pos": "動詞",
+      "meaning": "預測",
+      "collocations": [
+        "predict that..."
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W105.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W106",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "product",
+      "pos": "名詞",
+      "meaning": "產品",
+      "collocations": [
+        "health and food products"
+      ],
+      "derivatives": [
+        {
+          "form": "produce",
+          "detail": "動詞: 製造",
+          "audio": "audio/word/G1-S1-SUP-W106-d1.mp3"
+        },
+        {
+          "form": "production",
+          "detail": "名詞: 製造",
+          "audio": "audio/word/G1-S1-SUP-W106-d2.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W106.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W107",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "properly",
+      "pos": "副詞",
+      "meaning": "適當地",
+      "collocations": [
+        "do it properly"
+      ],
+      "derivatives": [
+        {
+          "form": "proper",
+          "detail": "形容詞: 適當的",
+          "audio": "audio/word/G1-S1-SUP-W107-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W107.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W108",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "recycling",
+      "pos": "名詞",
+      "meaning": "回收",
+      "collocations": [
+        "out for recycling"
+      ],
+      "derivatives": [
+        {
+          "form": "recycle",
+          "detail": "動詞/名詞: 回收",
+          "audio": "audio/word/G1-S1-SUP-W108-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W108.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W109",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "remove",
+      "pos": "動詞",
+      "meaning": "移除",
+      "collocations": [
+        "remove A from B"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W109.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W110",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "represent",
+      "pos": "動詞",
+      "meaning": "代表",
+      "collocations": [
+        "represent his class"
+      ],
+      "derivatives": [
+        {
+          "form": "representation",
+          "detail": "名詞: 表現;塑像",
+          "audio": "audio/word/G1-S1-SUP-W110-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W110.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W111",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "reward",
+      "pos": "名詞",
+      "meaning": "獎勵;報酬",
+      "collocations": [
+        "reward of $2,000 for"
+      ],
+      "derivatives": [
+        {
+          "form": "reward",
+          "detail": "動詞: 獎賞(reward A with B)",
+          "audio": "audio/word/G1-S1-SUP-W111-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W111.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W112",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "sensitive",
+      "pos": "形容詞",
+      "meaning": "敏感的",
+      "collocations": [
+        "sensitive to"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W112.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W113",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "slavery",
+      "pos": "名詞",
+      "meaning": "蓄奴制",
+      "collocations": [
+        "sold into slavery"
+      ],
+      "derivatives": [
+        {
+          "form": "slave",
+          "detail": "名詞: 奴隸",
+          "audio": "audio/word/G1-S1-SUP-W113-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W113.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W114",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "specific",
+      "pos": "形容詞",
+      "meaning": "特定的",
+      "collocations": [
+        "specific reason"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W114.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W115",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "statue",
+      "pos": "名詞",
+      "meaning": "雕像",
+      "collocations": [
+        "statue of..."
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W115.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W116",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "substance",
+      "pos": "名詞",
+      "meaning": "物質",
+      "collocations": [
+        "chemical substance"
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W116.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W117",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "surround",
+      "pos": "動詞",
+      "meaning": "圍繞",
+      "collocations": [
+        "be surrounded by"
+      ],
+      "derivatives": [
+        {
+          "form": "surroundings",
+          "detail": "名詞: 環境",
+          "audio": "audio/word/G1-S1-SUP-W117-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W117.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W118",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "symbolize",
+      "pos": "動詞",
+      "meaning": "象徵",
+      "collocations": [
+        "symbolize"
+      ],
+      "derivatives": [
+        {
+          "form": "symbol",
+          "detail": "名詞: 象徵",
+          "audio": "audio/word/G1-S1-SUP-W118-d1.mp3"
+        },
+        {
+          "form": "symbolic",
+          "detail": "形容詞: 作為象徵的",
+          "audio": "audio/word/G1-S1-SUP-W118-d2.mp3"
+        },
+        {
+          "form": "symbolise",
+          "detail": "英式拼法",
+          "audio": "audio/word/G1-S1-SUP-W118-d3.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W118.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W119",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "tourist",
+      "pos": "名詞",
+      "meaning": "遊客",
+      "collocations": [
+        "tourist center"
+      ],
+      "derivatives": [
+        {
+          "form": "tourism",
+          "detail": "名詞: 旅遊業",
+          "audio": "audio/word/G1-S1-SUP-W119-d1.mp3"
+        }
+      ],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W119.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W120",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "treatment",
+      "pos": "名詞",
+      "meaning": "對待;待遇",
+      "collocations": [
+        "treatment of..."
+      ],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W120.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
+    },
+    {
+      "id": "G1-S1-SUP-W121",
+      "book": "G1-S1-SUP",
+      "kind": "word",
+      "unit": "單字補充 Unit 4–6",
+      "word": "unfair",
+      "pos": "形容詞",
+      "meaning": "不公正的",
+      "collocations": [],
+      "derivatives": [],
+      "ipa": null,
+      "audioWord": "audio/word/G1-S1-SUP-W121.mp3",
+      "imageWord": null,
+      "audioWordSource": "piper"
     }
   ],
   "phrases": [
@@ -1990,6 +3147,231 @@
       "exampleZh": null,
       "audioPhrase": "audio/word/G1-S1-SUP-P020.mp3",
       "audioExample": "audio/sentence/G1-S1-SUP-P020-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P021",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "even though",
+      "meaning": "儘管",
+      "definition": "despite the action or statement that follows",
+      "example": "Kyle knows all the words to this song even though he has only heard it a few times before.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P021.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P021-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P022",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "close to",
+      "meaning": "將近",
+      "definition": "nearly; almost",
+      "example": "During the performance, close to two thousand people sang along with the band and created an unforgettable memory together.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P022.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P022-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P023",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "over time",
+      "meaning": "隨著時間過去",
+      "definition": "as time passes or is passing",
+      "example": "Janice found the math class really tough at first, but it became easier over time.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P023.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P023-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P024",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "pay a visit to",
+      "meaning": "拜訪;參觀",
+      "definition": "to visit some place or someone",
+      "example": "Tracy decided to pay a visit to Big Ben while she was on a business trip in London.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P024.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P024-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P025",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "as always",
+      "meaning": "一直如此",
+      "definition": "just like the way something always happens",
+      "example": "The noodle shop has a long line of people outside as always because they make the best noodles in town.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P025.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P025-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P026",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "come along",
+      "meaning": "到達;出現",
+      "definition": "to show up or arrive at a place",
+      "example": "Jane said she's not ready to join us yet, but she will come along later.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P026.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P026-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P027",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "pack...up",
+      "meaning": "收拾;打包",
+      "definition": "to put things into a box, piece of luggage, etc. to transport them",
+      "example": "After Mr. Huang got fired, he sadly packed all of his things up and left.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P027.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P027-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P028",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "on one's own",
+      "meaning": "獨自;靠自己",
+      "definition": "by oneself",
+      "example": "Lily loves to go fishing on her own, so she can listen to the sound of the sea.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P028.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P028-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P029",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "for a while",
+      "meaning": "一陣子",
+      "definition": "for a (usually short) period of time",
+      "example": "The lion hid behind a tree for a while, waiting for a deer to walk by.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P029.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P029-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P030",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "end up",
+      "meaning": "最後結果是",
+      "definition": "to be in a certain place, state, or situation after doing something",
+      "example": "The family couldn't agree on a restaurant to go to, so they ended up staying home and eating pizza.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P030.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P030-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P031",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "due to",
+      "meaning": "因為",
+      "definition": "because of",
+      "example": "The restaurant was not very popular due to the smell of the seafood market nearby.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P031.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P031-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P032",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "all of a sudden",
+      "meaning": "突然間",
+      "definition": "quickly and unexpectedly",
+      "example": "Cindy was walking down the street when all of a sudden, rain began to pour down from the sky.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P032.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P032-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P033",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "turn out",
+      "meaning": "結果是",
+      "definition": "to end in a certain way",
+      "example": "All the members of the band were worried about their performance, but it turned out to be amazing!",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P033.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P033-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P034",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "come across",
+      "meaning": "遇到;偶然碰見",
+      "definition": "to find something or someone by chance",
+      "example": "Paulina went through all of her receipts but didn't come across any winning numbers.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P034.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P034-1.mp3"
+    },
+    {
+      "id": "G1-S1-SUP-P035",
+      "book": "G1-S1-SUP",
+      "kind": "phrase",
+      "lesson": 4,
+      "lessonTitle": null,
+      "unit": "片語 Lesson 4",
+      "phrase": "carry out",
+      "meaning": "執行;進行",
+      "definition": "to do and complete a task or an assignment",
+      "example": "After the statue went missing from the square, the police carried out an investigation.",
+      "exampleZh": null,
+      "audioPhrase": "audio/word/G1-S1-SUP-P035.mp3",
+      "audioExample": "audio/sentence/G1-S1-SUP-P035-1.mp3"
     }
   ]
 }

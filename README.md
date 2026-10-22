@@ -6,7 +6,7 @@
 
 目前內容:
 - **高一上 Level 2(`G1-S1`)**:1003 字、72 頁、1169 例句(主本)。
-- **高一上 補充(`G1-S1-SUP`)**:68 個詞類變化字(含衍生詞)+ 20 條片語(Lesson 1–3)。此本卡片結構不同(`kind: word / phrase`),App 依 `kind` 自動切換呈現。
+- **高一上 補充(`G1-S1-SUP`)**:68 個詞類變化字(含衍生詞)+ 53 個 Unit 4–6 單字(含搭配詞)+ 35 條片語(Lesson 1–4)。此本卡片結構不同(`kind: word / phrase`),App 依 `kind` 自動切換呈現。
 
 > 多單字本:`data/index.json` 列出所有本(含 `type: vocab | supplement`),App 從選單切換;新增一本只加一列、不改 App。
 
