@@ -831,7 +831,16 @@ function applyFont() { document.documentElement.style.setProperty('--fs', state.
 function registerSW() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
+      navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
+        .then((reg) => reg.update()).catch(() => {});
+      // 新版 SW 接手時自動重新載入一次,讓新資料/程式立即生效
+      const hadController = !!navigator.serviceWorker.controller;
+      let reloaded = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!hadController || reloaded) return;
+        reloaded = true;
+        location.reload();
+      });
     });
   }
 }

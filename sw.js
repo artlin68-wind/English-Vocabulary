@@ -6,7 +6,7 @@
  *    「分單元下載」寫入 AUDIO_CACHE。此處對音檔採 cache-first,快取沒有才走網路。
  * 版本升級:改 SHELL_VERSION 觸發 precache 更新,舊殼快取自動清除;音檔快取保留。
  * ============================================================ */
-const SHELL_VERSION = 'vocab-shell-v8';
+const SHELL_VERSION = 'vocab-shell-v9';
 const AUDIO_CACHE = 'vocab-audio';
 
 const SHELL_ASSETS = [
@@ -82,16 +82,19 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // App 殼與資料:cache-first,背景更新(stale-while-revalidate)
+  // App 殼與資料:network-first(線上一律拿最新,資料改版立即生效),
+  // 成功就更新快取;離線/失敗才回快取。
   event.respondWith((async () => {
-    const cached = await caches.match(req);
-    const network = fetch(req).then((res) => {
-      if (res && res.ok) caches.open(SHELL_VERSION).then((c) => c.put(req, res.clone()));
-      return res;
-    }).catch(() => null);
-    if (cached) { network; return cached; }
-    const res = await network;
-    if (res) return res;
+    try {
+      const res = await fetch(req, { cache: 'no-cache' });
+      if (res && res.ok) {
+        const copy = res.clone();
+        caches.open(SHELL_VERSION).then((c) => c.put(req, copy));
+        return res;
+      }
+    } catch {}
+    const cached = await caches.match(req, { ignoreSearch: true });
+    if (cached) return cached;
     // 導覽請求離線且未快取 → 回首頁殼
     if (req.mode === 'navigate') {
       const shell = await caches.match('index.html');
