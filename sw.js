@@ -6,7 +6,7 @@
  *    「分單元下載」寫入 AUDIO_CACHE。此處對音檔採 cache-first,快取沒有才走網路。
  * 版本升級:改 SHELL_VERSION 觸發 precache 更新,舊殼快取自動清除;音檔快取保留。
  * ============================================================ */
-const SHELL_VERSION = 'vocab-shell-v9';
+const SHELL_VERSION = 'vocab-shell-v10';
 const AUDIO_CACHE = 'vocab-audio';
 
 const SHELL_ASSETS = [
@@ -64,7 +64,8 @@ self.addEventListener('fetch', (event) => {
     event.respondWith((async () => {
       const cached = await caches.match(req, { cacheName: AUDIO_CACHE });
       if (cached) return cached;
-      try { return await fetch(req); }
+      // no-cache:每次向伺服器確認(304 很小),避免瀏覽器 HTTP 快取播到改版前的舊語音
+      try { return await fetch(req, { cache: 'no-cache' }); }
       catch { return new Response('', { status: 504, statusText: 'offline-audio-not-downloaded' }); }
     })());
     return;
