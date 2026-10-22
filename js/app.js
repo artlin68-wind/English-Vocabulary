@@ -225,7 +225,11 @@ function fillSupWordCard(w) {
   $('pageNote').hidden = true;
   setPosTags(w.pos ? [w.pos] : []);
   $('wordText').textContent = w.word;
-  $('ipaText').hidden = true;
+  // 音標:與主本相同呈現(ipaRaw 原樣,含括號)
+  const ipa = $('ipaText');
+  const ipaStr = w.ipaRaw || (w.ipa ? `[${w.ipa}]` : '');
+  if (ipaStr) { ipa.textContent = ipaStr; ipa.hidden = false; }
+  else { ipa.hidden = true; }
   $('playWordBtn').hidden = !w.audioWord;
   toggleImg($('imgWord'), w.imageWord);
 

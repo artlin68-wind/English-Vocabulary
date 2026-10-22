@@ -6,7 +6,7 @@
     "wordCount": 121,
     "phraseCount": 35,
     "source": "英文單字與片語整理.pdf；高一片語_U4-6.xlsx（Lesson 4）；高一單字_U4-6.xlsx（單字補充 Unit 4–6）",
-    "note": "本補充版無音標與例句中譯；audio 欄位待建置管線產生；exampleZh 可日後補中譯。"
+    "note": "單字皆有 KK 音標(與主本同字沿用主本;其餘人工校對,見 scripts/sup_ipa.py);片語無音標;exampleZh 可日後補中譯。"
   },
   "units": [
     "詞類變化補充",
@@ -37,10 +37,12 @@
           "audio": "audio/word/G1-S1-SUP-W001-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵æksəˈdɛntḷɪ",
       "audioWord": "audio/word/G1-S1-SUP-W001.mp3",
       "imageWord": "images/word/G1-S1-SUP-W001.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵æksəˈdɛntḷɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W002",
@@ -57,10 +59,12 @@
           "audio": "audio/word/G1-S1-SUP-W002-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈæftɚwɚd",
       "audioWord": "audio/word/G1-S1-SUP-W002.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈæftɚwɚd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W003",
@@ -92,10 +96,12 @@
           "audio": "audio/word/G1-S1-SUP-W003-d4.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈmez",
       "audioWord": "audio/word/G1-S1-SUP-W003.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈmez]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W004",
@@ -122,10 +128,12 @@
           "audio": "audio/word/G1-S1-SUP-W004-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈstɑnɪʃ",
       "audioWord": "audio/word/G1-S1-SUP-W004.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈstɑnɪʃ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W005",
@@ -152,10 +160,12 @@
           "audio": "audio/word/G1-S1-SUP-W005-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈtɛnʃən",
       "audioWord": "audio/word/G1-S1-SUP-W005.mp3",
       "imageWord": "images/word/G1-S1-SUP-W005.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈtɛnʃən]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W006",
@@ -172,10 +182,12 @@
           "audio": "audio/word/G1-S1-SUP-W006-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈævərɪdʒ",
       "audioWord": "audio/word/G1-S1-SUP-W006.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈævərɪdʒ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W007",
@@ -202,10 +214,12 @@
           "audio": "audio/word/G1-S1-SUP-W007-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈvɔɪd",
       "audioWord": "audio/word/G1-S1-SUP-W007.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈvɔɪd]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W008",
@@ -227,10 +241,12 @@
           "audio": "audio/word/G1-S1-SUP-W008-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈwek",
       "audioWord": "audio/word/G1-S1-SUP-W008.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈwek]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W009",
@@ -257,10 +273,12 @@
           "audio": "audio/word/G1-S1-SUP-W009-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "brið",
       "audioWord": "audio/word/G1-S1-SUP-W009.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[brið]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W010",
@@ -282,10 +300,12 @@
           "audio": "audio/word/G1-S1-SUP-W010-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "kəˈmjunə͵ket",
       "audioWord": "audio/word/G1-S1-SUP-W010.mp3",
       "imageWord": "images/word/G1-S1-SUP-W010.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[kəˈmjunə͵ket]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W011",
@@ -307,10 +327,12 @@
           "audio": "audio/word/G1-S1-SUP-W011-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "kəˈnɛkt",
       "audioWord": "audio/word/G1-S1-SUP-W011.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[kəˈnɛkt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W012",
@@ -337,10 +359,12 @@
           "audio": "audio/word/G1-S1-SUP-W012-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈkritʃɚ",
       "audioWord": "audio/word/G1-S1-SUP-W012.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈkritʃɚ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W013",
@@ -362,10 +386,12 @@
           "audio": "audio/word/G1-S1-SUP-W013-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈkʌltʃɚ",
       "audioWord": "audio/word/G1-S1-SUP-W013.mp3",
       "imageWord": "images/word/G1-S1-SUP-W013.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈkʌltʃɚ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W014",
@@ -387,10 +413,12 @@
           "audio": "audio/word/G1-S1-SUP-W014-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈkʌstəm",
       "audioWord": "audio/word/G1-S1-SUP-W014.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈkʌstəm]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W015",
@@ -412,10 +440,12 @@
           "audio": "audio/word/G1-S1-SUP-W015-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈdelɪ",
       "audioWord": "audio/word/G1-S1-SUP-W015.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈdelɪ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W016",
@@ -432,10 +462,12 @@
           "audio": "audio/word/G1-S1-SUP-W016-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "dɪˈnaɪ",
       "audioWord": "audio/word/G1-S1-SUP-W016.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[dɪˈnaɪ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W017",
@@ -462,10 +494,12 @@
           "audio": "audio/word/G1-S1-SUP-W017-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "dɪˈprɛs",
       "audioWord": "audio/word/G1-S1-SUP-W017.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[dɪˈprɛs]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W018",
@@ -492,10 +526,12 @@
           "audio": "audio/word/G1-S1-SUP-W018-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈdɪfərəns",
       "audioWord": "audio/word/G1-S1-SUP-W018.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈdɪfərəns]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W019",
@@ -512,10 +548,12 @@
           "audio": "audio/word/G1-S1-SUP-W019-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵dɪsəˈpɪr",
       "audioWord": "audio/word/G1-S1-SUP-W019.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵dɪsəˈpɪr]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W020",
@@ -542,10 +580,12 @@
           "audio": "audio/word/G1-S1-SUP-W020-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵dɪsəˈpɔɪnt",
       "audioWord": "audio/word/G1-S1-SUP-W020.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵dɪsəˈpɔɪnt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W021",
@@ -567,10 +607,12 @@
           "audio": "audio/word/G1-S1-SUP-W021-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈdɪstəns",
       "audioWord": "audio/word/G1-S1-SUP-W021.mp3",
       "imageWord": "images/word/G1-S1-SUP-W021.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈdɪstəns]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W022",
@@ -597,10 +639,12 @@
           "audio": "audio/word/G1-S1-SUP-W022-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪmˈbærəs",
       "audioWord": "audio/word/G1-S1-SUP-W022.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪmˈbærəs]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W023",
@@ -622,10 +666,12 @@
           "audio": "audio/word/G1-S1-SUP-W023-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪmˈbres",
       "audioWord": "audio/word/G1-S1-SUP-W023.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪmˈbres]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W024",
@@ -647,10 +693,12 @@
           "audio": "audio/word/G1-S1-SUP-W024-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈɛkspɚt",
       "audioWord": "audio/word/G1-S1-SUP-W024.mp3",
       "imageWord": "images/word/G1-S1-SUP-W024.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈɛkspɚt]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W025",
@@ -667,10 +715,12 @@
           "audio": "audio/word/G1-S1-SUP-W025-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈfeljɚ",
       "audioWord": "audio/word/G1-S1-SUP-W025.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈfeljɚ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W026",
@@ -687,10 +737,12 @@
           "audio": "audio/word/G1-S1-SUP-W026-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "flaɪt",
       "audioWord": "audio/word/G1-S1-SUP-W026.mp3",
       "imageWord": "images/word/G1-S1-SUP-W026.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[flaɪt]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W027",
@@ -707,10 +759,12 @@
           "audio": "audio/word/G1-S1-SUP-W027-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "flot",
       "audioWord": "audio/word/G1-S1-SUP-W027.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[flot]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W028",
@@ -727,10 +781,12 @@
           "audio": "audio/word/G1-S1-SUP-W028-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈfokəs",
       "audioWord": "audio/word/G1-S1-SUP-W028.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈfokəs]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W029",
@@ -741,10 +797,12 @@
       "pos": "副詞",
       "meaning": "永遠；永久地",
       "derivatives": [],
-      "ipa": null,
+      "ipa": "fɚˈɛvɚ",
       "audioWord": "audio/word/G1-S1-SUP-W029.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[fɚˈɛvɚ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W030",
@@ -776,10 +834,12 @@
           "audio": "audio/word/G1-S1-SUP-W030-d4.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈfɔrtʃənɪt",
       "audioWord": "audio/word/G1-S1-SUP-W030.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈfɔrtʃənɪt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W031",
@@ -796,10 +856,12 @@
           "audio": "audio/word/G1-S1-SUP-W031-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "græb",
       "audioWord": "audio/word/G1-S1-SUP-W031.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[græb]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W032",
@@ -816,10 +878,12 @@
           "audio": "audio/word/G1-S1-SUP-W032-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈgritɪŋ",
       "audioWord": "audio/word/G1-S1-SUP-W032.mp3",
       "imageWord": "images/word/G1-S1-SUP-W032.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈgritɪŋ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W033",
@@ -841,10 +905,12 @@
           "audio": "audio/word/G1-S1-SUP-W033-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪgˈnor",
       "audioWord": "audio/word/G1-S1-SUP-W033.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪgˈnor]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W034",
@@ -871,10 +937,12 @@
           "audio": "audio/word/G1-S1-SUP-W034-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪmˈprɛs",
       "audioWord": "audio/word/G1-S1-SUP-W034.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪmˈprɛs]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W035",
@@ -901,10 +969,12 @@
           "audio": "audio/word/G1-S1-SUP-W035-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪnˈklud",
       "audioWord": "audio/word/G1-S1-SUP-W035.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪnˈklud]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W036",
@@ -931,10 +1001,12 @@
           "audio": "audio/word/G1-S1-SUP-W036-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪnˈspaɪr",
       "audioWord": "audio/word/G1-S1-SUP-W036.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪnˈspaɪr]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W037",
@@ -956,10 +1028,12 @@
           "audio": "audio/word/G1-S1-SUP-W037-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵ɪntrəˈdjus",
       "audioWord": "audio/word/G1-S1-SUP-W037.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵ɪntrəˈdjus]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W038",
@@ -976,10 +1050,12 @@
           "audio": "audio/word/G1-S1-SUP-W038-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈdʒɝnɪ",
       "audioWord": "audio/word/G1-S1-SUP-W038.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈdʒɝnɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W039",
@@ -1006,10 +1082,12 @@
           "audio": "audio/word/G1-S1-SUP-W039-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈmɛmə͵raɪz",
       "audioWord": "audio/word/G1-S1-SUP-W039.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈmɛmə͵raɪz]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W040",
@@ -1026,10 +1104,12 @@
           "audio": "audio/word/G1-S1-SUP-W040-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈmɛsɪdʒ",
       "audioWord": "audio/word/G1-S1-SUP-W040.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈmɛsɪdʒ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W041",
@@ -1040,10 +1120,12 @@
       "pos": "動詞/名詞",
       "meaning": "小睡",
       "derivatives": [],
-      "ipa": null,
+      "ipa": "næp",
       "audioWord": "audio/word/G1-S1-SUP-W041.mp3",
       "imageWord": "images/word/G1-S1-SUP-W041.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[næp]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W042",
@@ -1070,10 +1152,12 @@
           "audio": "audio/word/G1-S1-SUP-W042-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "[ˈpɝfɪkt] (adj.) [pɚˈfɛkt] (v.)",
       "audioWord": "audio/word/G1-S1-SUP-W042.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈpɝfɪkt] (adj.) [pɚˈfɛkt] (v.)",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W043",
@@ -1100,10 +1184,12 @@
           "audio": "audio/word/G1-S1-SUP-W043-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈpɝsṇḷɪ",
       "audioWord": "audio/word/G1-S1-SUP-W043.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈpɝsṇḷɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W044",
@@ -1130,10 +1216,12 @@
           "audio": "audio/word/G1-S1-SUP-W044-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "prɪˈzɛnt",
       "audioWord": "audio/word/G1-S1-SUP-W044.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[prɪˈzɛnt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W045",
@@ -1160,10 +1248,12 @@
           "audio": "audio/word/G1-S1-SUP-W045-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈrɪə͵laɪz",
       "audioWord": "audio/word/G1-S1-SUP-W045.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈrɪə͵laɪz]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W046",
@@ -1180,10 +1270,12 @@
           "audio": "audio/word/G1-S1-SUP-W046-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈkɔl",
       "audioWord": "audio/word/G1-S1-SUP-W046.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈkɔl]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W047",
@@ -1205,10 +1297,12 @@
           "audio": "audio/word/G1-S1-SUP-W047-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈflɛkt",
       "audioWord": "audio/word/G1-S1-SUP-W047.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈflɛkt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W048",
@@ -1235,10 +1329,12 @@
           "audio": "audio/word/G1-S1-SUP-W048-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈfrɛʃ",
       "audioWord": "audio/word/G1-S1-SUP-W048.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈfrɛʃ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W049",
@@ -1270,10 +1366,12 @@
           "audio": "audio/word/G1-S1-SUP-W049-d4.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈlet",
       "audioWord": "audio/word/G1-S1-SUP-W049.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈlet]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W050",
@@ -1290,10 +1388,12 @@
           "audio": "audio/word/G1-S1-SUP-W050-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈmaɪnd",
       "audioWord": "audio/word/G1-S1-SUP-W050.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈmaɪnd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W051",
@@ -1304,10 +1404,12 @@
       "pos": "動詞/名詞",
       "meaning": "回答；回覆",
       "derivatives": [],
-      "ipa": null,
+      "ipa": "rɪˈplaɪ",
       "audioWord": "audio/word/G1-S1-SUP-W051.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈplaɪ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W052",
@@ -1329,10 +1431,12 @@
           "audio": "audio/word/G1-S1-SUP-W052-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈspɑnd",
       "audioWord": "audio/word/G1-S1-SUP-W052.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈspɑnd]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W053",
@@ -1354,10 +1458,12 @@
           "audio": "audio/word/G1-S1-SUP-W053-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "roˈmæns",
       "audioWord": "audio/word/G1-S1-SUP-W053.mp3",
       "imageWord": "images/word/G1-S1-SUP-W053.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[roˈmæns]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W054",
@@ -1374,10 +1480,12 @@
           "audio": "audio/word/G1-S1-SUP-W054-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈruɪn",
       "audioWord": "audio/word/G1-S1-SUP-W054.mp3",
       "imageWord": "images/word/G1-S1-SUP-W054.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈruɪn]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W055",
@@ -1388,10 +1496,12 @@
       "pos": "形容詞",
       "meaning": "神聖的",
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈsekrɪd",
       "audioWord": "audio/word/G1-S1-SUP-W055.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈsekrɪd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W056",
@@ -1423,10 +1533,12 @@
           "audio": "audio/word/G1-S1-SUP-W056-d4.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈsætɪs͵faɪ",
       "audioWord": "audio/word/G1-S1-SUP-W056.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈsætɪs͵faɪ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W057",
@@ -1443,10 +1555,12 @@
           "audio": "audio/word/G1-S1-SUP-W057-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈskɛdʒʊl",
       "audioWord": "audio/word/G1-S1-SUP-W057.mp3",
       "imageWord": "images/word/G1-S1-SUP-W057.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈskɛdʒʊl]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W058",
@@ -1457,10 +1571,12 @@
       "pos": "動詞",
       "meaning": "故意不參加；略過、跳過",
       "derivatives": [],
-      "ipa": null,
+      "ipa": "skɪp",
       "audioWord": "audio/word/G1-S1-SUP-W058.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[skɪp]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W059",
@@ -1477,10 +1593,12 @@
           "audio": "audio/word/G1-S1-SUP-W059-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈsɝfɪs",
       "audioWord": "audio/word/G1-S1-SUP-W059.mp3",
       "imageWord": "images/word/G1-S1-SUP-W059.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈsɝfɪs]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W060",
@@ -1502,10 +1620,12 @@
           "audio": "audio/word/G1-S1-SUP-W060-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "sɚˈvaɪv",
       "audioWord": "audio/word/G1-S1-SUP-W060.mp3",
       "imageWord": "images/word/G1-S1-SUP-W060.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[sɚˈvaɪv]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W061",
@@ -1516,10 +1636,12 @@
       "pos": "副詞",
       "meaning": "因此",
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈðɛr͵for",
       "audioWord": "audio/word/G1-S1-SUP-W061.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈðɛr͵for]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W062",
@@ -1536,10 +1658,12 @@
           "audio": "audio/word/G1-S1-SUP-W062-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "θruˈaʊt",
       "audioWord": "audio/word/G1-S1-SUP-W062.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[θruˈaʊt]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W063",
@@ -1561,10 +1685,12 @@
           "audio": "audio/word/G1-S1-SUP-W063-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "trəˈdɪʃən",
       "audioWord": "audio/word/G1-S1-SUP-W063.mp3",
       "imageWord": "images/word/G1-S1-SUP-W063.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[trəˈdɪʃən]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W064",
@@ -1581,10 +1707,12 @@
           "audio": "audio/word/G1-S1-SUP-W064-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ʌpˈsɛt",
       "audioWord": "audio/word/G1-S1-SUP-W064.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ʌpˈsɛt]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W065",
@@ -1611,10 +1739,12 @@
           "audio": "audio/word/G1-S1-SUP-W065-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈvæljuəbḷ",
       "audioWord": "audio/word/G1-S1-SUP-W065.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈvæljuəbḷ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W066",
@@ -1641,10 +1771,12 @@
           "audio": "audio/word/G1-S1-SUP-W066-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈvɛrɪ",
       "audioWord": "audio/word/G1-S1-SUP-W066.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈvɛrɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W067",
@@ -1666,10 +1798,12 @@
           "audio": "audio/word/G1-S1-SUP-W067-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈwʌndɚ",
       "audioWord": "audio/word/G1-S1-SUP-W067.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈwʌndɚ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W068",
@@ -1686,10 +1820,12 @@
           "audio": "audio/word/G1-S1-SUP-W068-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "jɛl",
       "audioWord": "audio/word/G1-S1-SUP-W068.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[jɛl]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W069",
@@ -1703,10 +1839,12 @@
         "ability to + V"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "əˈbɪlətɪ",
       "audioWord": "audio/word/G1-S1-SUP-W069.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈbɪlətɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W070",
@@ -1726,10 +1864,12 @@
           "audio": "audio/word/G1-S1-SUP-W070-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈkɑmplɪʃ",
       "audioWord": "audio/word/G1-S1-SUP-W070.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈkɑmplɪʃ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W071",
@@ -1749,10 +1889,12 @@
           "audio": "audio/word/G1-S1-SUP-W071-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈlɝt",
       "audioWord": "audio/word/G1-S1-SUP-W071.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈlɝt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W072",
@@ -1764,10 +1906,12 @@
       "meaning": "古代的",
       "collocations": [],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈenʃənt",
       "audioWord": "audio/word/G1-S1-SUP-W072.mp3",
       "imageWord": "images/word/G1-S1-SUP-W072.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈenʃənt]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W073",
@@ -1787,10 +1931,12 @@
           "audio": "audio/word/G1-S1-SUP-W073-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈsaɪn",
       "audioWord": "audio/word/G1-S1-SUP-W073.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈsaɪn]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W074",
@@ -1815,10 +1961,12 @@
           "audio": "audio/word/G1-S1-SUP-W074-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "əˈtrækʃən",
       "audioWord": "audio/word/G1-S1-SUP-W074.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[əˈtrækʃən]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W075",
@@ -1843,10 +1991,12 @@
           "audio": "audio/word/G1-S1-SUP-W075-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "bɪˈhevjɚ",
       "audioWord": "audio/word/G1-S1-SUP-W075.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[bɪˈhevjɚ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W076",
@@ -1867,10 +2017,12 @@
           "audio": "audio/word/G1-S1-SUP-W076-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵sɛləˈbreʃən",
       "audioWord": "audio/word/G1-S1-SUP-W076.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵sɛləˈbreʃən]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W077",
@@ -1890,10 +2042,12 @@
           "audio": "audio/word/G1-S1-SUP-W077-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "kəmˈplit",
       "audioWord": "audio/word/G1-S1-SUP-W077.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[kəmˈplit]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W078",
@@ -1913,10 +2067,12 @@
           "audio": "audio/word/G1-S1-SUP-W078-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "kənˈsjum",
       "audioWord": "audio/word/G1-S1-SUP-W078.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[kənˈsjum]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W079",
@@ -1930,10 +2086,12 @@
         "the convenience of the public"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "kənˈvinjəns",
       "audioWord": "audio/word/G1-S1-SUP-W079.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[kənˈvinjəns]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W080",
@@ -1963,10 +2121,12 @@
           "audio": "audio/word/G1-S1-SUP-W080-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "krɪˈet",
       "audioWord": "audio/word/G1-S1-SUP-W080.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[krɪˈet]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W081",
@@ -1986,10 +2146,12 @@
           "audio": "audio/word/G1-S1-SUP-W081-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈkraʊdɪd",
       "audioWord": "audio/word/G1-S1-SUP-W081.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈkraʊdɪd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W082",
@@ -2003,10 +2165,12 @@
         "detect a small change"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "dɪˈtɛkt",
       "audioWord": "audio/word/G1-S1-SUP-W082.mp3",
       "imageWord": "images/word/G1-S1-SUP-W082.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[dɪˈtɛkt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W083",
@@ -2021,10 +2185,12 @@
         "spread of disease"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "dɪˈziz",
       "audioWord": "audio/word/G1-S1-SUP-W083.mp3",
       "imageWord": "images/word/G1-S1-SUP-W083.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[dɪˈziz]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W084",
@@ -2038,10 +2204,12 @@
         "drift toward"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "drɪft",
       "audioWord": "audio/word/G1-S1-SUP-W084.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[drɪft]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W085",
@@ -2061,10 +2229,12 @@
           "audio": "audio/word/G1-S1-SUP-W085-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈigɚlɪ",
       "audioWord": "audio/word/G1-S1-SUP-W085.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈigɚlɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W086",
@@ -2085,10 +2255,12 @@
           "audio": "audio/word/G1-S1-SUP-W086-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪnˈvaɪrənmənt",
       "audioWord": "audio/word/G1-S1-SUP-W086.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪnˈvaɪrənmənt]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W087",
@@ -2108,10 +2280,12 @@
           "audio": "audio/word/G1-S1-SUP-W087-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈɛnvɪ",
       "audioWord": "audio/word/G1-S1-SUP-W087.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈɛnvɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W088",
@@ -2131,10 +2305,12 @@
           "audio": "audio/word/G1-S1-SUP-W088-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪkˈspoz",
       "audioWord": "audio/word/G1-S1-SUP-W088.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪkˈspoz]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W089",
@@ -2154,10 +2330,12 @@
           "audio": "audio/word/G1-S1-SUP-W089-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈfɝmlɪ",
       "audioWord": "audio/word/G1-S1-SUP-W089.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈfɝmlɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W090",
@@ -2171,10 +2349,12 @@
         "freedom to + V"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈfridəm",
       "audioWord": "audio/word/G1-S1-SUP-W090.mp3",
       "imageWord": "images/word/G1-S1-SUP-W090.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈfridəm]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W091",
@@ -2194,10 +2374,12 @@
           "audio": "audio/word/G1-S1-SUP-W091-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "glob",
       "audioWord": "audio/word/G1-S1-SUP-W091.mp3",
       "imageWord": "images/word/G1-S1-SUP-W091.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[glob]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W092",
@@ -2222,10 +2404,12 @@
           "audio": "audio/word/G1-S1-SUP-W092-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "hɑrm",
       "audioWord": "audio/word/G1-S1-SUP-W092.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[hɑrm]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W093",
@@ -2245,10 +2429,12 @@
           "audio": "audio/word/G1-S1-SUP-W093-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵ɪndɪˈpɛndəns",
       "audioWord": "audio/word/G1-S1-SUP-W093.mp3",
       "imageWord": "images/word/G1-S1-SUP-W093.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵ɪndɪˈpɛndəns]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W094",
@@ -2273,10 +2459,12 @@
           "audio": "audio/word/G1-S1-SUP-W094-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ɪnˈfɛktɪd",
       "audioWord": "audio/word/G1-S1-SUP-W094.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ɪnˈfɛktɪd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W095",
@@ -2290,10 +2478,12 @@
         "items on sale"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈaɪtəm",
       "audioWord": "audio/word/G1-S1-SUP-W095.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈaɪtəm]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W096",
@@ -2308,10 +2498,12 @@
         "keen sense of"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "kin",
       "audioWord": "audio/word/G1-S1-SUP-W096.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[kin]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W097",
@@ -2325,10 +2517,12 @@
         "famous landmarks"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈlænd͵mɑrk",
       "audioWord": "audio/word/G1-S1-SUP-W097.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈlænd͵mɑrk]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W098",
@@ -2348,10 +2542,12 @@
           "audio": "audio/word/G1-S1-SUP-W098-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "loˈket",
       "audioWord": "audio/word/G1-S1-SUP-W098.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[loˈket]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W099",
@@ -2372,10 +2568,12 @@
           "audio": "audio/word/G1-S1-SUP-W099-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈmænɪdʒ",
       "audioWord": "audio/word/G1-S1-SUP-W099.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈmænɪdʒ]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W100",
@@ -2389,10 +2587,12 @@
         "monument to remember..."
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈmɑnjəmənt",
       "audioWord": "audio/word/G1-S1-SUP-W100.mp3",
       "imageWord": "images/word/G1-S1-SUP-W100.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈmɑnjəmənt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W101",
@@ -2410,10 +2610,12 @@
           "audio": "audio/word/G1-S1-SUP-W101-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈɑbvɪəslɪ",
       "audioWord": "audio/word/G1-S1-SUP-W101.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈɑbvɪəslɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W102",
@@ -2433,10 +2635,12 @@
           "audio": "audio/word/G1-S1-SUP-W102-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "pɚˈfɔrm",
       "audioWord": "audio/word/G1-S1-SUP-W102.mp3",
       "imageWord": "images/word/G1-S1-SUP-W102.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[pɚˈfɔrm]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W103",
@@ -2457,10 +2661,12 @@
           "audio": "audio/word/G1-S1-SUP-W103-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈplæstɪk",
       "audioWord": "audio/word/G1-S1-SUP-W103.mp3",
       "imageWord": "images/word/G1-S1-SUP-W103.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈplæstɪk]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W104",
@@ -2485,10 +2691,12 @@
           "audio": "audio/word/G1-S1-SUP-W104-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈpɔɪzṇəs",
       "audioWord": "audio/word/G1-S1-SUP-W104.mp3",
       "imageWord": "images/word/G1-S1-SUP-W104.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈpɔɪzṇəs]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W105",
@@ -2502,10 +2710,12 @@
         "predict that..."
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "prɪˈdɪkt",
       "audioWord": "audio/word/G1-S1-SUP-W105.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[prɪˈdɪkt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W106",
@@ -2530,10 +2740,12 @@
           "audio": "audio/word/G1-S1-SUP-W106-d2.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈprɑdəkt",
       "audioWord": "audio/word/G1-S1-SUP-W106.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈprɑdəkt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W107",
@@ -2553,10 +2765,12 @@
           "audio": "audio/word/G1-S1-SUP-W107-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈprɑpɚlɪ",
       "audioWord": "audio/word/G1-S1-SUP-W107.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈprɑpɚlɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W108",
@@ -2576,10 +2790,12 @@
           "audio": "audio/word/G1-S1-SUP-W108-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "riˈsaɪklɪŋ",
       "audioWord": "audio/word/G1-S1-SUP-W108.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[riˈsaɪklɪŋ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W109",
@@ -2593,10 +2809,12 @@
         "remove A from B"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "rɪˈmuv",
       "audioWord": "audio/word/G1-S1-SUP-W109.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈmuv]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W110",
@@ -2616,10 +2834,12 @@
           "audio": "audio/word/G1-S1-SUP-W110-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "͵rɛprɪˈzɛnt",
       "audioWord": "audio/word/G1-S1-SUP-W110.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[͵rɛprɪˈzɛnt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W111",
@@ -2639,10 +2859,12 @@
           "audio": "audio/word/G1-S1-SUP-W111-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "rɪˈwɔrd",
       "audioWord": "audio/word/G1-S1-SUP-W111.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[rɪˈwɔrd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W112",
@@ -2656,10 +2878,12 @@
         "sensitive to"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈsɛnsətɪv",
       "audioWord": "audio/word/G1-S1-SUP-W112.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈsɛnsətɪv]",
+      "ipaSource": "main"
     },
     {
       "id": "G1-S1-SUP-W113",
@@ -2679,10 +2903,12 @@
           "audio": "audio/word/G1-S1-SUP-W113-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈslevərɪ",
       "audioWord": "audio/word/G1-S1-SUP-W113.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈslevərɪ]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W114",
@@ -2696,10 +2922,12 @@
         "specific reason"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "spɪˈsɪfɪk",
       "audioWord": "audio/word/G1-S1-SUP-W114.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[spɪˈsɪfɪk]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W115",
@@ -2713,10 +2941,12 @@
         "statue of..."
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈstætʃu",
       "audioWord": "audio/word/G1-S1-SUP-W115.mp3",
       "imageWord": "images/word/G1-S1-SUP-W115.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈstætʃu]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W116",
@@ -2730,10 +2960,12 @@
         "chemical substance"
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈsʌbstəns",
       "audioWord": "audio/word/G1-S1-SUP-W116.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈsʌbstəns]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W117",
@@ -2753,10 +2985,12 @@
           "audio": "audio/word/G1-S1-SUP-W117-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "səˈraʊnd",
       "audioWord": "audio/word/G1-S1-SUP-W117.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[səˈraʊnd]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W118",
@@ -2786,10 +3020,12 @@
           "audio": "audio/word/G1-S1-SUP-W118-d3.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈsɪmbḷ͵aɪz",
       "audioWord": "audio/word/G1-S1-SUP-W118.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈsɪmbḷ͵aɪz]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W119",
@@ -2809,10 +3045,12 @@
           "audio": "audio/word/G1-S1-SUP-W119-d1.mp3"
         }
       ],
-      "ipa": null,
+      "ipa": "ˈtʊrɪst",
       "audioWord": "audio/word/G1-S1-SUP-W119.mp3",
       "imageWord": "images/word/G1-S1-SUP-W119.jpg",
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈtʊrɪst]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W120",
@@ -2826,10 +3064,12 @@
         "treatment of..."
       ],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ˈtritmənt",
       "audioWord": "audio/word/G1-S1-SUP-W120.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ˈtritmənt]",
+      "ipaSource": "kk"
     },
     {
       "id": "G1-S1-SUP-W121",
@@ -2841,10 +3081,12 @@
       "meaning": "不公正的",
       "collocations": [],
       "derivatives": [],
-      "ipa": null,
+      "ipa": "ʌnˈfɛr",
       "audioWord": "audio/word/G1-S1-SUP-W121.mp3",
       "imageWord": null,
-      "audioWordSource": "tts"
+      "audioWordSource": "tts",
+      "ipaRaw": "[ʌnˈfɛr]",
+      "ipaSource": "kk"
     }
   ],
   "phrases": [
